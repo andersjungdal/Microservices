@@ -1,0 +1,244 @@
+C:\Users\ander\Desktop\Kode 2020\ECommerce\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\appsettings.Development.json
+C:\Users\ander\Desktop\Kode 2020\ECommerce\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Users\ander\Desktop\Kode 2020\ECommerce\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
+C:\Users\ander\Desktop\Kode 2020\ECommerce\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\ECommerce.Api.Products.exe
+C:\Users\ander\Desktop\Kode 2020\ECommerce\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\ECommerce.Api.Products.deps.json
+C:\Users\ander\Desktop\Kode 2020\ECommerce\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\ECommerce.Api.Products.runtimeconfig.json
+C:\Users\ander\Desktop\Kode 2020\ECommerce\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\ECommerce.Api.Products.runtimeconfig.dev.json
+C:\Users\ander\Desktop\Kode 2020\ECommerce\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\ECommerce.Api.Products.dll
+C:\Users\ander\Desktop\Kode 2020\ECommerce\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\ECommerce.Api.Products.pdb
+C:\Users\ander\Desktop\Kode 2020\ECommerce\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\AutoMapper.dll
+C:\Users\ander\Desktop\Kode 2020\ECommerce\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\ander\Desktop\Kode 2020\ECommerce\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\Microsoft.ApplicationInsights.dll
+C:\Users\ander\Desktop\Kode 2020\ECommerce\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\Microsoft.ApplicationInsights.AspNetCore.dll
+C:\Users\ander\Desktop\Kode 2020\ECommerce\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\Microsoft.AI.DependencyCollector.dll
+C:\Users\ander\Desktop\Kode 2020\ECommerce\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\Microsoft.AI.EventCounterCollector.dll
+C:\Users\ander\Desktop\Kode 2020\ECommerce\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\ander\Desktop\Kode 2020\ECommerce\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\Microsoft.AI.WindowsServer.dll
+C:\Users\ander\Desktop\Kode 2020\ECommerce\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\ander\Desktop\Kode 2020\ECommerce\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\ander\Desktop\Kode 2020\ECommerce\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\Microsoft.Bcl.HashCode.dll
+C:\Users\ander\Desktop\Kode 2020\ECommerce\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\ander\Desktop\Kode 2020\ECommerce\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
+C:\Users\ander\Desktop\Kode 2020\ECommerce\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\ander\Desktop\Kode 2020\ECommerce\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.InMemory.dll
+C:\Users\ander\Desktop\Kode 2020\ECommerce\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\ander\Desktop\Kode 2020\ECommerce\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\ander\Desktop\Kode 2020\ECommerce\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DiagnosticAdapter.dll
+C:\Users\ander\Desktop\Kode 2020\ECommerce\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.ApplicationInsights.dll
+C:\Users\ander\Desktop\Kode 2020\ECommerce\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\Microsoft.Extensions.PlatformAbstractions.dll
+C:\Users\ander\Desktop\Kode 2020\ECommerce\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\Microsoft.Identity.Client.dll
+C:\Users\ander\Desktop\Kode 2020\ECommerce\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\ander\Desktop\Kode 2020\ECommerce\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
+C:\Users\ander\Desktop\Kode 2020\ECommerce\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\System.Diagnostics.PerformanceCounter.dll
+C:\Users\ander\Desktop\Kode 2020\ECommerce\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\System.Runtime.Caching.dll
+C:\Users\ander\Desktop\Kode 2020\ECommerce\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
+C:\Users\ander\Desktop\Kode 2020\ECommerce\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll
+C:\Users\ander\Desktop\Kode 2020\ECommerce\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll
+C:\Users\ander\Desktop\Kode 2020\ECommerce\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+C:\Users\ander\Desktop\Kode 2020\ECommerce\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+C:\Users\ander\Desktop\Kode 2020\ECommerce\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+C:\Users\ander\Desktop\Kode 2020\ECommerce\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netstandard1.3\System.Data.SqlClient.dll
+C:\Users\ander\Desktop\Kode 2020\ECommerce\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard1.3\System.Data.SqlClient.dll
+C:\Users\ander\Desktop\Kode 2020\ECommerce\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Diagnostics.PerformanceCounter.dll
+C:\Users\ander\Desktop\Kode 2020\ECommerce\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
+C:\Users\ander\Desktop\Kode 2020\ECommerce\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
+C:\Users\ander\Desktop\Kode 2020\ECommerce\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\ander\Desktop\Kode 2020\ECommerce\ECommerce.Api.Products\obj\Debug\netcoreapp3.1\ECommerce.Api.Products.csproj.CoreCompileInputs.cache
+C:\Users\ander\Desktop\Kode 2020\ECommerce\ECommerce.Api.Products\obj\Debug\netcoreapp3.1\ECommerce.Api.Products.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\ander\Desktop\Kode 2020\ECommerce\ECommerce.Api.Products\obj\Debug\netcoreapp3.1\ECommerce.Api.Products.AssemblyInfoInputs.cache
+C:\Users\ander\Desktop\Kode 2020\ECommerce\ECommerce.Api.Products\obj\Debug\netcoreapp3.1\ECommerce.Api.Products.AssemblyInfo.cs
+C:\Users\ander\Desktop\Kode 2020\ECommerce\ECommerce.Api.Products\obj\Debug\netcoreapp3.1\ECommerce.Api.Products.RazorTargetAssemblyInfo.cache
+C:\Users\ander\Desktop\Kode 2020\ECommerce\ECommerce.Api.Products\obj\Debug\netcoreapp3.1\ECommerce.Api.Products.csproj.CopyComplete
+C:\Users\ander\Desktop\Kode 2020\ECommerce\ECommerce.Api.Products\obj\Debug\netcoreapp3.1\staticwebassets\ECommerce.Api.Products.StaticWebAssets.Manifest.cache
+C:\Users\ander\Desktop\Kode 2020\ECommerce\ECommerce.Api.Products\obj\Debug\netcoreapp3.1\staticwebassets\ECommerce.Api.Products.StaticWebAssets.xml
+C:\Users\ander\Desktop\Kode 2020\ECommerce\ECommerce.Api.Products\obj\Debug\netcoreapp3.1\ECommerce.Api.Products.dll
+C:\Users\ander\Desktop\Kode 2020\ECommerce\ECommerce.Api.Products\obj\Debug\netcoreapp3.1\ECommerce.Api.Products.pdb
+C:\Users\ander\Desktop\Kode 2020\ECommerce\ECommerce.Api.Products\obj\Debug\netcoreapp3.1\ECommerce.Api.Products.genruntimeconfig.cache
+C:\Users\ander\Desktop\Kode 2020\ECommerce\ECommerce.Api.Products\obj\Debug\netcoreapp3.1\ECommerce.Api.Products.csprojAssemblyReference.cache
+C:\Users\ander\Desktop\Kode_2020\ECommerce\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\appsettings.Development.json
+C:\Users\ander\Desktop\Kode_2020\ECommerce\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Users\ander\Desktop\Kode_2020\ECommerce\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\ECommerce.Api.Products.exe
+C:\Users\ander\Desktop\Kode_2020\ECommerce\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
+C:\Users\ander\Desktop\Kode_2020\ECommerce\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\ECommerce.Api.Products.deps.json
+C:\Users\ander\Desktop\Kode_2020\ECommerce\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\ECommerce.Api.Products.runtimeconfig.json
+C:\Users\ander\Desktop\Kode_2020\ECommerce\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\ECommerce.Api.Products.runtimeconfig.dev.json
+C:\Users\ander\Desktop\Kode_2020\ECommerce\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\ECommerce.Api.Products.dll
+C:\Users\ander\Desktop\Kode_2020\ECommerce\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\ECommerce.Api.Products.pdb
+C:\Users\ander\Desktop\Kode_2020\ECommerce\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\AutoMapper.dll
+C:\Users\ander\Desktop\Kode_2020\ECommerce\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\ander\Desktop\Kode_2020\ECommerce\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\Microsoft.ApplicationInsights.dll
+C:\Users\ander\Desktop\Kode_2020\ECommerce\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\Microsoft.ApplicationInsights.AspNetCore.dll
+C:\Users\ander\Desktop\Kode_2020\ECommerce\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\Microsoft.AI.DependencyCollector.dll
+C:\Users\ander\Desktop\Kode_2020\ECommerce\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\Microsoft.AI.EventCounterCollector.dll
+C:\Users\ander\Desktop\Kode_2020\ECommerce\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\ander\Desktop\Kode_2020\ECommerce\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\Microsoft.AI.WindowsServer.dll
+C:\Users\ander\Desktop\Kode_2020\ECommerce\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\ander\Desktop\Kode_2020\ECommerce\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\ander\Desktop\Kode_2020\ECommerce\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\Microsoft.Bcl.HashCode.dll
+C:\Users\ander\Desktop\Kode_2020\ECommerce\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\ander\Desktop\Kode_2020\ECommerce\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
+C:\Users\ander\Desktop\Kode_2020\ECommerce\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\ander\Desktop\Kode_2020\ECommerce\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.InMemory.dll
+C:\Users\ander\Desktop\Kode_2020\ECommerce\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\ander\Desktop\Kode_2020\ECommerce\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\ander\Desktop\Kode_2020\ECommerce\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DiagnosticAdapter.dll
+C:\Users\ander\Desktop\Kode_2020\ECommerce\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.ApplicationInsights.dll
+C:\Users\ander\Desktop\Kode_2020\ECommerce\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\Microsoft.Extensions.PlatformAbstractions.dll
+C:\Users\ander\Desktop\Kode_2020\ECommerce\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\Microsoft.Identity.Client.dll
+C:\Users\ander\Desktop\Kode_2020\ECommerce\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\ander\Desktop\Kode_2020\ECommerce\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
+C:\Users\ander\Desktop\Kode_2020\ECommerce\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\System.Diagnostics.PerformanceCounter.dll
+C:\Users\ander\Desktop\Kode_2020\ECommerce\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\System.Runtime.Caching.dll
+C:\Users\ander\Desktop\Kode_2020\ECommerce\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
+C:\Users\ander\Desktop\Kode_2020\ECommerce\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll
+C:\Users\ander\Desktop\Kode_2020\ECommerce\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll
+C:\Users\ander\Desktop\Kode_2020\ECommerce\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+C:\Users\ander\Desktop\Kode_2020\ECommerce\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+C:\Users\ander\Desktop\Kode_2020\ECommerce\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+C:\Users\ander\Desktop\Kode_2020\ECommerce\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netstandard1.3\System.Data.SqlClient.dll
+C:\Users\ander\Desktop\Kode_2020\ECommerce\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard1.3\System.Data.SqlClient.dll
+C:\Users\ander\Desktop\Kode_2020\ECommerce\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Diagnostics.PerformanceCounter.dll
+C:\Users\ander\Desktop\Kode_2020\ECommerce\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
+C:\Users\ander\Desktop\Kode_2020\ECommerce\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
+C:\Users\ander\Desktop\Kode_2020\ECommerce\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\ander\Desktop\Kode_2020\ECommerce\ECommerce.Api.Products\obj\Debug\netcoreapp3.1\ECommerce.Api.Products.csprojAssemblyReference.cache
+C:\Users\ander\Desktop\Kode_2020\ECommerce\ECommerce.Api.Products\obj\Debug\netcoreapp3.1\ECommerce.Api.Products.AssemblyInfoInputs.cache
+C:\Users\ander\Desktop\Kode_2020\ECommerce\ECommerce.Api.Products\obj\Debug\netcoreapp3.1\ECommerce.Api.Products.AssemblyInfo.cs
+C:\Users\ander\Desktop\Kode_2020\ECommerce\ECommerce.Api.Products\obj\Debug\netcoreapp3.1\ECommerce.Api.Products.RazorTargetAssemblyInfo.cache
+C:\Users\ander\Desktop\Kode_2020\ECommerce\ECommerce.Api.Products\obj\Debug\netcoreapp3.1\ECommerce.Api.Products.csproj.CopyComplete
+C:\Users\ander\Desktop\Kode_2020\ECommerce\ECommerce.Api.Products\obj\Debug\netcoreapp3.1\staticwebassets\ECommerce.Api.Products.StaticWebAssets.Manifest.cache
+C:\Users\ander\Desktop\Kode_2020\ECommerce\ECommerce.Api.Products\obj\Debug\netcoreapp3.1\staticwebassets\ECommerce.Api.Products.StaticWebAssets.xml
+C:\Users\ander\Desktop\Kode_2020\ECommerce\ECommerce.Api.Products\obj\Debug\netcoreapp3.1\ECommerce.Api.Products.dll
+C:\Users\ander\Desktop\Kode_2020\ECommerce\ECommerce.Api.Products\obj\Debug\netcoreapp3.1\ECommerce.Api.Products.pdb
+C:\Users\ander\Desktop\Kode_2020\ECommerce\ECommerce.Api.Products\obj\Debug\netcoreapp3.1\ECommerce.Api.Products.genruntimeconfig.cache
+C:\Users\ander\Desktop\Kode_2020\ECommerce\ECommerce.Api.Products\obj\Debug\netcoreapp3.1\ECommerce.Api.Products.csproj.CoreCompileInputs.cache
+C:\Users\ander\Desktop\Kode_2020\ECommerce\ECommerce.Api.Products\obj\Debug\netcoreapp3.1\ECommerce.Api.Products.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\ander\Desktop\andersmicro\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\appsettings.Development.json
+C:\Users\ander\Desktop\andersmicro\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Users\ander\Desktop\andersmicro\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
+C:\Users\ander\Desktop\andersmicro\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\ECommerce.Api.Products.exe
+C:\Users\ander\Desktop\andersmicro\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\ECommerce.Api.Products.deps.json
+C:\Users\ander\Desktop\andersmicro\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\ECommerce.Api.Products.runtimeconfig.json
+C:\Users\ander\Desktop\andersmicro\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\ECommerce.Api.Products.runtimeconfig.dev.json
+C:\Users\ander\Desktop\andersmicro\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\ECommerce.Api.Products.dll
+C:\Users\ander\Desktop\andersmicro\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\ECommerce.Api.Products.pdb
+C:\Users\ander\Desktop\andersmicro\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\AutoMapper.dll
+C:\Users\ander\Desktop\andersmicro\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\ander\Desktop\andersmicro\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\Microsoft.ApplicationInsights.dll
+C:\Users\ander\Desktop\andersmicro\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\Microsoft.ApplicationInsights.AspNetCore.dll
+C:\Users\ander\Desktop\andersmicro\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\Microsoft.AI.DependencyCollector.dll
+C:\Users\ander\Desktop\andersmicro\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\Microsoft.AI.EventCounterCollector.dll
+C:\Users\ander\Desktop\andersmicro\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\ander\Desktop\andersmicro\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\Microsoft.AI.WindowsServer.dll
+C:\Users\ander\Desktop\andersmicro\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\ander\Desktop\andersmicro\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\ander\Desktop\andersmicro\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\Microsoft.Bcl.HashCode.dll
+C:\Users\ander\Desktop\andersmicro\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\ander\Desktop\andersmicro\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
+C:\Users\ander\Desktop\andersmicro\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\ander\Desktop\andersmicro\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.InMemory.dll
+C:\Users\ander\Desktop\andersmicro\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\ander\Desktop\andersmicro\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\ander\Desktop\andersmicro\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DiagnosticAdapter.dll
+C:\Users\ander\Desktop\andersmicro\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.ApplicationInsights.dll
+C:\Users\ander\Desktop\andersmicro\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\Microsoft.Extensions.PlatformAbstractions.dll
+C:\Users\ander\Desktop\andersmicro\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\Microsoft.Identity.Client.dll
+C:\Users\ander\Desktop\andersmicro\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\ander\Desktop\andersmicro\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
+C:\Users\ander\Desktop\andersmicro\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\System.Diagnostics.PerformanceCounter.dll
+C:\Users\ander\Desktop\andersmicro\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\System.Runtime.Caching.dll
+C:\Users\ander\Desktop\andersmicro\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
+C:\Users\ander\Desktop\andersmicro\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll
+C:\Users\ander\Desktop\andersmicro\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll
+C:\Users\ander\Desktop\andersmicro\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+C:\Users\ander\Desktop\andersmicro\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+C:\Users\ander\Desktop\andersmicro\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+C:\Users\ander\Desktop\andersmicro\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netstandard1.3\System.Data.SqlClient.dll
+C:\Users\ander\Desktop\andersmicro\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard1.3\System.Data.SqlClient.dll
+C:\Users\ander\Desktop\andersmicro\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Diagnostics.PerformanceCounter.dll
+C:\Users\ander\Desktop\andersmicro\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
+C:\Users\ander\Desktop\andersmicro\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
+C:\Users\ander\Desktop\andersmicro\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\ander\Desktop\andersmicro\ECommerce.Api.Products\obj\Debug\netcoreapp3.1\ECommerce.Api.Products.csprojAssemblyReference.cache
+C:\Users\ander\Desktop\andersmicro\ECommerce.Api.Products\obj\Debug\netcoreapp3.1\ECommerce.Api.Products.csproj.CoreCompileInputs.cache
+C:\Users\ander\Desktop\andersmicro\ECommerce.Api.Products\obj\Debug\netcoreapp3.1\ECommerce.Api.Products.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\ander\Desktop\andersmicro\ECommerce.Api.Products\obj\Debug\netcoreapp3.1\ECommerce.Api.Products.AssemblyInfoInputs.cache
+C:\Users\ander\Desktop\andersmicro\ECommerce.Api.Products\obj\Debug\netcoreapp3.1\ECommerce.Api.Products.AssemblyInfo.cs
+C:\Users\ander\Desktop\andersmicro\ECommerce.Api.Products\obj\Debug\netcoreapp3.1\ECommerce.Api.Products.RazorTargetAssemblyInfo.cache
+C:\Users\ander\Desktop\andersmicro\ECommerce.Api.Products\obj\Debug\netcoreapp3.1\ECommerce.Api.Products.csproj.CopyComplete
+C:\Users\ander\Desktop\andersmicro\ECommerce.Api.Products\obj\Debug\netcoreapp3.1\staticwebassets\ECommerce.Api.Products.StaticWebAssets.Manifest.cache
+C:\Users\ander\Desktop\andersmicro\ECommerce.Api.Products\obj\Debug\netcoreapp3.1\staticwebassets\ECommerce.Api.Products.StaticWebAssets.xml
+C:\Users\ander\Desktop\andersmicro\ECommerce.Api.Products\obj\Debug\netcoreapp3.1\ECommerce.Api.Products.dll
+C:\Users\ander\Desktop\andersmicro\ECommerce.Api.Products\obj\Debug\netcoreapp3.1\ECommerce.Api.Products.pdb
+C:\Users\ander\Desktop\andersmicro\ECommerce.Api.Products\obj\Debug\netcoreapp3.1\ECommerce.Api.Products.genruntimeconfig.cache
+C:\Users\ander\Desktop\Microservices\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\appsettings.Development.json
+C:\Users\ander\Desktop\Microservices\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Users\ander\Desktop\Microservices\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
+C:\Users\ander\Desktop\Microservices\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\ECommerce.Api.Products.exe
+C:\Users\ander\Desktop\Microservices\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\ECommerce.Api.Products.deps.json
+C:\Users\ander\Desktop\Microservices\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\ECommerce.Api.Products.runtimeconfig.json
+C:\Users\ander\Desktop\Microservices\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\ECommerce.Api.Products.runtimeconfig.dev.json
+C:\Users\ander\Desktop\Microservices\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\ECommerce.Api.Products.dll
+C:\Users\ander\Desktop\Microservices\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\ECommerce.Api.Products.pdb
+C:\Users\ander\Desktop\Microservices\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\AutoMapper.dll
+C:\Users\ander\Desktop\Microservices\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\ander\Desktop\Microservices\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\Microsoft.ApplicationInsights.dll
+C:\Users\ander\Desktop\Microservices\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\Microsoft.ApplicationInsights.AspNetCore.dll
+C:\Users\ander\Desktop\Microservices\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\Microsoft.AI.DependencyCollector.dll
+C:\Users\ander\Desktop\Microservices\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\Microsoft.AI.EventCounterCollector.dll
+C:\Users\ander\Desktop\Microservices\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\ander\Desktop\Microservices\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\Microsoft.AI.WindowsServer.dll
+C:\Users\ander\Desktop\Microservices\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\ander\Desktop\Microservices\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\ander\Desktop\Microservices\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\Microsoft.Bcl.HashCode.dll
+C:\Users\ander\Desktop\Microservices\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\ander\Desktop\Microservices\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
+C:\Users\ander\Desktop\Microservices\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\ander\Desktop\Microservices\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\ander\Desktop\Microservices\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\ander\Desktop\Microservices\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DiagnosticAdapter.dll
+C:\Users\ander\Desktop\Microservices\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.ApplicationInsights.dll
+C:\Users\ander\Desktop\Microservices\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\Microsoft.Extensions.PlatformAbstractions.dll
+C:\Users\ander\Desktop\Microservices\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\Microsoft.Identity.Client.dll
+C:\Users\ander\Desktop\Microservices\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\ander\Desktop\Microservices\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
+C:\Users\ander\Desktop\Microservices\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\System.Diagnostics.PerformanceCounter.dll
+C:\Users\ander\Desktop\Microservices\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\System.Runtime.Caching.dll
+C:\Users\ander\Desktop\Microservices\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
+C:\Users\ander\Desktop\Microservices\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll
+C:\Users\ander\Desktop\Microservices\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll
+C:\Users\ander\Desktop\Microservices\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+C:\Users\ander\Desktop\Microservices\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+C:\Users\ander\Desktop\Microservices\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+C:\Users\ander\Desktop\Microservices\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netstandard1.3\System.Data.SqlClient.dll
+C:\Users\ander\Desktop\Microservices\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard1.3\System.Data.SqlClient.dll
+C:\Users\ander\Desktop\Microservices\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Diagnostics.PerformanceCounter.dll
+C:\Users\ander\Desktop\Microservices\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
+C:\Users\ander\Desktop\Microservices\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
+C:\Users\ander\Desktop\Microservices\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\ander\Desktop\Microservices\ECommerce.Api.Products\obj\Debug\netcoreapp3.1\ECommerce.Api.Products.csprojAssemblyReference.cache
+C:\Users\ander\Desktop\Microservices\ECommerce.Api.Products\obj\Debug\netcoreapp3.1\ECommerce.Api.Products.AssemblyInfoInputs.cache
+C:\Users\ander\Desktop\Microservices\ECommerce.Api.Products\obj\Debug\netcoreapp3.1\ECommerce.Api.Products.AssemblyInfo.cs
+C:\Users\ander\Desktop\Microservices\ECommerce.Api.Products\obj\Debug\netcoreapp3.1\ECommerce.Api.Products.RazorTargetAssemblyInfo.cache
+C:\Users\ander\Desktop\Microservices\ECommerce.Api.Products\obj\Debug\netcoreapp3.1\ECommerce.Api.Products.csproj.CopyComplete
+C:\Users\ander\Desktop\Microservices\ECommerce.Api.Products\obj\Debug\netcoreapp3.1\staticwebassets\ECommerce.Api.Products.StaticWebAssets.Manifest.cache
+C:\Users\ander\Desktop\Microservices\ECommerce.Api.Products\obj\Debug\netcoreapp3.1\staticwebassets\ECommerce.Api.Products.StaticWebAssets.xml
+C:\Users\ander\Desktop\Microservices\ECommerce.Api.Products\obj\Debug\netcoreapp3.1\ECommerce.Api.Products.dll
+C:\Users\ander\Desktop\Microservices\ECommerce.Api.Products\obj\Debug\netcoreapp3.1\ECommerce.Api.Products.pdb
+C:\Users\ander\Desktop\Microservices\ECommerce.Api.Products\obj\Debug\netcoreapp3.1\ECommerce.Api.Products.genruntimeconfig.cache
+C:\Users\ander\Desktop\Microservices\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\ander\Desktop\Microservices\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\ander\Desktop\Microservices\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.dll
+C:\Users\ander\Desktop\Microservices\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\ander\Desktop\Microservices\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Binder.dll
+C:\Users\ander\Desktop\Microservices\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\ander\Desktop\Microservices\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\ander\Desktop\Microservices\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.dll
+C:\Users\ander\Desktop\Microservices\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\ander\Desktop\Microservices\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
+C:\Users\ander\Desktop\Microservices\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+C:\Users\ander\Desktop\Microservices\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\ander\Desktop\Microservices\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.InMemory.dll
+C:\Users\ander\Desktop\Microservices\ECommerce.Api.Products\obj\Debug\netcoreapp3.1\ECommerce.Api.Products.csproj.CoreCompileInputs.cache
+C:\Users\ander\Desktop\Microservices\ECommerce.Api.Products\obj\Debug\netcoreapp3.1\ECommerce.Api.Products.MvcApplicationPartsAssemblyInfo.cache

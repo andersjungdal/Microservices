@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "EQdNU/O8xoJ1IneHwBzjps6akFmhHoGvQ5rx6sVfR/FfxCIfvrSfuMLXY40ickF/lFCW7tWzzrEZQd2p2jPcRw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\ander\\Desktop\\Microservices\\ECommerce.RabbitMQ.Bus\\ECommerce.RabbitMQ.Bus.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ander\\.nuget\\packages\\mediatr\\8.0.1\\mediatr.8.0.1.nupkg.sha512",
+    "C:\\Users\\ander\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\3.1.3\\microsoft.extensions.dependencyinjection.3.1.3.nupkg.sha512",
+    "C:\\Users\\ander\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\3.1.3\\microsoft.extensions.dependencyinjection.abstractions.3.1.3.nupkg.sha512",
+    "C:\\Users\\ander\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\ander\\.nuget\\packages\\rabbitmq.client\\5.1.2\\rabbitmq.client.5.1.2.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,39 @@
+﻿@page "/counter"
+
+<h1>Create new Product</h1>
+
+<h4>Product</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="PostInstallation">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <h5>Name</h5>
+                @*<label asp-for="ForventetÅrsforbrug" class="control-label"></label>*@
+                <input asp-for="ForventetÅrsforbrug" class="form-control" />
+                <span asp-validation-for="ForventetÅrsforbrug" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <h5>Price</h5>
+                @*<label asp-for="AflæsningsFrekvens" class="control-label"></label>*@
+                <input asp-for="AflæsningsFrekvens" class="form-control" />
+                <span asp-validation-for="AflæsningsFrekvens" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <h5>Inventory</h5>
+                @*<label asp-for="Aflæsningsform" class="control-label"></label>*@
+                <input asp-for="Aflæsningsform" class="form-control" />
+                <span asp-validation-for="Aflæsningsform" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Opret" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+@code {
+
+
+
+}
