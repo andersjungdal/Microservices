@@ -16,6 +16,8 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using ECommerce.RabbitMQ.IoC;
 using MediatR;
+using ECommerce.Api.Customers.Domain.CommandHandlers;
+using ECommerce.Api.Customers.Domain.Commands;
 
 namespace ECommerce.Api.Customers
 {
@@ -43,6 +45,7 @@ namespace ECommerce.Api.Customers
             services.AddControllers();
             services.AddMediatR(typeof(Startup));
             services.AddRabbitMq();
+            services.AddTransient<IRequestHandler<CreatePostCustomerCommand,bool>, PostCustomerCommandHandler>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

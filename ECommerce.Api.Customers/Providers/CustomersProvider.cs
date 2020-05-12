@@ -1,6 +1,8 @@
 ﻿using AutoMapper;
 using ECommerce.Api.Customers.Db;
+using ECommerce.Api.Customers.Domain.Commands;
 using ECommerce.Api.Customers.Interfaces;
+using ECommerce.RabbitMQ.Bus.Bus.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
@@ -17,14 +19,16 @@ namespace ECommerce.Api.Customers.Providers
         private readonly ILogger<CustomersProvider> logger;
         private readonly IMapper mapper;
         private readonly IConfigurationProvider configurationProvider;
+        private readonly IEventBus eventBus;
 
         public CustomersProvider(CustomersDbContext dbContext, ILogger<CustomersProvider> logger, IMapper mapper,
-            IConfigurationProvider configurationProvider)
+            IConfigurationProvider configurationProvider, IEventBus eventBus)
         {
             this.dbContext = dbContext;
             this.logger = logger;
             this.mapper = mapper;
             this.configurationProvider = configurationProvider;
+            this.eventBus = eventBus;
             //SeedData();
         }
 
@@ -85,6 +89,8 @@ namespace ECommerce.Api.Customers.Providers
         {
             try
             {
+
+
                 logger?.LogInformation("Creating customer");
                 var mapper = configurationProvider.CreateMapper();
                 var newcustomer = mapper.Map<Db.Customer>(customer);
@@ -93,8 +99,14 @@ namespace ECommerce.Api.Customers.Providers
                     dbContext.Customers.Add(newcustomer);
                     await dbContext.SaveChangesAsync();
                     logger?.LogInformation($"product created {newcustomer}");
+
+                    var createPostCustomerCommand = new CreatePostCustomerCommand(newcustomer.Id, customer.Name, customer.Address);
+                    await eventBus.SendCommand(createPostCustomerCommand);
+
                     return (true, newcustomer, null);
                 }
+
+
                 return (false, null, "Not created");
             }
             catch (Exception ex)

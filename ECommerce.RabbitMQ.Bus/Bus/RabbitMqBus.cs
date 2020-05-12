@@ -38,7 +38,7 @@ namespace ECommerce.RabbitMQ.Bus.Bus
         {
             var factory = new ConnectionFactory
             {
-                HostName = "localhost"
+                Uri = new Uri("amqp://admin:iamadmin@localhost:5672")
             };
 
             using IConnection connection = factory.CreateConnection();
@@ -47,7 +47,7 @@ namespace ECommerce.RabbitMQ.Bus.Bus
             var message = JsonConvert.SerializeObject(@event);
             var body = Encoding.UTF8.GetBytes(message);
 
-            channel.ExchangeDeclare(eventName, ExchangeType.Fanout);
+            channel.ExchangeDeclare(eventName, ExchangeType.Fanout, true);
             channel.BasicPublish(eventName, "", null, body);
         }
 
