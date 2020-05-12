@@ -19,6 +19,17 @@ namespace ECommerce.Api.Search.Controllers
             this.searchService = searchService;
         }
 
+        [HttpGet]
+        public async Task<IActionResult> GetAllSearchesAsync()
+        {
+            var result = await searchService.GetAllSearchesAsync();
+            if (result.IsSuccess)
+            {
+                return Ok(result.SearchResults);
+            }
+            return NotFound();
+        }
+
         [HttpPost]
         public async Task<IActionResult> SearchAsync(SearchTerm term)
         {

@@ -1,5 +1,8 @@
-﻿using ECommerce.Api.Search.Interfaces;
+﻿using ECommerce.Api.Search.Db;
+using ECommerce.Api.Search.Interfaces;
 using ECommerce.Api.Search.Models;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,13 +15,39 @@ namespace ECommerce.Api.Search.Services
         private readonly IOrdersService ordersService;
         private readonly IProductsService productsService;
         private readonly ICustomersService customersService;
+        private readonly SearchesDbContext searchesDbContext;
+        private readonly ILogger logger;
 
-        public SearchService(IOrdersService ordersService, IProductsService productsService, ICustomersService customersService)
+        public SearchService(IOrdersService ordersService, IProductsService productsService, ICustomersService customersService, SearchesDbContext searchesDbContext, ILogger logger )
         {
             this.ordersService = ordersService;
             this.productsService = productsService;
             this.customersService = customersService;
+            this.searchesDbContext = searchesDbContext;
+            this.logger = logger;
         }
+
+        public async Task<(bool IsSuccess, dynamic SearchResults, string ErrorMessage)> GetAllSearchesAsync()
+        {
+            try
+            {
+                logger?.LogInformation("Querying customers");
+                var searches = await searchesDbContext.Customers.Include(p => p.Orders.Select(n => n.Items)).ToListAsync();
+                if (searches != null && searches.Any())
+                {
+                    logger?.LogInformation($"{searches.Count} customer(s) found");
+                    //var result = mapper.Map<IEnumerable<Db.Customer>, IEnumerable<Models.Customer>>(customers);
+                    return (true, searches, null);
+                }
+                return (false, null, "Not found");
+            }
+            catch (Exception ex)
+            {
+                logger?.LogError(ex.ToString());
+                return (false, null, ex.Message);
+            }
+        }
+
         public async Task<(bool IsSuccess, dynamic SearchResults)> SearchAsync(int customerId)
         {
             var ordersResult = await ordersService.GetOrdersAsync(customerId);

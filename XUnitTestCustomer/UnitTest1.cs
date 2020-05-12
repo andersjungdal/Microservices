@@ -24,7 +24,7 @@ namespace ECommerce.Api.Products.Tests
             var configuration = new MapperConfiguration(cfg => cfg.AddProfile(customerProfile));
             var mapper = new Mapper(configuration);
 
-            var customersProvider = new CustomersProvider(dbContext, null, mapper, configuration);
+            var customersProvider = new CustomersProvider(dbContext, null, mapper, configuration, null);
 
             var customer = await customersProvider.GetCustomersAsync();
             Assert.True(customer.IsSuccess);
@@ -44,7 +44,7 @@ namespace ECommerce.Api.Products.Tests
             var configuration = new MapperConfiguration(cfg => cfg.AddProfile(customerProfile));
             var mapper = new Mapper(configuration);
 
-            var customersProvider = new CustomersProvider(dbContext, null, mapper, configuration);
+            var customersProvider = new CustomersProvider(dbContext, null, mapper, configuration, null);
 
             var customer = await customersProvider.GetCustomerAsync(1);
             Assert.True(customer.IsSuccess);
@@ -65,7 +65,7 @@ namespace ECommerce.Api.Products.Tests
             var configuration = new MapperConfiguration(cfg => cfg.AddProfile(customerProfile));
             var mapper = new Mapper(configuration);
 
-            var customersProvider = new CustomersProvider(dbContext, null, mapper, configuration);
+            var customersProvider = new CustomersProvider(dbContext, null, mapper, configuration, null);
 
             var customer = await customersProvider.GetCustomerAsync(-1);
             Assert.False(customer.IsSuccess);

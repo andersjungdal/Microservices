@@ -2,11 +2,13 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using ECommerce.Api.Search.Db;
 using ECommerce.Api.Search.Interfaces;
 using ECommerce.Api.Search.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -44,7 +46,8 @@ namespace ECommerce.Api.Search
             services.AddScoped<ISearchService, SearchService>();
             services.AddScoped<ICustomersService, CustomersService>();
             services.AddControllers();
-            
+            services.AddDbContext<SearchesDbContext>(options =>
+                options.UseSqlServer("Data Source=LAPTOP-U3V1724K;Initial Catalog=Microservices.Search.Database;Integrated Security=True"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
