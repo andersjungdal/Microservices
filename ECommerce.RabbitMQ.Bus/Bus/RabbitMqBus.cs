@@ -41,14 +41,21 @@ namespace ECommerce.RabbitMQ.Bus.Bus
                 Uri = new Uri("amqp://admin:iamadmin@localhost:5672")
             };
 
-            using IConnection connection = factory.CreateConnection();
-            using IModel channel = connection.CreateModel();
-            var eventName = @event.GetType().Name;
-            var message = JsonConvert.SerializeObject(@event);
-            var body = Encoding.UTF8.GetBytes(message);
+            using (var connection = factory.CreateConnection())
+            using (var channel = connection.CreateModel())
+            {
+                var eventName = @event.GetType().Name;
+                var message = JsonConvert.SerializeObject(@event);
+                var body = Encoding.UTF8.GetBytes(message);
 
-            channel.ExchangeDeclare(eventName, ExchangeType.Fanout, true);
-            channel.BasicPublish(eventName, "", null, body);
+                //channel.ExchangeDeclare(eventName, ExchangeType.Fanout);
+                channel.QueueDeclare(eventName, false, false, false, null);
+                var properties = channel.CreateBasicProperties();
+                properties.Persistent = false;
+                channel.BasicPublish("",eventName, null, body);
+                //channel.BasicPublish(eventName, "", null, body);
+
+            }
         }
 
         public void Subscribe<T, TH>() where T : Event where TH : IEventHandler<T>
@@ -57,7 +64,7 @@ namespace ECommerce.RabbitMQ.Bus.Bus
             var handlerType = typeof(TH);
 
             if (!eventTypes.Contains(typeof(T))) eventTypes.Add(typeof(T));
-            if(!handlers.ContainsKey(eventName)) handlers.Add(eventName, new List<Type>());
+            if (!handlers.ContainsKey(eventName)) handlers.Add(eventName, new List<Type>());
             if (handlers[eventName].Any(x => x.GetType() == handlerType))
                 throw new ArgumentException($"Handler Type {handlerType.Name} is already registered for {eventName}",
                     nameof(handlerType));
@@ -71,20 +78,25 @@ namespace ECommerce.RabbitMQ.Bus.Bus
         {
             var factory = new ConnectionFactory
             {
-                HostName = "localhost"
+                Uri = new Uri("amqp://admin:iamadmin@localhost:5672"),
+                DispatchConsumersAsync = true
             };
 
-            var Connection = factory.CreateConnection();
-            var channel = Connection.CreateModel();
+            var connection = factory.CreateConnection();
+            var channel = connection.CreateModel();
             var eventName = typeof(T).Name;
-            var queueName = channel.QueueDeclare(eventName + "-" + Guid.NewGuid().ToString(), false, false, true, null).QueueName;
 
-            channel.ExchangeDeclare(eventName, ExchangeType.Fanout);
-            channel.QueueBind(queueName, eventName, "");
+            //var queueName = channel.QueueDeclare(eventName + "-" + Guid.NewGuid().ToString(), false, false, true, null).QueueName;
+
+
+            //channel.ExchangeDeclare(eventName, ExchangeType.Fanout);
+            //channel.QueueBind(queueName, eventName, "");
+            channel.QueueDeclare(eventName, false, false, false, null);
 
             var consumer = new AsyncEventingBasicConsumer(channel);
             consumer.Received += Consumer_Received;
-            channel.BasicConsume(queueName, true, consumer);
+            channel.BasicConsume(eventName, true, consumer);
+            //channel.BasicConsume(queueName, true, consumer);
         }
         private async Task Consumer_Received(object sender, BasicDeliverEventArgs @event)
         {
@@ -100,12 +112,13 @@ namespace ECommerce.RabbitMQ.Bus.Bus
                 Console.WriteLine(e.Message);
                 throw;
             }
-        }
+        
+    }
 
         private async Task ProcessEvent(string eventName, string message)
         {
-            if(handlers.ContainsKey(eventName))
-                using(var scope = serviceScopeFactory.CreateScope())
+            if (handlers.ContainsKey(eventName))
+                using (var scope = serviceScopeFactory.CreateScope())
                 {
                     var subscriptions = handlers[eventName];
                     foreach (var subscription in subscriptions)
