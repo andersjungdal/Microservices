@@ -15,10 +15,10 @@ namespace ECommerce.RabbitMQ.IoC
         public static void AddRabbitMq(this IServiceCollection services)
         {
             //Domain Bus
-            services.AddSingleton<IEventBus, RabbitMqBus>(sp =>
+            services.AddSingleton<IEventBus, RabbitMQBus>(sp =>
             {
                 var scopeFactory = sp.GetRequiredService<IServiceScopeFactory>();
-                return new RabbitMqBus(sp.GetService<IMediator>(), scopeFactory);
+                return new RabbitMQBus(sp.GetService<IMediator>(), scopeFactory);
             });
         }
 
