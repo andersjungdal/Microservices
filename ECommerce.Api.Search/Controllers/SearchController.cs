@@ -19,6 +19,17 @@ namespace ECommerce.Api.Search.Controllers
             this.searchService = searchService;
         }
 
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetSearchesAsync(int id)
+        {
+            var result = await searchService.GetSearchesAsync(id);
+            if (result.IsSuccess)
+            {
+                return Ok(result.SearchResults);
+            }
+            return NotFound();
+        }
+
         [HttpGet]
         public async Task<IActionResult> GetAllSearchesAsync()
         {
@@ -29,6 +40,7 @@ namespace ECommerce.Api.Search.Controllers
             }
             return NotFound();
         }
+
 
         [HttpPost]
         public async Task<IActionResult> SearchAsync(SearchTerm term)

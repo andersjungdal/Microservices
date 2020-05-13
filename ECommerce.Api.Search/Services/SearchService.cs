@@ -16,34 +16,67 @@ namespace ECommerce.Api.Search.Services
         private readonly IProductsService productsService;
         private readonly ICustomersService customersService;
         private readonly SearchesDbContext searchesDbContext;
-        private readonly ILogger logger;
 
-        public SearchService(IOrdersService ordersService, IProductsService productsService, ICustomersService customersService, SearchesDbContext searchesDbContext, ILogger logger )
+
+        public SearchService(IOrdersService ordersService, IProductsService productsService, ICustomersService customersService, SearchesDbContext searchesDbContext)
         {
             this.ordersService = ordersService;
             this.productsService = productsService;
             this.customersService = customersService;
             this.searchesDbContext = searchesDbContext;
-            this.logger = logger;
+
+        }
+
+
+        public async Task<(bool IsSuccess, dynamic SearchResults, string ErrorMessage)> GetSearchesAsync(int id)
+        {
+            try
+            {
+
+                //var searches = await searchesDbContext.Customers.FirstOrDefaultAsync(l => l.Id == id);
+
+                var searches = await searchesDbContext.Customers
+                    .Include(o => o.Orders)
+                    .ThenInclude(c => c.Items)
+                    .FirstOrDefaultAsync(x => x.Id == id);
+                
+                if (searches != null)
+                {
+                    
+                    //var result = mapper.Map<IEnumerable<Db.Customer>, IEnumerable<Models.Customer>>(customers);
+                    return (true, searches, null);
+                }
+                return (false, null, "It was not found");
+            }
+            catch (Exception ex)
+            {
+                
+                return (false, null, ex.Message);
+            }
         }
 
         public async Task<(bool IsSuccess, dynamic SearchResults, string ErrorMessage)> GetAllSearchesAsync()
         {
             try
             {
-                logger?.LogInformation("Querying customers");
-                var searches = await searchesDbContext.Customers.Include(p => p.Orders.Select(n => n.Items)).ToListAsync();
-                if (searches != null && searches.Any())
+                //var searches = await searchesDbContext.Customers.FirstOrDefaultAsync(l => l.Id == id);
+
+                var searches = await searchesDbContext.Customers
+                    .Include(o => o.Orders)
+                    .ThenInclude(c => c.Items)
+                    .ToListAsync();
+
+                if (searches != null)
                 {
-                    logger?.LogInformation($"{searches.Count} customer(s) found");
+
                     //var result = mapper.Map<IEnumerable<Db.Customer>, IEnumerable<Models.Customer>>(customers);
                     return (true, searches, null);
                 }
-                return (false, null, "Not found");
+                return (false, null, "It was not found");
             }
             catch (Exception ex)
             {
-                logger?.LogError(ex.ToString());
+
                 return (false, null, ex.Message);
             }
         }

@@ -9,6 +9,7 @@ namespace ECommerce.Api.Search.Interfaces
     public interface ISearchService
     {
         Task<(bool IsSuccess, dynamic SearchResults)>SearchAsync(int customerId);
+        Task<(bool IsSuccess, dynamic SearchResults, string ErrorMessage)> GetSearchesAsync(int id);
         Task<(bool IsSuccess, dynamic SearchResults, string ErrorMessage)> GetAllSearchesAsync();
     }
 }
