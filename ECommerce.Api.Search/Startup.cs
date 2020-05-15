@@ -20,6 +20,7 @@ using Microsoft.Extensions.Logging;
 using Polly;
 using MediatR;
 using ECommerce.RabbitMQ.IoC;
+using AutoMapper;
 
 namespace ECommerce.Api.Search
 {
@@ -60,6 +61,8 @@ namespace ECommerce.Api.Search
             services.AddTransient<PostCustomerEventHandler>();
 
             services.AddTransient<IEventHandler<PostCustomerCreatedEvent>, PostCustomerEventHandler>();
+
+            //services.AddAutoMapper(typeof(Startup));
 
         }
 

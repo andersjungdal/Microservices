@@ -9,7 +9,9 @@ namespace ECommerce.Api.Products.Interfaces
     {
         Task<(bool IsSuccess, IEnumerable<Product> Products, string ErrorMessage)> GetProductsAsync();
         Task<(bool IsSuccess, Product Product, string ErrorMessage)> GetProductAsync(int id);
-        Task<(bool IsSuccess, Db.Product product, string ErrorMessage)> PostProductAsync([FromBody] Product product);
-        Task<(bool IsSuccess, Db.Product product, string ErrorMessage)> DeleteProductAsync(int id);
+        Task<(bool IsSuccess, Db.Product Product, string ErrorMessage)> PostProductAsync([FromBody] Product product);
+        Task<(bool IsSuccess, Db.Product Product, string ErrorMessage)> DeleteProductAsync(int id);
+        //virker ikke
+        //Task<(bool IsSuccess, Db.Product Product, string ErrorMessage)> UpdateProductAsync(int id, [FromBody] Product product);
     }
 }

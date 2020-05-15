@@ -43,7 +43,7 @@ namespace ECommerce.Api.Products.Controllers
             var newproduct =  await productsProvider.PostProductAsync(product);
             if (newproduct.IsSuccess)
             {
-                return Ok(newproduct.product);
+                return Ok(newproduct.Product);
             }
             return NotFound(newproduct.ErrorMessage);
         }
@@ -57,5 +57,16 @@ namespace ECommerce.Api.Products.Controllers
             }
             return NotFound(product.ErrorMessage);
         }
+        //virker ikke
+        //[HttpPost("{id}",Name = nameof(UpdateProductAsync))]
+        //public async Task<IActionResult> UpdateProductAsync(int id, Product product)
+        //{
+        //    var editproduct = await productsProvider.UpdateProductAsync(id, product);
+        //    if (editproduct.IsSuccess)
+        //    {
+        //        return Ok(editproduct);
+        //    }
+        //    return NotFound(editproduct.ErrorMessage);
+        //}
     }
 }

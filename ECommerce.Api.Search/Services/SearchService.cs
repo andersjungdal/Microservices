@@ -1,4 +1,5 @@
-﻿using ECommerce.Api.Search.Db;
+﻿using AutoMapper;
+using ECommerce.Api.Search.Db;
 using ECommerce.Api.Search.Interfaces;
 using ECommerce.Api.Search.Models;
 using Microsoft.EntityFrameworkCore;
@@ -16,15 +17,15 @@ namespace ECommerce.Api.Search.Services
         //private readonly IProductsService productsService;
         //private readonly ICustomersService customersService;
         private readonly SearchesDbContext searchesDbContext;
+        private readonly IMapper mapper;
 
-
-        public SearchService(/*IOrdersService ordersService, IProductsService productsService, ICustomersService customersService,*/ SearchesDbContext searchesDbContext)
+        public SearchService(/*IOrdersService ordersService, IProductsService productsService, ICustomersService customersService,*/ SearchesDbContext searchesDbContext, IMapper mapper)
         {
             //this.ordersService = ordersService;
             //this.productsService = productsService;
             //this.customersService = customersService;
             this.searchesDbContext = searchesDbContext;
-            
+            this.mapper = mapper;
         }
 
 
@@ -41,8 +42,8 @@ namespace ECommerce.Api.Search.Services
                 
                 if (searches != null)
                 {
-                    
-                    //var result = mapper.Map<IEnumerable<Db.Customer>, IEnumerable<Models.Customer>>(customers);
+
+                    //var result = mapper.Map<Db.Customer, Models.Customer>(searches);
                     return (true, searches, null);
                 }
                 return (false, null, "It was not found");
@@ -67,8 +68,7 @@ namespace ECommerce.Api.Search.Services
 
                 if (searches != null)
                 {
-
-                    //var result = mapper.Map<IEnumerable<Db.Customer>, IEnumerable<Models.Customer>>(customers);
+                    //var result = mapper.Map<IEnumerable<Models.Customer>>(searches);
                     return (true, searches, null);
                 }
                 return (false, null, "It was not found");

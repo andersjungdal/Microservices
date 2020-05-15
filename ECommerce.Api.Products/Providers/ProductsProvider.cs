@@ -10,6 +10,7 @@ using AutoMapper;
 using AutoMapper.QueryableExtensions;
 using Microsoft.AspNetCore.Mvc;
 using ECommerce.Api.Products.Db;
+using Microsoft.EntityFrameworkCore.Internal;
 
 namespace ECommerce.Api.Products.Providers
 {
@@ -84,7 +85,7 @@ namespace ECommerce.Api.Products.Providers
             }
         }
 
-        public async Task<(bool IsSuccess, Db.Product product, string ErrorMessage)> PostProductAsync([FromBody] Models.Product product)
+        public async Task<(bool IsSuccess, Db.Product Product, string ErrorMessage)> PostProductAsync([FromBody] Models.Product product)
         {
             try
             {
@@ -108,7 +109,7 @@ namespace ECommerce.Api.Products.Providers
             }
         }
 
-        public async Task<(bool IsSuccess, Db.Product product, string ErrorMessage)> DeleteProductAsync(int id)
+        public async Task<(bool IsSuccess, Db.Product Product, string ErrorMessage)> DeleteProductAsync(int id)
         {
             try
             {
@@ -126,5 +127,26 @@ namespace ECommerce.Api.Products.Providers
                 return (false, null, ex.Message);
             }
         }
+        //virker ikke
+        //public async Task<(bool IsSuccess, Db.Product Product, string ErrorMessage)> UpdateProductAsync(int id, [FromBody] Models.Product product)
+        //{
+        //    try
+        //    {
+        //        var updateproduct = await dbContext.Products.FirstOrDefaultAsync(x => x.Id == id);
+        //        var mapper = configurationProvider.CreateMapper();
+        //        if (updateproduct == null)
+        //            return (false, null, "Not updated");
+        //        var editproduct = mapper.Map<Db.Product>(product);
+        //        editproduct.Id = id;
+        //        dbContext.Update(editproduct).State = EntityState.Modified;
+        //        await dbContext.SaveChangesAsync();
+        //        return (true, editproduct, null);
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        logger?.LogError(ex.ToString());
+        //        return (false, null, ex.Message);
+        //    }
+        //}
     }
 }
