@@ -22,6 +22,7 @@ using MediatR;
 using ECommerce.RabbitMQ.IoC;
 using AutoMapper;
 
+
 namespace ECommerce.Api.Search
 {
     public class Startup
@@ -48,19 +49,25 @@ namespace ECommerce.Api.Search
             {
                 config.BaseAddress = new Uri(Configuration["Services:Customers"]);
             });
+
             services.AddScoped<IProductsService, ProductsService>();
             services.AddScoped<IOrdersService, OrdersService>();
             services.AddScoped<ISearchService, SearchService>();
             services.AddScoped<ICustomersService, CustomersService>();
             services.AddControllers();
+
             services.AddDbContext<SearchesDbContext>(options =>
                 options.UseSqlServer("Data Source=LAPTOP-U3V1724K;Initial Catalog=Microservices.Search.Database;Integrated Security=True"));
+
             services.AddMediatR(typeof(Startup));
+
             services.AddRabbitMq();
 
             services.AddTransient<PostCustomerEventHandler>();
-
             services.AddTransient<IEventHandler<PostCustomerCreatedEvent>, PostCustomerEventHandler>();
+
+            services.AddTransient<PostProductEventHandler>();
+            services.AddTransient<IEventHandler<PostProductCreatedEvent>, PostProductEventHandler>();
 
             //services.AddAutoMapper(typeof(Startup));
 
@@ -84,6 +91,7 @@ namespace ECommerce.Api.Search
             });
 
             app.Subscribe<PostCustomerCreatedEvent, PostCustomerEventHandler>();
+            app.Subscribe<PostProductCreatedEvent, PostProductEventHandler>();
         }       
     }
 }

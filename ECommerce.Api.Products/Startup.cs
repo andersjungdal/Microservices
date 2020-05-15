@@ -1,7 +1,11 @@
 using AutoMapper;
 using ECommerce.Api.Products.Db;
+using ECommerce.Api.Products.Domain.CommandHandlers;
+using ECommerce.Api.Products.Domain.Commands;
 using ECommerce.Api.Products.Interfaces;
 using ECommerce.Api.Products.Providers;
+using ECommerce.RabbitMQ.IoC;
+using MediatR;
 using Microsoft.ApplicationInsights.AspNetCore.Extensions;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -33,6 +37,11 @@ namespace ECommerce.Api.Products
 
             //services.AddDbContext<ProductsDbContext>(opt =>
             //    opt.UseInMemoryDatabase("Products"));
+
+            services.AddMediatR(typeof(Startup));
+            services.AddRabbitMq();
+            services.AddTransient<IRequestHandler<CreatePostProductCommand, bool>, PostProductCommandHandler>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

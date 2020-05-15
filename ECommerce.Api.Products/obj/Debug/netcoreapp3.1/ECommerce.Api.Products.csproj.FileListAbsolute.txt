@@ -240,5 +240,12 @@ C:\Users\ander\Desktop\Microservices\ECommerce.Api.Products\bin\Debug\netcoreapp
 C:\Users\ander\Desktop\Microservices\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
 C:\Users\ander\Desktop\Microservices\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
 C:\Users\ander\Desktop\Microservices\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.InMemory.dll
+C:\Users\ander\Desktop\Microservices\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\MediatR.dll
+C:\Users\ander\Desktop\Microservices\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\MediatR.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\ander\Desktop\Microservices\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\RabbitMQ.Client.dll
+C:\Users\ander\Desktop\Microservices\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\ECommerce.RabbitMQ.Bus.dll
+C:\Users\ander\Desktop\Microservices\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\ECommerce.RabbitMQ.IoC.dll
+C:\Users\ander\Desktop\Microservices\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\ECommerce.RabbitMQ.IoC.pdb
+C:\Users\ander\Desktop\Microservices\ECommerce.Api.Products\bin\Debug\netcoreapp3.1\ECommerce.RabbitMQ.Bus.pdb
 C:\Users\ander\Desktop\Microservices\ECommerce.Api.Products\obj\Debug\netcoreapp3.1\ECommerce.Api.Products.csproj.CoreCompileInputs.cache
 C:\Users\ander\Desktop\Microservices\ECommerce.Api.Products\obj\Debug\netcoreapp3.1\ECommerce.Api.Products.MvcApplicationPartsAssemblyInfo.cache

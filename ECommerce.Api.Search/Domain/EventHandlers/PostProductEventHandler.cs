@@ -1,28 +1,24 @@
 ﻿using ECommerce.Api.Search.Db;
 using ECommerce.Api.Search.Domain.Events;
 using ECommerce.RabbitMQ.Bus.Bus.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace ECommerce.Api.Search.Domain.EventHandlers
 {
-    public class PostCustomerEventHandler : IEventHandler<PostCustomerCreatedEvent>
+    public class PostProductEventHandler : IEventHandler<PostProductCreatedEvent>
     {
         private readonly SearchesDbContext searchesDbContext;
 
-        public PostCustomerEventHandler(SearchesDbContext searchesDbContext)
+        public PostProductEventHandler(SearchesDbContext searchesDbContext)
         {
             this.searchesDbContext = searchesDbContext;
         }
-        public Task Handle(PostCustomerCreatedEvent @event)
+
+        public Task Handle(PostProductCreatedEvent @event)
         {
-            searchesDbContext.Customers.Add(new Customer
+            searchesDbContext.Products.Add(new Product
             {
-                Address = @event.Address,
-                Name = @event.Name,
-                CustomerId = @event.Id
+                Name = @event.Name
             });
             searchesDbContext.SaveChanges();
             return Task.CompletedTask;

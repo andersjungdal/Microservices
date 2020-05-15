@@ -17,15 +17,15 @@ namespace ECommerce.Api.Search.Services
         //private readonly IProductsService productsService;
         //private readonly ICustomersService customersService;
         private readonly SearchesDbContext searchesDbContext;
-        private readonly IMapper mapper;
+        //private readonly IMapper mapper;
 
-        public SearchService(/*IOrdersService ordersService, IProductsService productsService, ICustomersService customersService,*/ SearchesDbContext searchesDbContext, IMapper mapper)
+        public SearchService(/*IOrdersService ordersService, IProductsService productsService, ICustomersService customersService,*/ SearchesDbContext searchesDbContext/*, IMapper mapper*/)
         {
             //this.ordersService = ordersService;
             //this.productsService = productsService;
             //this.customersService = customersService;
             this.searchesDbContext = searchesDbContext;
-            this.mapper = mapper;
+            //this.mapper = mapper;
         }
 
 
