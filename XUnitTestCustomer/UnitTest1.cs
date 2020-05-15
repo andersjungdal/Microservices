@@ -8,7 +8,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace ECommerce.Api.Products.Tests
+namespace ECommerce.Api.Customers.Tests
 {
     public class CustomersServiceTest
     {

@@ -44,7 +44,7 @@ namespace ECommerce.Api.Customers.Controllers
             var newcustomer = await customersProvider.PostCustomerAsync(customer);
             if (newcustomer.IsSuccess)
             {
-                return Ok(newcustomer.customer);
+                return Ok(newcustomer.Customer);
             }
             return NotFound(newcustomer.ErrorMessage);
         }

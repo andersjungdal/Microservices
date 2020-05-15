@@ -85,7 +85,7 @@ namespace ECommerce.Api.Customers.Providers
             }
         }
 
-        public async Task<(bool IsSuccess, Db.Customer customer, string ErrorMessage)> PostCustomerAsync([FromBody] Models.Customer customer)
+        public async Task<(bool IsSuccess, Db.Customer Customer, string ErrorMessage)> PostCustomerAsync([FromBody] Models.Customer customer)
         {
             try
             {
@@ -117,7 +117,7 @@ namespace ECommerce.Api.Customers.Providers
             }
         }
 
-        public async Task<(bool IsSuccess, Db.Customer customer, string ErrorMessage)> DeleteCustomerAsync(int id)
+        public async Task<(bool IsSuccess, Db.Customer Customer, string ErrorMessage)> DeleteCustomerAsync(int id)
         {
             try
             {

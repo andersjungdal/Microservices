@@ -12,19 +12,19 @@ namespace ECommerce.Api.Search.Services
 {
     public class SearchService : ISearchService
     {
-        private readonly IOrdersService ordersService;
-        private readonly IProductsService productsService;
-        private readonly ICustomersService customersService;
+        //private readonly IOrdersService ordersService;
+        //private readonly IProductsService productsService;
+        //private readonly ICustomersService customersService;
         private readonly SearchesDbContext searchesDbContext;
 
 
-        public SearchService(IOrdersService ordersService, IProductsService productsService, ICustomersService customersService, SearchesDbContext searchesDbContext)
+        public SearchService(/*IOrdersService ordersService, IProductsService productsService, ICustomersService customersService,*/ SearchesDbContext searchesDbContext)
         {
-            this.ordersService = ordersService;
-            this.productsService = productsService;
-            this.customersService = customersService;
+            //this.ordersService = ordersService;
+            //this.productsService = productsService;
+            //this.customersService = customersService;
             this.searchesDbContext = searchesDbContext;
-
+            
         }
 
 
@@ -80,34 +80,55 @@ namespace ECommerce.Api.Search.Services
             }
         }
 
-        public async Task<(bool IsSuccess, dynamic SearchResults)> SearchAsync(int customerId)
-        {
-            var ordersResult = await ordersService.GetOrdersAsync(customerId);
-            var productsResult = await productsService.GetProductsAsync();
-            var customersResult = await customersService.GetCustomersAsync(customerId);
+        //public async Task<(bool IsSuccess, dynamic SearchResults)> SearchAsync(int customerId)
+        //{
+        //    var ordersResult = await ordersService.GetOrdersAsync(customerId);
+        //    var productsResult = await productsService.GetProductsAsync();
+        //    var customersResult = await customersService.GetCustomersAsync(customerId);
             
-            if (ordersResult.IsSuccess)
-            {              
-                    foreach (var order in ordersResult.Orders)
-                    {
-                        foreach (var item in order.Items)
-                        {
-                            item.ProductName = productsResult.IsSuccess ?
-                                productsResult.Products.FirstOrDefault(x => x.Id == item.ProductId)?.Name :
-                                "Product information is not available";
-                        }
-                    }
+        //    if (ordersResult.IsSuccess)
+        //    {              
+        //            foreach (var order in ordersResult.Orders)
+        //            {
+        //                foreach (var item in order.Items)
+        //                {
+        //                    item.ProductName = productsResult.IsSuccess ?
+        //                        productsResult.Products.FirstOrDefault(x => x.Id == item.ProductId)?.Name :
+        //                        "Product information is not available";
+        //                }
+        //            }
 
-                var result = new
-                {
-                    Customer = ordersResult.IsSuccess ?
-                        customersResult.Customer :
-                            new { Name = "Customer information is not available" },
-                    Orders = ordersResult.Orders
-                };
-                return (true, result);
+        //        var result = new
+        //        {
+        //            Customer = ordersResult.IsSuccess ?
+        //                customersResult.Customer :
+        //                    new { Name = "Customer information is not available" },
+        //            Orders = ordersResult.Orders
+        //        };
+        //        return (true, result);
+        //    }
+        //    return (false, null);
+        //}
+
+        public async Task<(bool IsSuccess, dynamic SearchResults, string ErrorMessage)> DeleteSearchAsync(int id)
+        {
+            try 
+            { 
+                var searches = await searchesDbContext.Customers
+                        .Include(o => o.Orders)
+                        .ThenInclude(c => c.Items)
+                        .FirstOrDefaultAsync(x => x.Id == id);
+                if (searches == null) return (false, null, "Not updated");
+                searchesDbContext.Customers.Remove(searches);
+                await searchesDbContext.SaveChangesAsync();
+                return (true, searches, null);              
             }
-            return (false, null);
-        }
+            catch (Exception ex)
+            {
+
+                return (false, null, ex.Message);
+            }
+
+}
     }
 }
