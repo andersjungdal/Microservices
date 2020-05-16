@@ -69,6 +69,9 @@ namespace ECommerce.Api.Search
             services.AddTransient<PostProductEventHandler>();
             services.AddTransient<IEventHandler<PostProductCreatedEvent>, PostProductEventHandler>();
 
+            services.AddTransient<PostOrderEventHandler>();
+            services.AddTransient<IEventHandler<PostOrderCreatedEvent>, PostOrderEventHandler>();
+
             //services.AddAutoMapper(typeof(Startup));
 
         }
@@ -92,6 +95,7 @@ namespace ECommerce.Api.Search
 
             app.Subscribe<PostCustomerCreatedEvent, PostCustomerEventHandler>();
             app.Subscribe<PostProductCreatedEvent, PostProductEventHandler>();
+            app.Subscribe<PostOrderCreatedEvent, PostOrderEventHandler>();
         }       
     }
 }

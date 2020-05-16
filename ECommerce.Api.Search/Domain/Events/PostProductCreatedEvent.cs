@@ -8,16 +8,10 @@ namespace ECommerce.Api.Search.Domain.Events
 {
     public class PostProductCreatedEvent : Event
     {
-        public int Id { get; set; }
         public string Name { get; set; }
-        public decimal Price { get; set; }
-        public int Inventory { get; set; }
-        public PostProductCreatedEvent(int id, string name, decimal price, int inventory)
+        public PostProductCreatedEvent(string name)
         {
-            Id = id;
             Name = name;
-            Price = price;
-            Inventory = inventory;
         }
     }
 }

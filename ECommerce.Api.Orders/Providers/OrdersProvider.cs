@@ -1,6 +1,8 @@
 ﻿using AutoMapper;
 using ECommerce.Api.Orders.Db;
+using ECommerce.Api.Orders.Domain.Commands;
 using ECommerce.Api.Orders.Interfaces;
+using ECommerce.RabbitMQ.Bus.Bus.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
@@ -17,13 +19,16 @@ namespace ECommerce.Api.Orders.Providers
         private readonly ILogger<OrdersProvider> logger;
         private readonly IMapper mapper;
         private readonly IConfigurationProvider configurationProvider;
+        private readonly IEventBus eventBus;
 
-        public OrdersProvider(OrdersDbContext dbContext, ILogger<OrdersProvider> logger, IMapper mapper, IConfigurationProvider configurationProvider)
+        public OrdersProvider(OrdersDbContext dbContext, ILogger<OrdersProvider> logger, IMapper mapper, 
+            IConfigurationProvider configurationProvider, IEventBus eventBus)
         {
             this.dbContext = dbContext;
             this.logger = logger;
             this.mapper = mapper;
             this.configurationProvider = configurationProvider;
+            this.eventBus = eventBus;
             //SeedData();
         }
 
@@ -140,8 +145,8 @@ namespace ECommerce.Api.Orders.Providers
                     await dbContext.SaveChangesAsync();
                     logger?.LogInformation($"order created {neworder}");
 
-                    //var createPostCustomerCommand = new CreatePostCustomerCommand(newcustomer.Id, customer.Name, customer.Address);
-                    //await eventBus.SendCommand(createPostCustomerCommand);
+                    var createPostOrderCommand = new CreatePostOrderCommand(order.OrderDate, order.Total, order.Items);
+                    await eventBus.SendCommand(createPostOrderCommand);
 
                     return (true, neworder, null);
                 }
