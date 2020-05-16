@@ -1,7 +1,6 @@
 using AutoMapper;
 using ECommerce.Api.Products.Db;
-using ECommerce.Api.Products.Domain.CommandHandlers;
-using ECommerce.Api.Products.Domain.Commands;
+
 using ECommerce.Api.Products.Interfaces;
 using ECommerce.Api.Products.Providers;
 using ECommerce.RabbitMQ.IoC;
@@ -13,6 +12,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using ECommerce.Api.Products.Domain.CommandHandlers;
+using ECommerce.Api.Products.Domain.Commands;
 
 namespace ECommerce.Api.Products
 {
@@ -39,8 +40,9 @@ namespace ECommerce.Api.Products
             //    opt.UseInMemoryDatabase("Products"));
 
             services.AddMediatR(typeof(Startup));
-            services.AddRabbitMq();
             services.AddTransient<IRequestHandler<CreatePostProductCommand, bool>, PostProductCommandHandler>();
+            services.AddRabbitMq();
+
 
         }
 

@@ -11,6 +11,8 @@ using AutoMapper.QueryableExtensions;
 using Microsoft.AspNetCore.Mvc;
 using ECommerce.Api.Products.Db;
 using Microsoft.EntityFrameworkCore.Internal;
+using ECommerce.RabbitMQ.Bus.Bus.Interfaces;
+using ECommerce.Api.Products.Domain.Commands;
 
 namespace ECommerce.Api.Products.Providers
 {
@@ -20,14 +22,16 @@ namespace ECommerce.Api.Products.Providers
         private readonly ILogger<ProductsProvider> logger;
         private readonly IMapper mapper;
         private readonly IConfigurationProvider configurationProvider;
+        private readonly IEventBus eventBus;
 
         public ProductsProvider(Db.ProductsDbContext dbContext, ILogger<ProductsProvider> logger, IMapper mapper, 
-            IConfigurationProvider configurationProvider)
+            IConfigurationProvider configurationProvider, IEventBus eventBus)
         {
             this.dbContext = dbContext;
             this.logger = logger;
             this.mapper = mapper;
             this.configurationProvider = configurationProvider;
+            this.eventBus = eventBus;
             //SeedData();
         }
 
@@ -97,6 +101,11 @@ namespace ECommerce.Api.Products.Providers
                     dbContext.Products.Add(newproduct);
                     await dbContext.SaveChangesAsync();
                     logger?.LogInformation($"product created {newproduct}");
+
+                    var createPostProductCommand = new CreatePostProductCommand(product.Name);
+                    await eventBus.SendCommand(createPostProductCommand);
+
+
                     return (true, newproduct, null);
                 }
                 return (false, null, "Not created");               

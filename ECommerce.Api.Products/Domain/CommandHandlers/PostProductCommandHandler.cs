@@ -18,9 +18,10 @@ namespace ECommerce.Api.Products.Domain.CommandHandlers
         {
             this.eventBus = eventBus;
         }
+
         public Task<bool> Handle(CreatePostProductCommand request, CancellationToken cancellationToken)
         {
-            eventBus.PublishEvent(new PostProductCreatedEvent(request.Id, request.Name, request.Price, request.Inventory));
+            eventBus.PublishEvent(new PostProductCreatedEvent(request.Name));
             return Task.FromResult(true);
         }
     }

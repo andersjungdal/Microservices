@@ -7,12 +7,9 @@ namespace ECommerce.Api.Products.Domain.Commands
 {
     public class CreatePostProductCommand : PostProductCommand
     {
-        public CreatePostProductCommand(int id, string name, decimal price, int inventory)
+        public CreatePostProductCommand(string name)
         {
-            Id = id;
             Name = name;
-            Price = price;
-            Inventory = inventory;         
         }
     }
 }
