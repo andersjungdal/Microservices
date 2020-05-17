@@ -3,7 +3,7 @@
 @inject NavigationManager NavigationManager
 
     <h3>Chat</h3>
-    <select @bind="gruppeNavn">
+    <select @bind="groupName">
         <option value="testroom1">rum1</option>
         <option value="testroom2">rum2</option>
         <option value="testroom3">rum3</option>
@@ -22,7 +22,7 @@
     </label>
 </div>
 <button @onclick="JoinGroup">Join</button>
-<button @onclick="SendTilGruppe">Send</button>
+<button @onclick="SendGroup">Send</button>
 
 <hr>
 
@@ -38,7 +38,7 @@
     private string userName;
     private string userMessage;
     private List<string> messages = new List<string>();
-    private string gruppeNavn;
+    private string groupName;
 
     protected override async Task OnInitializedAsync()
     {
@@ -57,7 +57,7 @@
             StateHasChanged();
 
         });
-        chatHubConnection.On<string>("SendBeskedTilGruppe", (x) =>
+        chatHubConnection.On<string>("SendMessageToGroup", (x) =>
         {
             string krypteretBesked = x;
             messages.Add(krypteretBesked);
@@ -69,11 +69,9 @@
         //return base.OnInitializedAsync();
     }
 
+    Task JoinGroup() => chatHubConnection.SendAsync("JoinGroup", "test");
 
-
-    Task JoinGroup() => chatHubConnection.SendAsync("JoinGroup", gruppeNavn[0]);
-
-    Task SendTilGruppe() => chatHubConnection.SendAsync("SendTilGruppe", userMessage, gruppeNavn[1]);
+    Task SendGroup() => chatHubConnection.SendAsync("SendGroup", userMessage, "test");
 
     //IsConnected => chatHubConnection.State == HubConnectionState.Connected;
 

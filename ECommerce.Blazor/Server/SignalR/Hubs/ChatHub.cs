@@ -11,11 +11,11 @@ namespace ECommerce.Blazor.Server.SignalR.Hubs
         public async Task JoinGroup(string groupId)
         {
             await Groups.AddToGroupAsync(Context.ConnectionId, groupId);
-            await Clients.Caller.SendAsync("NewUserEntered", "velkommen til gruppe-chatten");
+            await Clients.Caller.SendAsync("NewUserEntered", "Welcome to group chat");
         }
-        public async Task SendTilGruppe(string besked, string gruppeid)
+        public async Task SendGroup(string message, string groupId)
         {
-            await Clients.Group(gruppeid).SendAsync("SendBeskedTilGruppe", besked);
+            await Clients.Group(groupId).SendAsync("SendMessageToGroup", message);
         }
         
     }
