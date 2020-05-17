@@ -1,0 +1,34 @@
+﻿@page "/chatroom2/{userName}"
+<h3>chatroom2</h3>
+
+<h1>@userName</h1>
+
+<div class="form-group">
+    <label>
+        Message:
+        <input @bind="userMessage" size="50" />
+    </label>
+</div>
+
+@*<button @onclick="SendGroup">Send</button>*@
+
+<hr>
+
+<ul id="messagesList">
+    @foreach (var message in messages)
+    {
+        <li>@message</li>
+    }
+</ul>
+
+
+@code {
+
+    [Parameter]
+    public string userName { get; set; }
+
+    private string userMessage;
+
+    private List<string> messages = new List<string>();
+
+}

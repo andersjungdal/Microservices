@@ -2,40 +2,70 @@
 @using Microsoft.AspNetCore.SignalR.Client
 @inject NavigationManager NavigationManager
 
-    <h3>Chat</h3>
-    <select @bind="groupName">
-        <option value="testroom1">rum1</option>
-        <option value="testroom2">rum2</option>
-        <option value="testroom3">rum3</option>
-        <option value="testroom4">rum4</option>
-    </select>
+<h3>Chat</h3>
+<select @bind="groupName">
+    <option value="">Select a group</option>
+    <option value="testroom1">rum1</option>
+    <option value="testroom2">rum2</option>
+    <option value="testroom3">rum2</option>
+</select>
 <div class="form-group">
     <label>
         User:
         <input @bind="userName" />
     </label>
 </div>
-<div class="form-group">
-    <label>
-        Message:
-        <input @bind="userMessage" size="50" />
-    </label>
-</div>
-<button @onclick="JoinGroup">Join</button>
-<button @onclick="SendGroup">Send</button>
 
-<hr>
+@if (groupName == "testroom1")
+{
 
-<ul id="messagesList">
-    @foreach (var message in messages)
+    if (userName == null)
     {
-        <li>@message</li>
+        <p>You have to specify a username</p>
     }
-</ul>
+    else
+    {
+        <form action="/chatroom1/@userName.ToString()">
+            <button @onclick="JoinGroup">Join</button>
+        </form>
+    }
+}
+
+@if (groupName == "testroom2")
+{
+    if (userName == null)
+    {
+        <p>You have to specify a username</p>
+    }
+    else
+    {
+        <form action="/chatroom2/@userName.ToString()">
+            <button @onclick="JoinGroup">Join</button>
+        </form>
+    }
+}
+@if (groupName == "testroom3")
+{
+    if (userName == null)
+    {
+        <p>You have to specify a username</p>
+    }
+    else
+    {
+        <form action="/chatroom3/@userName.ToString()">
+            <button @onclick="JoinGroup">Join</button>
+        </form>
+    }
+}
+
+
+
+
 
 @code {
+
     private HubConnection chatHubConnection;
-    private string userName;
+    public string userName { get; set; }
     private string userMessage;
     private List<string> messages = new List<string>();
     private string groupName;
@@ -50,7 +80,7 @@
         .WithUrl(NavigationManager.ToAbsoluteUri("/ChatHub"))
         .Build();
 
-        chatHubConnection.On<string>("NewUserEntered",(x) =>
+        chatHubConnection.On<string>("NewUserEntered", (x) =>
         {
             string encodedMessage = x;
             messages.Add(encodedMessage);
@@ -59,8 +89,8 @@
         });
         chatHubConnection.On<string>("SendMessageToGroup", (x) =>
         {
-            string krypteretBesked = x;
-            messages.Add(krypteretBesked);
+            string encodedMessage = x;
+            messages.Add(encodedMessage);
             StateHasChanged();
         });
 
@@ -69,9 +99,9 @@
         //return base.OnInitializedAsync();
     }
 
-    Task JoinGroup() => chatHubConnection.SendAsync("JoinGroup", "test");
+    Task JoinGroup() => chatHubConnection.SendAsync("JoinGroup", groupName);
 
-    Task SendGroup() => chatHubConnection.SendAsync("SendGroup", userMessage, "test");
+    Task SendGroup() => chatHubConnection.SendAsync("SendGroup", userMessage, groupName);
 
     //IsConnected => chatHubConnection.State == HubConnectionState.Connected;
 

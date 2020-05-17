@@ -343,3 +343,9 @@ C:\Users\ander\Desktop\Microservices\ECommerce.Blazor\Client\obj\Debug\netstanda
 C:\Users\ander\Desktop\Microservices\ECommerce.Blazor\Client\obj\Debug\netstandard2.1\staticwebassets\ECommerce.Blazor.Client.StaticWebAssets.xml
 C:\Users\ander\Desktop\Microservices\ECommerce.Blazor\Client\obj\Debug\netstandard2.1\ECommerce.Blazor.Client.dll
 C:\Users\ander\Desktop\Microservices\ECommerce.Blazor\Client\obj\Debug\netstandard2.1\ECommerce.Blazor.Client.pdb
+C:\Users\ander\Desktop\Microservices\ECommerce.Blazor\Client\obj\Debug\netstandard2.1\RazorDeclaration\Pages\ChatRoom1.razor.g.cs
+C:\Users\ander\Desktop\Microservices\ECommerce.Blazor\Client\obj\Debug\netstandard2.1\RazorDeclaration\Pages\ChatRoom2.razor.g.cs
+C:\Users\ander\Desktop\Microservices\ECommerce.Blazor\Client\obj\Debug\netstandard2.1\RazorDeclaration\Pages\ChatRoom3.razor.g.cs
+C:\Users\ander\Desktop\Microservices\ECommerce.Blazor\Client\obj\Debug\netstandard2.1\Razor\Pages\ChatRoom1.razor.g.cs
+C:\Users\ander\Desktop\Microservices\ECommerce.Blazor\Client\obj\Debug\netstandard2.1\Razor\Pages\ChatRoom2.razor.g.cs
+C:\Users\ander\Desktop\Microservices\ECommerce.Blazor\Client\obj\Debug\netstandard2.1\Razor\Pages\ChatRoom3.razor.g.cs

@@ -27,11 +27,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XUnitTestOrder", "XUnitTest
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XUnitTestSearch", "XUnitTestSearch\XUnitTestSearch.csproj", "{E511EA72-6F4F-4761-A448-3B412E906E68}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECommerce.Blazor.Server", "ECommerce.Blazor\Server\ECommerce.Blazor.Server.csproj", "{24B46F99-952C-48B8-B6D0-93B90D887111}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ECommerce.Blazor.Server", "ECommerce.Blazor\Server\ECommerce.Blazor.Server.csproj", "{24B46F99-952C-48B8-B6D0-93B90D887111}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECommerce.Blazor.Client", "ECommerce.Blazor\Client\ECommerce.Blazor.Client.csproj", "{01629503-1B43-481C-9644-00844FFAD2F7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ECommerce.Blazor.Client", "ECommerce.Blazor\Client\ECommerce.Blazor.Client.csproj", "{01629503-1B43-481C-9644-00844FFAD2F7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECommerce.Blazor.Shared", "ECommerce.Blazor\Shared\ECommerce.Blazor.Shared.csproj", "{E2856360-4C2D-48DA-B4A0-0A2086E55242}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ECommerce.Blazor.Shared", "ECommerce.Blazor\Shared\ECommerce.Blazor.Shared.csproj", "{E2856360-4C2D-48DA-B4A0-0A2086E55242}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
