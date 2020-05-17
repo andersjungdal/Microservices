@@ -9,11 +9,10 @@ namespace ECommerce.Api.Search.Profiles
     {
         public SearchProfile()
         {
-            //CreateMap<Db.Customer, Models.Customer>()
-                
-            //CreateMap<Db.Order, Models.Order>();
-            //CreateMap<Db.OrderItem, Models.OrderItem>();
-            //CreateMap<Db.Product, Models.Product>();
+            CreateMap<Db.Customer, Models.Customer>();
+            CreateMap<Db.Order, Models.Order>();
+            CreateMap<Db.OrderItem, Models.OrderItem>();
+            CreateMap<Db.Product, Models.Product>();
         }
     }
 }

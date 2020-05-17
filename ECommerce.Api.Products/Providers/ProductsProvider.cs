@@ -140,11 +140,8 @@ namespace ECommerce.Api.Products.Providers
         //public async Task<(bool IsSuccess, Db.Product Product, string ErrorMessage)> UpdateProductAsync(int id, [FromBody] Models.Product product)
         //{
         //    try
-        //    {
-        //        var updateproduct = await dbContext.Products.FirstOrDefaultAsync(x => x.Id == id);
+        //    {               
         //        var mapper = configurationProvider.CreateMapper();
-        //        if (updateproduct == null)
-        //            return (false, null, "Not updated");
         //        var editproduct = mapper.Map<Db.Product>(product);
         //        editproduct.Id = id;
         //        dbContext.Update(editproduct).State = EntityState.Modified;

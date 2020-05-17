@@ -58,9 +58,11 @@ namespace ECommerce.Api.Products.Controllers
             return NotFound(product.ErrorMessage);
         }
         //virker ikke
-        //[HttpPost("{id}",Name = nameof(UpdateProductAsync))]
+        //[HttpPut("{id}", Name = nameof(UpdateProductAsync))]
         //public async Task<IActionResult> UpdateProductAsync(int id, Product product)
         //{
+        //    var updateproduct = await productsProvider.GetProductAsync(id);
+        //    if (!updateproduct.IsSuccess) return NotFound();
         //    var editproduct = await productsProvider.UpdateProductAsync(id, product);
         //    if (editproduct.IsSuccess)
         //    {

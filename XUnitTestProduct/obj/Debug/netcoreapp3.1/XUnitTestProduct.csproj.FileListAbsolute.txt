@@ -147,3 +147,10 @@ C:\Users\ander\Desktop\Microservices\XUnitTestProduct\bin\Debug\netcoreapp3.1\EC
 C:\Users\ander\Desktop\Microservices\XUnitTestProduct\obj\Debug\netcoreapp3.1\XUnitTestProduct.csproj.CoreCompileInputs.cache
 C:\Users\ander\Desktop\Microservices\XUnitTestProduct\obj\Debug\netcoreapp3.1\XUnitTestProduct.dll
 C:\Users\ander\Desktop\Microservices\XUnitTestProduct\obj\Debug\netcoreapp3.1\XUnitTestProduct.pdb
+C:\Users\ander\Desktop\Microservices\XUnitTestProduct\bin\Debug\netcoreapp3.1\MediatR.dll
+C:\Users\ander\Desktop\Microservices\XUnitTestProduct\bin\Debug\netcoreapp3.1\MediatR.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\ander\Desktop\Microservices\XUnitTestProduct\bin\Debug\netcoreapp3.1\RabbitMQ.Client.dll
+C:\Users\ander\Desktop\Microservices\XUnitTestProduct\bin\Debug\netcoreapp3.1\ECommerce.RabbitMQ.Bus.dll
+C:\Users\ander\Desktop\Microservices\XUnitTestProduct\bin\Debug\netcoreapp3.1\ECommerce.RabbitMQ.IoC.dll
+C:\Users\ander\Desktop\Microservices\XUnitTestProduct\bin\Debug\netcoreapp3.1\ECommerce.RabbitMQ.Bus.pdb
+C:\Users\ander\Desktop\Microservices\XUnitTestProduct\bin\Debug\netcoreapp3.1\ECommerce.RabbitMQ.IoC.pdb

@@ -72,7 +72,7 @@ namespace ECommerce.Api.Search
             services.AddTransient<PostOrderEventHandler>();
             services.AddTransient<IEventHandler<PostOrderCreatedEvent>, PostOrderEventHandler>();
 
-            //services.AddAutoMapper(typeof(Startup));
+            services.AddAutoMapper(typeof(Startup));
 
         }
 

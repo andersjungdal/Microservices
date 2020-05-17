@@ -24,7 +24,7 @@ namespace ECommerce.Api.Orders.Tests
             var configuration = new MapperConfiguration(cfg => cfg.AddProfile(orderProfile));
             var mapper = new Mapper(configuration);
 
-            var ordersProvider = new OrdersProvider(dbContext, null, mapper, configuration);
+            var ordersProvider = new OrdersProvider(dbContext, null, mapper, configuration, null);
 
             var order = await ordersProvider.GetAllOrdersAsync();
             Assert.True(order.IsSuccess);
