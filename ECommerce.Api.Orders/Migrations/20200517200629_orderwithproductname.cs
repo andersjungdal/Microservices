@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace ECommerce.Api.Orders.Migrations
 {
-    public partial class initial : Migration
+    public partial class orderwithproductname : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -15,7 +15,7 @@ namespace ECommerce.Api.Orders.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     CustomerId = table.Column<int>(nullable: false),
                     OrderDate = table.Column<DateTime>(nullable: false),
-                    Total = table.Column<decimal>(nullable: false)
+                    Total = table.Column<decimal>(type: "decimal(18,2)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -30,8 +30,9 @@ namespace ECommerce.Api.Orders.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     OrderId = table.Column<int>(nullable: false),
                     ProductId = table.Column<int>(nullable: false),
+                    ProductName = table.Column<string>(nullable: true),
                     Quantity = table.Column<int>(nullable: false),
-                    UnitPrice = table.Column<decimal>(nullable: false)
+                    UnitPrice = table.Column<decimal>(type: "decimal(18,2)", nullable: false)
                 },
                 constraints: table =>
                 {

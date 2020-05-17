@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ECommerce.Api.Orders.Migrations
 {
     [DbContext(typeof(OrdersDbContext))]
-    [Migration("20200510090644_initial2")]
-    partial class initial2
+    [Migration("20200517200629_orderwithproductname")]
+    partial class orderwithproductname
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -54,6 +54,9 @@ namespace ECommerce.Api.Orders.Migrations
 
                     b.Property<int>("ProductId")
                         .HasColumnType("int");
+
+                    b.Property<string>("ProductName")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("Quantity")
                         .HasColumnType("int");
