@@ -6,7 +6,7 @@
   "linkerEnabled": false,
   "resources": {
     "assembly": {
-      "ECommerce.Blazor.Client.dll": "sha256-STznAUiRlEfzCWBBYuF0oniM1xuP1SKaVuxF4mf+fVI=",
+      "ECommerce.Blazor.Client.dll": "sha256-UfVZsmhegsfgc7+mvCfaL9aoLlKw7nlkqlD8mU5Bs7Y=",
       "Microsoft.AspNetCore.SignalR.Client.dll": "sha256-0a6O7cydv\/C1Mx3yCTvDyDPpjBuFKHRK5jnlCZC3r24=",
       "Microsoft.Extensions.DependencyInjection.Abstractions.dll": "sha256-o+nIDOlv+7C51lX5qskB167ESJHrLYQiPQU9lsq7bOk=",
       "netstandard.dll": "sha256-\/zcPVM75OAY+joGVM8yIC1gO1SFYWP1CFERgQ8PJkfA=",
@@ -69,7 +69,7 @@
       "Microsoft.JSInterop.WebAssembly.dll": "sha256-Sljk6nvSPSpTCrJ6+bd12XiNuOwqOHEKHPSBoINTtWo="
     },
     "pdb": {
-      "ECommerce.Blazor.Client.pdb": "sha256-cNrOO\/lh225UtYMNw\/l\/CiWszsljRbHeRGO0m1pZbPI="
+      "ECommerce.Blazor.Client.pdb": "sha256-EHsBUzX\/HjEg3tBhlp\/E\/qr0iSchYJuqRfWedVmYt6I="
     },
     "runtime": {
       "dotnet.3.2.0-preview3.20168.1.js": "sha256-274clLanSGrn5tb3h9iFyKyVG0KYG2Um+VHF0kdNzHE=",

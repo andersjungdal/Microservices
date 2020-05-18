@@ -32,7 +32,6 @@ C:\Users\ander\Desktop\Microservices\ECommerce.Blazor\Client\bin\Debug\netstanda
 C:\Users\ander\Desktop\Microservices\ECommerce.Blazor\Client\obj\Debug\netstandard2.1\ECommerce.Blazor.Client.csprojAssemblyReference.cache
 C:\Users\ander\Desktop\Microservices\ECommerce.Blazor\Client\obj\Debug\netstandard2.1\ECommerce.Blazor.Client.RazorComponent.input.cache
 C:\Users\ander\Desktop\Microservices\ECommerce.Blazor\Client\obj\Debug\netstandard2.1\RazorDeclaration\App.razor.g.cs
-C:\Users\ander\Desktop\Microservices\ECommerce.Blazor\Client\obj\Debug\netstandard2.1\RazorDeclaration\Pages\Chat.razor.g.cs
 C:\Users\ander\Desktop\Microservices\ECommerce.Blazor\Client\obj\Debug\netstandard2.1\RazorDeclaration\Pages\Counter.razor.g.cs
 C:\Users\ander\Desktop\Microservices\ECommerce.Blazor\Client\obj\Debug\netstandard2.1\RazorDeclaration\Pages\Index.razor.g.cs
 C:\Users\ander\Desktop\Microservices\ECommerce.Blazor\Client\obj\Debug\netstandard2.1\RazorDeclaration\Shared\MainLayout.razor.g.cs
@@ -197,7 +196,6 @@ C:\Users\ander\Desktop\Microservices\ECommerce.Blazor\Client\obj\Debug\netstanda
 C:\Users\ander\Desktop\Microservices\ECommerce.Blazor\Client\obj\Debug\netstandard2.1\ECommerce.Blazor.Client.TagHelpers.output.cache
 C:\Users\ander\Desktop\Microservices\ECommerce.Blazor\Client\obj\Debug\netstandard2.1\ECommerce.Blazor.Client.RazorCoreGenerate.cache
 C:\Users\ander\Desktop\Microservices\ECommerce.Blazor\Client\obj\Debug\netstandard2.1\Razor\App.razor.g.cs
-C:\Users\ander\Desktop\Microservices\ECommerce.Blazor\Client\obj\Debug\netstandard2.1\Razor\Pages\Chat.razor.g.cs
 C:\Users\ander\Desktop\Microservices\ECommerce.Blazor\Client\obj\Debug\netstandard2.1\Razor\Pages\Counter.razor.g.cs
 C:\Users\ander\Desktop\Microservices\ECommerce.Blazor\Client\obj\Debug\netstandard2.1\Razor\Pages\Index.razor.g.cs
 C:\Users\ander\Desktop\Microservices\ECommerce.Blazor\Client\obj\Debug\netstandard2.1\Razor\Shared\MainLayout.razor.g.cs
@@ -343,11 +341,13 @@ C:\Users\ander\Desktop\Microservices\ECommerce.Blazor\Client\obj\Debug\netstanda
 C:\Users\ander\Desktop\Microservices\ECommerce.Blazor\Client\obj\Debug\netstandard2.1\staticwebassets\ECommerce.Blazor.Client.StaticWebAssets.xml
 C:\Users\ander\Desktop\Microservices\ECommerce.Blazor\Client\obj\Debug\netstandard2.1\ECommerce.Blazor.Client.dll
 C:\Users\ander\Desktop\Microservices\ECommerce.Blazor\Client\obj\Debug\netstandard2.1\ECommerce.Blazor.Client.pdb
-C:\Users\ander\Desktop\Microservices\ECommerce.Blazor\Client\obj\Debug\netstandard2.1\RazorDeclaration\Pages\ChatRoom1.razor.g.cs
-C:\Users\ander\Desktop\Microservices\ECommerce.Blazor\Client\obj\Debug\netstandard2.1\RazorDeclaration\Pages\ChatRoom2.razor.g.cs
-C:\Users\ander\Desktop\Microservices\ECommerce.Blazor\Client\obj\Debug\netstandard2.1\RazorDeclaration\Pages\ChatRoom3.razor.g.cs
-C:\Users\ander\Desktop\Microservices\ECommerce.Blazor\Client\obj\Debug\netstandard2.1\Razor\Pages\ChatRoom1.razor.g.cs
-C:\Users\ander\Desktop\Microservices\ECommerce.Blazor\Client\obj\Debug\netstandard2.1\Razor\Pages\ChatRoom2.razor.g.cs
-C:\Users\ander\Desktop\Microservices\ECommerce.Blazor\Client\obj\Debug\netstandard2.1\Razor\Pages\ChatRoom3.razor.g.cs
-C:\Users\ander\Desktop\Microservices\ECommerce.Blazor\Client\obj\Debug\netstandard2.1\RazorDeclaration\Pages\CommonChatRoom.razor.g.cs
-C:\Users\ander\Desktop\Microservices\ECommerce.Blazor\Client\obj\Debug\netstandard2.1\Razor\Pages\CommonChatRoom.razor.g.cs
+C:\Users\ander\Desktop\Microservices\ECommerce.Blazor\Client\obj\Debug\netstandard2.1\RazorDeclaration\Pages\Chat\Chat.razor.g.cs
+C:\Users\ander\Desktop\Microservices\ECommerce.Blazor\Client\obj\Debug\netstandard2.1\RazorDeclaration\Pages\Chat\ChatRoom1.razor.g.cs
+C:\Users\ander\Desktop\Microservices\ECommerce.Blazor\Client\obj\Debug\netstandard2.1\RazorDeclaration\Pages\Chat\ChatRoom2.razor.g.cs
+C:\Users\ander\Desktop\Microservices\ECommerce.Blazor\Client\obj\Debug\netstandard2.1\RazorDeclaration\Pages\Chat\ChatRoom3.razor.g.cs
+C:\Users\ander\Desktop\Microservices\ECommerce.Blazor\Client\obj\Debug\netstandard2.1\RazorDeclaration\Pages\Chat\CommonChatRoom.razor.g.cs
+C:\Users\ander\Desktop\Microservices\ECommerce.Blazor\Client\obj\Debug\netstandard2.1\Razor\Pages\Chat\Chat.razor.g.cs
+C:\Users\ander\Desktop\Microservices\ECommerce.Blazor\Client\obj\Debug\netstandard2.1\Razor\Pages\Chat\ChatRoom1.razor.g.cs
+C:\Users\ander\Desktop\Microservices\ECommerce.Blazor\Client\obj\Debug\netstandard2.1\Razor\Pages\Chat\ChatRoom2.razor.g.cs
+C:\Users\ander\Desktop\Microservices\ECommerce.Blazor\Client\obj\Debug\netstandard2.1\Razor\Pages\Chat\ChatRoom3.razor.g.cs
+C:\Users\ander\Desktop\Microservices\ECommerce.Blazor\Client\obj\Debug\netstandard2.1\Razor\Pages\Chat\CommonChatRoom.razor.g.cs
