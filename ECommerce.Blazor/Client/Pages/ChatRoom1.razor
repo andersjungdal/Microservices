@@ -6,25 +6,38 @@
 
 <h1>@userName</h1>
 
-<div class="form-group">
-    <label>
-        Message:
-        <input @bind="userMessage" size="50" />
-    </label>
-</div>
 
-<button @onclick="JoinGroup">Join</button>
 
-<button @onclick="SendGroup">Send</button>
+@if (!userConnected)
+{
+    <button @onclick="JoinGroup">Join</button>
+}
+else
+{
+    <div class="form-group">
+        <label>
+            Message:
+            <input @bind="userMessage" size="50" />
+        </label>
+    </div>
 
-<hr>
+    <button @onclick="LeaveGroup">Leave</button>
 
-<ul id="messagesList">
-    @foreach (var message in messages)
-    {
-        <li>@message</li>
-    }
-</ul>
+    <button @onclick="SendGroup">Send</button>
+
+    <ul id="messagesList">
+        @foreach (var message in messages)
+        {
+            <li>@message</li>
+        }
+    </ul>
+}
+
+
+
+
+
+
 
 
 @code {
@@ -34,11 +47,13 @@
     [Parameter]
     public string groupName { get; set; }
 
+
     private HubConnection chatHubConnection;
 
     private string userMessage;
 
     private List<string> messages = new List<string>();
+    private bool userConnected;
 
     protected override async Task OnInitializedAsync()
     {
@@ -50,7 +65,8 @@
         chatHubConnection.On<string>("NewUserEntered", (x) =>
         {
             string encodedMessage = x;
-            messages.Add(encodedMessage);
+        //messages.Add(encodedMessage);
+        userConnected = true;
             StateHasChanged();
 
         });
@@ -58,6 +74,12 @@
         {
             string encodedMessage = x;
             messages.Add(encodedMessage);
+            StateHasChanged();
+        });
+        chatHubConnection.On<string>("UserLeaved", (x) =>
+        {
+            string encodedMessage = x;
+            userConnected = false;
             StateHasChanged();
         });
 
@@ -68,6 +90,9 @@
 
     Task JoinGroup() => chatHubConnection.SendAsync("JoinGroup", groupName);
 
-    Task SendGroup() => chatHubConnection.SendAsync("SendGroup", $"{userName}:" + userMessage, groupName);
+    Task SendGroup() => chatHubConnection.SendAsync("SendGroup", $"{userName}: " + userMessage, groupName);
+
+    Task LeaveGroup() => chatHubConnection.SendAsync("LeaveGroup", groupName);
+
 
 }

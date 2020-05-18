@@ -3,10 +3,11 @@
 
 <h3>Chat</h3>
 <select @bind="groupName">
-    <option value="">Select a group</option>
+    <option value="">Select a room</option>
     <option value="testroom1">rum1</option>
     <option value="testroom2">rum2</option>
     <option value="testroom3">rum3</option>
+    <option value="testroomAll">common room</option>
 </select>
 <div class="form-group">
     <label>
@@ -20,7 +21,7 @@
 
     if (userName == null)
     {
-        <p>You have to specify a username</p>
+        <p>You have to specify a name</p>
     }
     else
     {
@@ -36,11 +37,11 @@
 {
     if (userName == null)
     {
-        <p>You have to specify a username</p>
+        <p>You have to specify a name</p>
     }
     else
     {
-    <a href="/chatroom2/@userName.ToString()/@groupName.ToString()">Go to @groupName</a>
+        <a href="/chatroom2/@userName.ToString()/@groupName.ToString()">Go to @groupName</a>
 
         @*<form action="/chatroom2/@userName.ToString()">
                 <button @onclick="JoinGroup">Join</button>
@@ -51,11 +52,26 @@
 {
     if (userName == null)
     {
-        <p>You have to specify a username</p>
+        <p>You have to specify a name</p>
     }
     else
     {
         <a href="/chatroom3/@userName.ToString()/@groupName.ToString()">Go to @groupName</a>
+
+        @*<form action="/chatroom3/@userName.ToString()">
+                <button @onclick="JoinGroup">Join</button>
+            </form>*@
+    }
+}
+@if (groupName == "testroomAll")
+{
+    if (userName == null)
+    {
+        <p>You have to specify a name</p>
+    }
+    else
+    {
+        <a href="/commonchatroom/@userName.ToString()/@groupName.ToString()">Go to @groupName</a>
 
         @*<form action="/chatroom3/@userName.ToString()">
                 <button @onclick="JoinGroup">Join</button>
@@ -69,12 +85,12 @@
 
 @code {
 
-    
+
     public string userName { get; set; }
-    
+
     private string groupName;
 
-    
+
 
     //IsConnected => chatHubConnection.State == HubConnectionState.Connected;
 

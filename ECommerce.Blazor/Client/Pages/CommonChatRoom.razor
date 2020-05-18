@@ -1,8 +1,8 @@
-﻿@page "/chatroom2/{userName}/{groupName}"
+﻿@page "/commonchatroom/{userName}/{groupName}"
 @using Microsoft.AspNetCore.SignalR.Client
 @inject NavigationManager NavigationManager
 
-<h3>@groupName</h3>
+<h3>CommonChatRoom</h3>
 
 <h1>@userName</h1>
 
@@ -21,7 +21,7 @@ else
 
     <button @onclick="LeaveGroup">Leave</button>
 
-    <button @onclick="SendGroup">Send</button>
+    <button @onclick="SendMessageToAll">Send</button>
 
     <ul id="messagesList">
         @foreach (var message in messages)
@@ -30,8 +30,6 @@ else
         }
     </ul>
 }
-
-
 
 @code {
 
@@ -46,7 +44,6 @@ else
 
     private List<string> messages = new List<string>();
     private bool userConnected;
-    //private List<string> userList = new List<string>();
 
     protected override async Task OnInitializedAsync()
     {
@@ -58,8 +55,8 @@ else
         chatHubConnection.On<string>("NewUserEntered", (x) =>
         {
             string encodedMessage = x;
+            //messages.Add(encodedMessage);
             userConnected = true;
-
             StateHasChanged();
 
         });
@@ -76,6 +73,13 @@ else
             StateHasChanged();
         });
 
+        chatHubConnection.On<string, string>("MessageToAll", (user, message) =>
+        {
+        var encodedMsg = $"{user}: {message}";
+        messages.Add(encodedMsg);
+        StateHasChanged();
+        });
+
         await chatHubConnection.StartAsync();
 
         //return base.OnInitializedAsync();
@@ -83,8 +87,8 @@ else
 
     Task JoinGroup() => chatHubConnection.SendAsync("JoinGroup", groupName);
 
-    Task SendGroup() => chatHubConnection.SendAsync("SendGroup", $"{userName}: " + userMessage, groupName);
-
     Task LeaveGroup() => chatHubConnection.SendAsync("LeaveGroup", groupName);
+
+    Task SendMessageToAll() => chatHubConnection.SendAsync("SendMessageToAll", userName, userMessage);
 
 }

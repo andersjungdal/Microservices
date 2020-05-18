@@ -22,5 +22,9 @@ namespace ECommerce.Blazor.Server.SignalR.Hubs
             await Groups.RemoveFromGroupAsync(Context.ConnectionId, groupId);
             await Clients.Caller.SendAsync("UserLeaved", "Goodbye user");
         }
+        public async Task SendMessageToAll(string user, string message)
+        {
+            await Clients.All.SendAsync("MessageToAll", user, message);
+        }
     }
 }
