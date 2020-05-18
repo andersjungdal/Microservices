@@ -1,13 +1,12 @@
 ﻿@page "/chat"
-@using Microsoft.AspNetCore.SignalR.Client
-@inject NavigationManager NavigationManager
+
 
 <h3>Chat</h3>
 <select @bind="groupName">
     <option value="">Select a group</option>
     <option value="testroom1">rum1</option>
     <option value="testroom2">rum2</option>
-    <option value="testroom3">rum2</option>
+    <option value="testroom3">rum3</option>
 </select>
 <div class="form-group">
     <label>
@@ -25,9 +24,11 @@
     }
     else
     {
-        <form action="/chatroom1/@userName.ToString()">
-            <button @onclick="JoinGroup">Join</button>
-        </form>
+        <a href="/chatroom1/@userName.ToString()/@groupName.ToString()">Go to @groupName</a>
+
+        @*<form action="/chatroom1/@userName.ToString()">
+                <button @onclick="JoinGroup">Join</button>
+            </form>*@
     }
 }
 
@@ -39,9 +40,11 @@
     }
     else
     {
-        <form action="/chatroom2/@userName.ToString()">
-            <button @onclick="JoinGroup">Join</button>
-        </form>
+    <a href="/chatroom2/@userName.ToString()/@groupName.ToString()">Go to @groupName</a>
+
+        @*<form action="/chatroom2/@userName.ToString()">
+                <button @onclick="JoinGroup">Join</button>
+            </form>*@
     }
 }
 @if (groupName == "testroom3")
@@ -52,9 +55,11 @@
     }
     else
     {
-        <form action="/chatroom3/@userName.ToString()">
-            <button @onclick="JoinGroup">Join</button>
-        </form>
+        <a href="/chatroom3/@userName.ToString()/@groupName.ToString()">Go to @groupName</a>
+
+        @*<form action="/chatroom3/@userName.ToString()">
+                <button @onclick="JoinGroup">Join</button>
+            </form>*@
     }
 }
 
@@ -64,44 +69,12 @@
 
 @code {
 
-    private HubConnection chatHubConnection;
+    
     public string userName { get; set; }
-    private string userMessage;
-    private List<string> messages = new List<string>();
+    
     private string groupName;
 
-    protected override async Task OnInitializedAsync()
-    {
-
-        //chatHubConnection = new HubConnectionBuilder(
-        //    ).WithUrl("https://localhost:5001/ChatHub").Build();
-
-        chatHubConnection = new HubConnectionBuilder()
-        .WithUrl(NavigationManager.ToAbsoluteUri("/ChatHub"))
-        .Build();
-
-        chatHubConnection.On<string>("NewUserEntered", (x) =>
-        {
-            string encodedMessage = x;
-            messages.Add(encodedMessage);
-            StateHasChanged();
-
-        });
-        chatHubConnection.On<string>("SendMessageToGroup", (x) =>
-        {
-            string encodedMessage = x;
-            messages.Add(encodedMessage);
-            StateHasChanged();
-        });
-
-        await chatHubConnection.StartAsync();
-
-        //return base.OnInitializedAsync();
-    }
-
-    Task JoinGroup() => chatHubConnection.SendAsync("JoinGroup", groupName);
-
-    Task SendGroup() => chatHubConnection.SendAsync("SendGroup", userMessage, groupName);
+    
 
     //IsConnected => chatHubConnection.State == HubConnectionState.Connected;
 

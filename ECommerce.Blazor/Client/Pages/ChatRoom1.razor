@@ -1,5 +1,8 @@
-﻿@page "/chatroom1/{userName}"
-<h3>chatroom1</h3>
+﻿@page "/chatroom1/{userName}/{groupName}"
+@using Microsoft.AspNetCore.SignalR.Client
+@inject NavigationManager NavigationManager
+
+<h3>@groupName</h3>
 
 <h1>@userName</h1>
 
@@ -10,7 +13,9 @@
     </label>
 </div>
 
-@*<button @onclick="SendGroup">Send</button>*@
+<button @onclick="JoinGroup">Join</button>
+
+<button @onclick="SendGroup">Send</button>
 
 <hr>
 
@@ -26,9 +31,43 @@
 
     [Parameter]
     public string userName { get; set; }
+    [Parameter]
+    public string groupName { get; set; }
+
+    private HubConnection chatHubConnection;
 
     private string userMessage;
 
     private List<string> messages = new List<string>();
+
+    protected override async Task OnInitializedAsync()
+    {
+
+        chatHubConnection = new HubConnectionBuilder()
+        .WithUrl(NavigationManager.ToAbsoluteUri("/ChatHub"))
+        .Build();
+
+        chatHubConnection.On<string>("NewUserEntered", (x) =>
+        {
+            string encodedMessage = x;
+            messages.Add(encodedMessage);
+            StateHasChanged();
+
+        });
+        chatHubConnection.On<string>("SendMessageToGroup", (x) =>
+        {
+            string encodedMessage = x;
+            messages.Add(encodedMessage);
+            StateHasChanged();
+        });
+
+        await chatHubConnection.StartAsync();
+
+        //return base.OnInitializedAsync();
+    }
+
+    Task JoinGroup() => chatHubConnection.SendAsync("JoinGroup", groupName);
+
+    Task SendGroup() => chatHubConnection.SendAsync("SendGroup", $"{userName}:" + userMessage, groupName);
 
 }
