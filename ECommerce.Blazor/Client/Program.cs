@@ -4,6 +4,8 @@ using System.Threading.Tasks;
 using System.Text;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Microsoft.Extensions.DependencyInjection;
+using System.Net.Http;
+using ECommerce.Blazor.Client.Services;
 
 namespace ECommerce.Blazor.Client
 {
@@ -16,7 +18,12 @@ namespace ECommerce.Blazor.Client
 
             builder.Services.AddBaseAddressHttpClient();
 
+            builder.Services.AddSingleton(new HttpClient());
+
+            builder.Services.AddSingleton<HttpClientConnection>();
+
             await builder.Build().RunAsync();
+
         }
     }
 }

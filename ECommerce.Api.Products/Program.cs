@@ -22,5 +22,7 @@ namespace ECommerce.Api.Products
                 {
                     webBuilder.UseStartup<Startup>();
                 });
+
+
     }
 }

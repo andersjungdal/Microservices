@@ -43,6 +43,8 @@ namespace ECommerce.Api.Products
             services.AddTransient<IRequestHandler<CreatePostProductCommand, bool>, PostProductCommandHandler>();
             services.AddRabbitMq();
 
+            services.AddCors();
+
 
         }
 
@@ -54,6 +56,8 @@ namespace ECommerce.Api.Products
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseCors(builder => builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader()); 
+
             app.UseRouting();
 
             app.UseAuthorization();
@@ -62,6 +66,8 @@ namespace ECommerce.Api.Products
             {
                 endpoints.MapControllers();
             });
+
+
         }
         
     }

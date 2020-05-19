@@ -351,3 +351,13 @@ C:\Users\ander\Desktop\Microservices\ECommerce.Blazor\Client\obj\Debug\netstanda
 C:\Users\ander\Desktop\Microservices\ECommerce.Blazor\Client\obj\Debug\netstandard2.1\Razor\Pages\Chat\ChatRoom2.razor.g.cs
 C:\Users\ander\Desktop\Microservices\ECommerce.Blazor\Client\obj\Debug\netstandard2.1\Razor\Pages\Chat\ChatRoom3.razor.g.cs
 C:\Users\ander\Desktop\Microservices\ECommerce.Blazor\Client\obj\Debug\netstandard2.1\Razor\Pages\Chat\CommonChatRoom.razor.g.cs
+C:\Users\ander\Desktop\Microservices\ECommerce.Blazor\Client\obj\Debug\netstandard2.1\RazorDeclaration\Pages\Product.razor.g.cs
+C:\Users\ander\Desktop\Microservices\ECommerce.Blazor\Client\obj\Debug\netstandard2.1\Razor\Pages\Product.razor.g.cs
+C:\Users\ander\Desktop\Microservices\ECommerce.Blazor\Client\bin\Debug\netstandard2.1\wwwroot\_framework\_bin\ECommerce.Blazor.Shared.dll
+C:\Users\ander\Desktop\Microservices\ECommerce.Blazor\Client\bin\Debug\netstandard2.1\wwwroot\_framework\_bin\ECommerce.Blazor.Shared.pdb
+C:\Users\ander\Desktop\Microservices\ECommerce.Blazor\Client\bin\Debug\netstandard2.1\wwwroot\_framework\_bin\ECommerce.Blazor.Shared.dll.gz
+C:\Users\ander\Desktop\Microservices\ECommerce.Blazor\Client\bin\Debug\netstandard2.1\wwwroot\_framework\_bin\ECommerce.Blazor.Shared.pdb.gz
+C:\Users\ander\Desktop\Microservices\ECommerce.Blazor\Client\obj\Debug\netstandard2.1\compressed\_framework\_bin\ECommerce.Blazor.Shared.dll.gz
+C:\Users\ander\Desktop\Microservices\ECommerce.Blazor\Client\obj\Debug\netstandard2.1\compressed\_framework\_bin\ECommerce.Blazor.Shared.pdb.gz
+C:\Users\ander\Desktop\Microservices\ECommerce.Blazor\Client\obj\Debug\netstandard2.1\compressed\_framework\_bin\ECommerce.Blazor.Shared.dll.gz.hash
+C:\Users\ander\Desktop\Microservices\ECommerce.Blazor\Client\obj\Debug\netstandard2.1\compressed\_framework\_bin\ECommerce.Blazor.Shared.pdb.gz.hash
