@@ -6,23 +6,24 @@ using System.Net.Http;
 using System.Text.Json;
 using ECommerce.Blazor.Shared.Models;
 using System.Text;
+using ECommerce.Blazor.Client.Interfaces;
 
 namespace ECommerce.Blazor.Client.Services
 {
-    public class HttpClientConnection
+    public class HttpClientProductsService : IHttpClientProductsService
     {
-        private readonly HttpClient httpClientFactory;
+        private readonly HttpClient httpClient;
 
-        public HttpClientConnection(HttpClient httpClientFactory)
+        public HttpClientProductsService(HttpClient httpClient)
         {
-            this.httpClientFactory = httpClientFactory;
+            this.httpClient = httpClient;
         }
         public async Task<(bool IsSuccess, string ErrorMessage)> PostProductAsync(Product product)
         {
             try
             {
                 var httpContent = new StringContent(JsonSerializer.Serialize(product), Encoding.UTF8, "application/json");
-                var response = await httpClientFactory.PostAsync("https://localhost:5004/api/products", httpContent);
+                var response = await httpClient.PostAsync("https://localhost:5004/api/products", httpContent);
                 if (response.IsSuccessStatusCode)
                 {
                     var content = await response.Content.ReadAsByteArrayAsync();

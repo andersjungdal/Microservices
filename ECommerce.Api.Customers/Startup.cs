@@ -46,6 +46,8 @@ namespace ECommerce.Api.Customers
             services.AddMediatR(typeof(Startup));
             services.AddRabbitMq();
             services.AddTransient<IRequestHandler<CreatePostCustomerCommand,bool>, PostCustomerCommandHandler>();
+
+            services.AddCors();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -55,6 +57,8 @@ namespace ECommerce.Api.Customers
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseCors(builder => builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
 
             app.UseRouting();
 

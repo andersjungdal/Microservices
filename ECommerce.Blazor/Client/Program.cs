@@ -20,7 +20,9 @@ namespace ECommerce.Blazor.Client
 
             builder.Services.AddSingleton(new HttpClient());
 
-            builder.Services.AddSingleton<HttpClientConnection>();
+            builder.Services.AddSingleton<HttpClientProductsService>();
+
+            builder.Services.AddSingleton<HttpClientCustomersService>();
 
             await builder.Build().RunAsync();
 

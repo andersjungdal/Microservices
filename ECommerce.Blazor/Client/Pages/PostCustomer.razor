@@ -1,0 +1,56 @@
+﻿@page "/postcustomer"
+
+@inject ECommerce.Blazor.Client.Services.HttpClientCustomersService client
+<h1>Create new Customer</h1>
+
+
+@if (customer == null)
+{
+    <p>loading..</p>
+}
+else
+{
+    <h4>Create Customer</h4>
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+
+            <EditForm Model="@customer" OnValidSubmit="Submit">
+
+
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <h5>Name</h5>
+                    <InputText id="inputRessourceName" class="form-control" placeholder="Navn" @bind-Value="customer.Name" />
+                </div>
+                <div class="form-group">
+                    <h5>Address</h5>
+                    <InputText id="inputRessourceName" class="form-control" placeholder="Navn" @bind-Value="customer.Address" />
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Opret" class="btn btn-primary" />
+                </div>
+
+            </EditForm>
+        </div>
+    </div>
+}
+@code {
+
+    //[Parameter]
+    //public int Id { get; set; }
+    //[Parameter]
+    //public string Name { get; set; }
+    //[Parameter]
+    //public decimal Price { get; set; }
+    //[Parameter]
+    //public int Inventory { get; set; }
+
+    public ECommerce.Blazor.Shared.Models.Customer customer { get; set; } = new Blazor.Shared.Models.Customer();
+
+    public async void Submit()
+    {
+        await client.PostCustomerAsync(customer);
+    }
+
+}
