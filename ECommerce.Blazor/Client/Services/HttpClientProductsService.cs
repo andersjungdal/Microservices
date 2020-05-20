@@ -18,6 +18,30 @@ namespace ECommerce.Blazor.Client.Services
         {
             this.httpClient = httpClient;
         }
+
+        public async Task<(bool IsSuccess, IEnumerable<Product> product, string ErrorMessage)> GetAllProductsAsync()
+        {
+            try
+            {
+                //var httpContent = new StringContent(JsonSerializer.Serialize(product), Encoding.UTF8, "application/json");
+                
+                var response = await httpClient.GetAsync("https://localhost:5004/api/products");
+                if (response.IsSuccessStatusCode)
+                {
+                    var content = await response.Content.ReadAsByteArrayAsync();
+                    var options = new JsonSerializerOptions() { PropertyNameCaseInsensitive = true };
+                    var result = JsonSerializer.Deserialize<IEnumerable<Product>>(content, options);
+                    return (true, result, null);
+                }
+                return (false, null, response.ReasonPhrase);
+
+            }
+            catch (Exception ex)
+            {
+                return (false, null, ex.Message);
+            }
+        }
+
         public async Task<(bool IsSuccess, string ErrorMessage)> PostProductAsync(Product product)
         {
             try

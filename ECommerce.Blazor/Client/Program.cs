@@ -24,6 +24,8 @@ namespace ECommerce.Blazor.Client
 
             builder.Services.AddSingleton<HttpClientCustomersService>();
 
+            builder.Services.AddSingleton<HttpClientOrdersService>();
+
             await builder.Build().RunAsync();
 
         }

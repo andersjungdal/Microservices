@@ -1,0 +1,56 @@
+﻿@page "/getcustomers"
+
+@inject ECommerce.Blazor.Client.Services.HttpClientCustomersService client
+<h1>get all customers</h1>
+@if (result == null)
+{
+    <p>loading..</p>
+}
+else
+{
+    <h4>Product</h4>
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+
+            <EditForm Model="@customer" OnValidSubmit="Submit">
+
+                @foreach (var customer in result.cus)
+                {
+                    <td>
+                        @customer.Address
+                        @customer.Name
+                    </td>
+                    <br>
+                }
+
+                <div class="form-group">
+                    <input type="submit" value="Opret" class="btn btn-primary" />
+                </div>
+            </EditForm>
+        </div>
+    </div>
+}
+@code {
+
+    //[Parameter]
+    //public int Id { get; set; }
+    //[Parameter]
+    //public string Name { get; set; }
+    //[Parameter]
+    //public decimal Price { get; set; }
+    //[Parameter]
+    //public int Inventory { get; set; }
+
+
+
+
+    List<ECommerce.Blazor.Shared.Models.Product> result = new List<ECommerce.Blazor.Shared.Models.Product>();
+
+    public async void Submit()
+    {
+        var result = await client.GetAllCustomersAsync();
+        await client.GetAllCustomersAsync();
+    }
+
+}

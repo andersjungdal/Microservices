@@ -1,0 +1,77 @@
+﻿@page "/postorder"
+
+@inject ECommerce.Blazor.Client.Services.HttpClientOrdersService client
+<h1>Create new order</h1>
+
+
+@if (order == null)
+{
+    <p>loading..</p>
+}
+else
+{
+    <h4>Create Order</h4>
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+
+            <EditForm Model="@order" OnValidSubmit="Submit">
+
+
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <h5>CustomerId</h5>
+                    <InputNumber id="inputRessourceName" class="form-control" placeholder="Navn" @bind-Value="order.CustomerId" />
+                </div>
+                <div class="form-group">
+                    <h5>OrderDate</h5>
+                    <InputDate id="inputRessourceName" class="form-control" placeholder="Navn" @bind-Value="order.OrderDate" />
+                </div>
+                <div class="form-group">
+                    <h5>Total</h5>
+                    <InputNumber id="inputRessourceName" class="form-control" placeholder="Navn" @bind-Value="order.Total" />
+                </div>
+                <div class="form-group">
+                    <h5>ProductId</h5>
+                    <InputNumber id="inputRessourceName" class="form-control" placeholder="Navn" @bind-Value="order.Items" />
+                </div>
+                <div class="form-group">
+                    <h5>ProductName</h5>
+                    <InputNumber id="inputRessourceName" class="form-control" placeholder="Navn" @bind-Value="order.Items" />
+                </div>
+                <div class="form-group">
+                    <h5>Quantity</h5>
+                    <InputNumber id="inputRessourceName" class="form-control" placeholder="Navn" @bind-Value="order.Items" />
+                </div>
+                <div class="form-group">
+                    <h5>UnitPrice</h5>
+                    <InputNumber id="inputRessourceName" class="form-control" placeholder="Navn" @bind-Value="order.Items" />
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Opret" class="btn btn-primary" />
+                </div>
+
+            </EditForm>
+        </div>
+    </div>
+}
+@code {
+
+    //[Parameter]
+    //public int Id { get; set; }
+    //[Parameter]
+    //public string Name { get; set; }
+    //[Parameter]
+    //public decimal Price { get; set; }
+    //[Parameter]
+    //public int Inventory { get; set; }
+
+    public ECommerce.Blazor.Shared.Models.Order order { get; set; } = new Blazor.Shared.Models.Order();
+    public ECommerce.Blazor.Shared.Models.OrderItem orderitem { get; set; } = new Blazor.Shared.Models.OrderItem();
+
+    public async void Submit()
+    {
+        await client.PostOrderAsync(order);
+    }
+
+}

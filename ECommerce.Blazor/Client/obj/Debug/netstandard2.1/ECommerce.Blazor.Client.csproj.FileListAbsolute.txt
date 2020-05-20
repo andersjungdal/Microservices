@@ -363,3 +363,9 @@ C:\Users\ander\Desktop\Microservices\ECommerce.Blazor\Client\obj\Debug\netstanda
 C:\Users\ander\Desktop\Microservices\ECommerce.Blazor\Client\obj\Debug\netstandard2.1\Razor\Pages\PostProduct.razor.g.cs
 C:\Users\ander\Desktop\Microservices\ECommerce.Blazor\Client\obj\Debug\netstandard2.1\RazorDeclaration\Pages\PostCustomer.razor.g.cs
 C:\Users\ander\Desktop\Microservices\ECommerce.Blazor\Client\obj\Debug\netstandard2.1\Razor\Pages\PostCustomer.razor.g.cs
+C:\Users\ander\Desktop\Microservices\ECommerce.Blazor\Client\obj\Debug\netstandard2.1\RazorDeclaration\Pages\PostOrder.razor.g.cs
+C:\Users\ander\Desktop\Microservices\ECommerce.Blazor\Client\obj\Debug\netstandard2.1\Razor\Pages\PostOrder.razor.g.cs
+C:\Users\ander\Desktop\Microservices\ECommerce.Blazor\Client\obj\Debug\netstandard2.1\RazorDeclaration\Pages\GetProducts.razor.g.cs
+C:\Users\ander\Desktop\Microservices\ECommerce.Blazor\Client\obj\Debug\netstandard2.1\Razor\Pages\GetProducts.razor.g.cs
+C:\Users\ander\Desktop\Microservices\ECommerce.Blazor\Client\obj\Debug\netstandard2.1\RazorDeclaration\Pages\GetCustomers.razor.g.cs
+C:\Users\ander\Desktop\Microservices\ECommerce.Blazor\Client\obj\Debug\netstandard2.1\RazorDeclaration\Pages\GetOrders.razor.g.cs

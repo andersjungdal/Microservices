@@ -89,6 +89,6 @@ else
 
     Task LeaveGroup() => chatHubConnection.SendAsync("LeaveGroup", groupName);
 
-    Task SendMessageToAll() => chatHubConnection.SendAsync("SendMessageToAll", userName, userMessage);
+    Task SendMessageToAll() => chatHubConnection.SendAsync("SendMessageToAll", userMessage);
 
 }
