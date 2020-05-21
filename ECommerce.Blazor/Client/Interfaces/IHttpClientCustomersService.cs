@@ -9,6 +9,5 @@ namespace ECommerce.Blazor.Client.Interfaces
     public interface IHttpClientCustomersService
     {
         public Task<(bool IsSuccess, string ErrorMessage)> PostCustomerAsync(Customer customer);
-        public Task<(bool IsSuccess, IEnumerable<Customer> product, string ErrorMessage)> GetAllCustomersAsync();
     }
 }

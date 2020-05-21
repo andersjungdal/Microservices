@@ -31,22 +31,33 @@ else
                     <h5>Total</h5>
                     <InputNumber id="inputRessourceName" class="form-control" placeholder="Navn" @bind-Value="order.Total" />
                 </div>
+
+                @foreach (var item in order.Items)
+                {
+
+                    <div class="form-group">
+                        <h5>Product id</h5>
+                        <InputNumber id="inputRessourceName" class="form-control" placeholder="Navn" @bind-Value="item.ProductId" />
+                    </div>
+                    <div class="form-group">
+                        <h5>Product name</h5>
+                        <InputText id="inputRessourceName" class="form-control" placeholder="Navn" @bind-Value="item.ProductName" />
+                    </div>
+                    <div class="form-group">
+                        <h5>Quantity</h5>
+                        <InputNumber id="inputRessourceName" class="form-control" placeholder="Navn" @bind-Value="item.Quantity" />
+                    </div>
+                    <div class="form-group">
+                        <h5>Unit price</h5>
+                        <InputNumber id="inputRessourceName" class="form-control" placeholder="Navn" @bind-Value="item.UnitPrice" />
+                    </div>
+
+                }
+
                 <div class="form-group">
-                    <h5>ProductId</h5>
-                    <InputNumber id="inputRessourceName" class="form-control" placeholder="Navn" @bind-Value="order.Items" />
+                    <input @onclick="() => order.Items.Add(new ECommerce.Blazor.Shared.Models.OrderItem())" value="Opret" class="btn btn-primary" />
                 </div>
-                <div class="form-group">
-                    <h5>ProductName</h5>
-                    <InputNumber id="inputRessourceName" class="form-control" placeholder="Navn" @bind-Value="order.Items" />
-                </div>
-                <div class="form-group">
-                    <h5>Quantity</h5>
-                    <InputNumber id="inputRessourceName" class="form-control" placeholder="Navn" @bind-Value="order.Items" />
-                </div>
-                <div class="form-group">
-                    <h5>UnitPrice</h5>
-                    <InputNumber id="inputRessourceName" class="form-control" placeholder="Navn" @bind-Value="order.Items" />
-                </div>
+
                 <div class="form-group">
                     <input type="submit" value="Opret" class="btn btn-primary" />
                 </div>
@@ -66,8 +77,10 @@ else
     //[Parameter]
     //public int Inventory { get; set; }
 
-    public ECommerce.Blazor.Shared.Models.Order order { get; set; } = new Blazor.Shared.Models.Order();
-    public ECommerce.Blazor.Shared.Models.OrderItem orderitem { get; set; } = new Blazor.Shared.Models.OrderItem();
+    public ECommerce.Blazor.Shared.Models.Order order { get; set; } = new Blazor.Shared.Models.Order()
+    {
+        Items = new List<ECommerce.Blazor.Shared.Models.OrderItem>()
+    };
 
     public async void Submit()
     {
