@@ -30,8 +30,6 @@ namespace ECommerce.Blazor.Client.Services
                 if (response.IsSuccessStatusCode)
                 {
                     var content = await response.Content.ReadAsByteArrayAsync();
-                    //var options = new JsonSerializerOptions() { PropertyNameCaseInsensitive = true };
-                    //var result = JsonSerializer.Deserialize<IEnumerable<Product>>(content, options);
                     return (true, null);
                 }
                 return (false, response.ReasonPhrase);

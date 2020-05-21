@@ -50,10 +50,7 @@ namespace ECommerce.Api.Search
                 config.BaseAddress = new Uri(Configuration["Services:Customers"]);
             });
 
-            services.AddScoped<IProductsService, ProductsService>();
-            services.AddScoped<IOrdersService, OrdersService>();
             services.AddScoped<ISearchService, SearchService>();
-            services.AddScoped<ICustomersService, CustomersService>();
             services.AddControllers();
 
             services.AddDbContext<SearchesDbContext>(options =>

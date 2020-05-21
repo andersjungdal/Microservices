@@ -6,7 +6,7 @@
   "linkerEnabled": false,
   "resources": {
     "assembly": {
-      "ECommerce.Blazor.Client.dll": "sha256-s0nGsndEH19O\/pSOhGH9+lAglzTsU2BVrf6S4zZsgpM=",
+      "ECommerce.Blazor.Client.dll": "sha256-8W+0JmeLdaJudNTKM5TOvbC9heJXbjkyOwc9GNesdys=",
       "System.Text.Json.dll": "sha256-HQeN+ZfHAERO+uW0fP0J9J3WV1hQ3vUIOWbqGSYBPp8=",
       "System.Runtime.CompilerServices.Unsafe.dll": "sha256-fom8\/iCIAJjiOFGTfsevXMd0zQP6\/nFmuTkPAk1OBqs=",
       "mscorlib.dll": "sha256-jZljmuzTfygesduHdmYslJFWQa3rWROeKj4fTctnZ6Y=",
@@ -70,7 +70,7 @@
       "Microsoft.JSInterop.WebAssembly.dll": "sha256-Sljk6nvSPSpTCrJ6+bd12XiNuOwqOHEKHPSBoINTtWo="
     },
     "pdb": {
-      "ECommerce.Blazor.Client.pdb": "sha256-Rm7F1fBhxLtrTNavS\/HmqHbJ7r0fOxqo+YMzqFrZR0U=",
+      "ECommerce.Blazor.Client.pdb": "sha256-SNKtZLVCZsePugqlgdYUnqWnJ+xXxYy0Y8KTHQZ8SoY=",
       "ECommerce.Blazor.Shared.pdb": "sha256-OPIAeGCAhH5Ooe1Vlutu\/ZTICRE2DVavXBPhLc7\/kFE="
     },
     "runtime": {

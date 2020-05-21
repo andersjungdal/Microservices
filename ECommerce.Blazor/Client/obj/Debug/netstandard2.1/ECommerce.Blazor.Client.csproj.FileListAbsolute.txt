@@ -32,7 +32,6 @@ C:\Users\ander\Desktop\Microservices\ECommerce.Blazor\Client\bin\Debug\netstanda
 C:\Users\ander\Desktop\Microservices\ECommerce.Blazor\Client\obj\Debug\netstandard2.1\ECommerce.Blazor.Client.csprojAssemblyReference.cache
 C:\Users\ander\Desktop\Microservices\ECommerce.Blazor\Client\obj\Debug\netstandard2.1\ECommerce.Blazor.Client.RazorComponent.input.cache
 C:\Users\ander\Desktop\Microservices\ECommerce.Blazor\Client\obj\Debug\netstandard2.1\RazorDeclaration\App.razor.g.cs
-C:\Users\ander\Desktop\Microservices\ECommerce.Blazor\Client\obj\Debug\netstandard2.1\RazorDeclaration\Pages\Counter.razor.g.cs
 C:\Users\ander\Desktop\Microservices\ECommerce.Blazor\Client\obj\Debug\netstandard2.1\RazorDeclaration\Pages\Index.razor.g.cs
 C:\Users\ander\Desktop\Microservices\ECommerce.Blazor\Client\obj\Debug\netstandard2.1\RazorDeclaration\Shared\MainLayout.razor.g.cs
 C:\Users\ander\Desktop\Microservices\ECommerce.Blazor\Client\obj\Debug\netstandard2.1\RazorDeclaration\Shared\NavMenu.razor.g.cs
@@ -196,7 +195,6 @@ C:\Users\ander\Desktop\Microservices\ECommerce.Blazor\Client\obj\Debug\netstanda
 C:\Users\ander\Desktop\Microservices\ECommerce.Blazor\Client\obj\Debug\netstandard2.1\ECommerce.Blazor.Client.TagHelpers.output.cache
 C:\Users\ander\Desktop\Microservices\ECommerce.Blazor\Client\obj\Debug\netstandard2.1\ECommerce.Blazor.Client.RazorCoreGenerate.cache
 C:\Users\ander\Desktop\Microservices\ECommerce.Blazor\Client\obj\Debug\netstandard2.1\Razor\App.razor.g.cs
-C:\Users\ander\Desktop\Microservices\ECommerce.Blazor\Client\obj\Debug\netstandard2.1\Razor\Pages\Counter.razor.g.cs
 C:\Users\ander\Desktop\Microservices\ECommerce.Blazor\Client\obj\Debug\netstandard2.1\Razor\Pages\Index.razor.g.cs
 C:\Users\ander\Desktop\Microservices\ECommerce.Blazor\Client\obj\Debug\netstandard2.1\Razor\Shared\MainLayout.razor.g.cs
 C:\Users\ander\Desktop\Microservices\ECommerce.Blazor\Client\obj\Debug\netstandard2.1\Razor\Shared\NavMenu.razor.g.cs
