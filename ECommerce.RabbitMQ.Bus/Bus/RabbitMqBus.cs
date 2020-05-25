@@ -17,7 +17,6 @@ namespace ECommerce.RabbitMQ.Bus.Bus
     //sealed to prevent inheritance
     public sealed class RabbitMQBus : IEventBus
     {
-        #region readonly members and constructor
         private readonly IMediator _mediator;
         //holds handlers for all events
         private readonly Dictionary<string, List<Type>> _handlers;
@@ -32,8 +31,6 @@ namespace ECommerce.RabbitMQ.Bus.Bus
             _handlers = new Dictionary<string, List<Type>>();
             _eventTypes = new List<Type>();
         }
-        #endregion
-
         public Task SendCommand<T>(T command) where T : Command
         {
             return _mediator.Send(command);
@@ -49,7 +46,7 @@ namespace ECommerce.RabbitMQ.Bus.Bus
                 var eventName = @event.GetType().Name;
 
                 //create a queue with the above mentioned eventName
-                channel.QueueDeclare(eventName, false, false, false, null);
+                channel.QueueDeclare(eventName, true, false, false, null);
                 var properties = channel.CreateBasicProperties();
                 properties.Persistent = false;
 
@@ -107,7 +104,7 @@ namespace ECommerce.RabbitMQ.Bus.Bus
             //gets the name of T type, from where it's comming in. The method<T>
             var eventName = typeof(T).Name;
 
-            channel.QueueDeclare(eventName, false, false, false, null);
+            channel.QueueDeclare(eventName, true, false, false, null);
 
             //async consumer
             var consumer = new AsyncEventingBasicConsumer(channel);

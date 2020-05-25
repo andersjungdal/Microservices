@@ -42,7 +42,6 @@ else
 
 
     private HubConnection chatHubConnection;
-    //private ChatHub chatHub;
 
     private string userMessage;
 
@@ -82,11 +81,11 @@ else
         //return base.OnInitializedAsync();
     }
 
-    Task JoinGroup() => chatHubConnection.SendAsync("JoinGroup", groupName/*, userName*/);
+    Task JoinGroup() => chatHubConnection.SendAsync("JoinGroup", groupName);
 
     Task SendGroup() => chatHubConnection.SendAsync("SendGroup", $"{userName}: " + userMessage, groupName);
 
-    Task LeaveGroup() => chatHubConnection.SendAsync("LeaveGroup", groupName/*, userName*/);
+    Task LeaveGroup() => chatHubConnection.SendAsync("LeaveGroup", groupName);
 
 
 }

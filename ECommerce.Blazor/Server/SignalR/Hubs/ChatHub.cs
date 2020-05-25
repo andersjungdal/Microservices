@@ -8,7 +8,6 @@ namespace ECommerce.Blazor.Server.SignalR.Hubs
 {
     public class ChatHub : Hub
     {
-        public List<string> users = new List<string>();
         public async Task JoinGroup(string groupId)
         {
             await Groups.AddToGroupAsync(Context.ConnectionId, groupId);
