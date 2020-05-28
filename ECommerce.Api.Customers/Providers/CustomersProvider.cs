@@ -29,19 +29,7 @@ namespace ECommerce.Api.Customers.Providers
             this.mapper = mapper;
             this.configurationProvider = configurationProvider;
             this.eventBus = eventBus;
-            //SeedData();
         }
-
-        //private void SeedData()
-        //{
-        //    if (!dbContext.Customers.Any())
-        //    {
-        //        dbContext.Customers.Add(new Db.Customer() { Id = 1, Name = "Jessica Smith", Address = "20 Elm St." });
-        //        dbContext.Customers.Add(new Db.Customer() { Id = 2, Name = "John Smith", Address = "30 Main St." });
-        //        dbContext.Customers.Add(new Db.Customer() { Id = 3, Name = "William Johnson", Address = "100 10th St." });
-        //        dbContext.SaveChanges();
-        //    }
-        //}
 
         public async Task<(bool IsSuccess, IEnumerable<Models.Customer> Customers, string ErrorMessage)> GetCustomersAsync()
         {

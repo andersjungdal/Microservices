@@ -14,13 +14,13 @@ using System.Threading.Tasks;
 
 namespace ECommerce.RabbitMQ.Bus.Bus
 {
-    //sealed to prevent inheritance
+    //sealed for at undgå arv
     public sealed class RabbitMQBus : IEventBus
     {
         private readonly IMediator _mediator;
-        //holds handlers for all events
+        //holder handlers til alle events
         private readonly Dictionary<string, List<Type>> _handlers;
-        //list of event types
+        //list af event typer
         private readonly List<Type> _eventTypes;
         private readonly IServiceScopeFactory _serviceScopeFactory;
 
@@ -42,20 +42,20 @@ namespace ECommerce.RabbitMQ.Bus.Bus
             using (var connection = factory.CreateConnection())
             using (var channel = connection.CreateModel())
             {
-                //gets the types name of the generic @event
+                //finder type navnene af generic @event
                 var eventName = @event.GetType().Name;
 
-                //create a queue with the above mentioned eventName
+                //laver en kø med det nævnte navn eventName
                 channel.QueueDeclare(eventName, true, false, false, null);
                 var properties = channel.CreateBasicProperties();
                 properties.Persistent = false;
 
-                //converts the @event to a JSON string
+                //konverter @event til JSON string
                 var message = JsonConvert.SerializeObject(@event);
-                //converts the message into bytes
+                //konverterer besked til bytes
                 var body = Encoding.UTF8.GetBytes(message);
 
-                //publishes the body to the above declared queue, with the name of eventName
+                //publishes body til den erklærede kø, med navn eventName
                 channel.BasicPublish("", eventName, null, body);
             }
         }
@@ -64,31 +64,31 @@ namespace ECommerce.RabbitMQ.Bus.Bus
             where T : Event
             where TH : IEventHandler<T>
         {
-            //another way of getting the name of the event
+            //en måde at få event navn
             var eventName = typeof(T).Name;
-            //gets the type of eventhandler
+            //finder eventHandler type
             var handlerType = typeof(TH);
 
-            //if it the list if events does not already contain that type of event, add the event type
+            //hvis listen ikke allerede indholder event typen, tilføjer event typen
             if (!_eventTypes.Contains(typeof(T)))
             {
                 _eventTypes.Add(typeof(T));
             }
 
-            //check if the dictionary keys already exist with that event name
+            //tjekker om dictionary keys allerede eksisterer det event navn
             if (!_handlers.ContainsKey(eventName))
             {
                 _handlers.Add(eventName, new List<Type>());
             }
 
             //basic validation
-            //if a handler, within that eventName(key) already exists, throw exception
+            //hvis en handler i det eventName(key) allerede eksisterer, throw exception
             if (_handlers[eventName].Any(s => s.GetType() == handlerType))
             {
                 throw new ArgumentException($"Handler, of type {handlerType.Name} is already registered for '{eventName}'", nameof(handlerType));
             }
 
-            //adds a handlertype to the list, with the already defined string key, with the value of eventName
+            //tilføjer handlertype til list, med den allerede defineret string key, med eventName værdien
             _handlers[eventName].Add(handlerType);
 
             StartBasicConsume<T>();
@@ -101,14 +101,14 @@ namespace ECommerce.RabbitMQ.Bus.Bus
             var connection = factory.CreateConnection();
             var channel = connection.CreateModel();
 
-            //gets the name of T type, from where it's comming in. The method<T>
+            //får fat i navnet på type T
             var eventName = typeof(T).Name;
 
             channel.QueueDeclare(eventName, true, false, false, null);
 
             //async consumer
             var consumer = new AsyncEventingBasicConsumer(channel);
-            //delegate for the received message (+= defines a delegate)
+            //delegate for den modtagede besked (+= definerer en delegate)
             consumer.Received += Consumer_Received;
 
             channel.BasicConsume(eventName, true, consumer);
@@ -118,11 +118,10 @@ namespace ECommerce.RabbitMQ.Bus.Bus
         {
             var eventName = @event.RoutingKey;
             var message = Encoding.UTF8.GetString(@event.Body);
-
-            //kicks off the event handler
+            
             try
             {
-                //the ProccessEvent knows which handler is subscribed to this type of event
+                //ProccesEvent ved hvilken hander der er subscribed til denne type af event
                 await ProcessEvent(eventName, message).ConfigureAwait(false);
             }
             catch (Exception ex)
@@ -134,7 +133,7 @@ namespace ECommerce.RabbitMQ.Bus.Bus
 
         private async Task ProcessEvent(string eventName, string message)
         {
-            //check the dictionary to see if we already have the specified type of handler, based on key
+            //tjekker dictionary for at se om der allerede er den specificeret type af hander, baseret på key
             if (_handlers.ContainsKey(eventName))
             {
                 using (var scope = _serviceScopeFactory.CreateScope())
@@ -142,7 +141,7 @@ namespace ECommerce.RabbitMQ.Bus.Bus
                     var subscriptions = _handlers[eventName];
                     foreach (var subscription in subscriptions)
                     {
-                        //creates a new subscription event
+                        //laver ny subscription event
                         var handler = scope.ServiceProvider.GetService(subscription);
                         if (handler == null) continue;
                         var eventType = _eventTypes.SingleOrDefault(t => t.Name == eventName);

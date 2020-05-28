@@ -27,7 +27,7 @@ namespace ECommerce.Blazor.Server
             services.AddControllersWithViews();
             services.AddSignalR();
 
-            //kan man undvære det her og hvad gør det?
+           
             services.AddResponseCompression(opts =>
             {
                 opts.MimeTypes = ResponseCompressionDefaults.MimeTypes.Concat(

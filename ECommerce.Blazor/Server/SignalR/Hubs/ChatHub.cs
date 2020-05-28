@@ -13,6 +13,7 @@ namespace ECommerce.Blazor.Server.SignalR.Hubs
             await Groups.AddToGroupAsync(Context.ConnectionId, groupId);
             await Clients.Caller.SendAsync("NewUserEntered", "Hi, Welcome to group chat");
         }
+        //Sender til ét rum
         public async Task SendGroup(string message, string groupId)
         {
             await Clients.Group(groupId).SendAsync("SendMessageToGroup", message);
@@ -22,6 +23,7 @@ namespace ECommerce.Blazor.Server.SignalR.Hubs
             await Groups.RemoveFromGroupAsync(Context.ConnectionId, groupId);
             await Clients.Caller.SendAsync("UserLeaved", "Goodbye user");
         }
+        //Sender til alle rum
         public async Task SendMessageToAll(string message)
         {
             await Clients.All.SendAsync("SendMessageToGroup", message);

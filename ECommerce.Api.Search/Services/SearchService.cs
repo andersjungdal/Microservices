@@ -51,8 +51,6 @@ namespace ECommerce.Api.Search.Services
         {
             try
             {
-                //var searches = await searchesDbContext.Customers.FirstOrDefaultAsync(l => l.Id == id);
-
                 var searches = await searchesDbContext.Customers
                     .Include(o => o.Orders)
                     .ThenInclude(c => c.Items)

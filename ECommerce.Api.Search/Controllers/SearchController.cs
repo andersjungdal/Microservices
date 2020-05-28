@@ -41,18 +41,6 @@ namespace ECommerce.Api.Search.Controllers
             return NotFound();
         }
 
-
-        //[HttpPost]
-        //public async Task<IActionResult> SearchAsync(SearchTerm term)
-        //{
-        //    var result = await searchService.SearchAsync(term.CustomerId);
-        //    if (result.IsSuccess)
-        //    {
-        //        return Ok(result.SearchResults);
-        //    }
-        //    return NotFound();
-
-        //}
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteSearchAsync(int id)
         {

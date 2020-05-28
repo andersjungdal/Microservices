@@ -25,7 +25,9 @@ namespace ECommerce.Blazor.Client.Services
         {
             try
             {
+                //Serialize et objekt til JSON string
                 var httpContent = new StringContent(JsonSerializer.Serialize(customer), Encoding.UTF8, "application/json");
+                //Finder CustomerController base address Post metode
                 var response = await httpClient.PostAsync("https://localhost:5002/api/customers", httpContent);
                 if (response.IsSuccessStatusCode)
                 {

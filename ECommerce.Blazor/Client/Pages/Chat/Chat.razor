@@ -16,68 +16,52 @@
     </label>
 </div>
 
-@if (groupName == "testroom1")
+@switch (groupName)
 {
+    case "testroom1":
+        if (userName == null)
+        {
+            <p>You have to specify a name</p>
+        }
+        else
+        {
+            <a href="/chatroom1/@userName.ToString()/@groupName.ToString()">Go to @groupName</a>
 
-    if (userName == null)
-    {
-        <p>You have to specify a name</p>
-    }
-    else
-    {
-        <a href="/chatroom1/@userName.ToString()/@groupName.ToString()">Go to @groupName</a>
+        }
+        break;
+    case "testroom2":
+        if (userName == null)
+        {
+            <p>You have to specify a name</p>
+        }
+        else
+        {
+            <a href="/chatroom2/@userName.ToString()/@groupName.ToString()">Go to @groupName</a>
 
-        @*<form action="/chatroom1/@userName.ToString()">
-                <button @onclick="JoinGroup">Join</button>
-            </form>*@
-    }
+        }
+        break;
+    case "testroom3":
+        if (userName == null)
+        {
+            <p>You have to specify a name</p>
+        }
+        else
+        {
+            <a href="/chatroom3/@userName.ToString()/@groupName.ToString()">Go to @groupName</a>
+        }
+        break;
+    case "testroomAll":
+        if (userName == null)
+        {
+            <p>You have to specify a name</p>
+        }
+        else
+        {
+            <a href="/commonchatroom/@userName.ToString()/@groupName.ToString()">Go to @groupName</a>
+        }
+        break;
 }
 
-@if (groupName == "testroom2")
-{
-    if (userName == null)
-    {
-        <p>You have to specify a name</p>
-    }
-    else
-    {
-        <a href="/chatroom2/@userName.ToString()/@groupName.ToString()">Go to @groupName</a>
-
-        @*<form action="/chatroom2/@userName.ToString()">
-                <button @onclick="JoinGroup">Join</button>
-            </form>*@
-    }
-}
-@if (groupName == "testroom3")
-{
-    if (userName == null)
-    {
-        <p>You have to specify a name</p>
-    }
-    else
-    {
-        <a href="/chatroom3/@userName.ToString()/@groupName.ToString()">Go to @groupName</a>
-
-        @*<form action="/chatroom3/@userName.ToString()">
-                <button @onclick="JoinGroup">Join</button>
-            </form>*@
-    }
-}
-@if (groupName == "testroomAll")
-{
-    if (userName == null)
-    {
-        <p>You have to specify a name</p>
-    }
-    else
-    {
-        <a href="/commonchatroom/@userName.ToString()/@groupName.ToString()">Go to @groupName</a>
-
-        @*<form action="/chatroom3/@userName.ToString()">
-                <button @onclick="JoinGroup">Join</button>
-            </form>*@
-    }
-}
 
 
 
@@ -87,9 +71,5 @@
     public string userName { get; set; }
 
     private string groupName;
-
-
-
-    //IsConnected => chatHubConnection.State == HubConnectionState.Connected;
 
 }
