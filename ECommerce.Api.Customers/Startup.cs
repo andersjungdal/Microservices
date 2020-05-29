@@ -33,10 +33,6 @@ namespace ECommerce.Api.Customers
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            //services.AddDbContext<CustomersDbContext>(options =>
-            //{
-            //    options.UseInMemoryDatabase("Customers");
-            //});
             services.AddDbContext<CustomersDbContext>(options =>
                 options.UseSqlServer("Data Source=LAPTOP-U3V1724K;Initial Catalog=Microservices.Customers.Database;Integrated Security=True"));
 

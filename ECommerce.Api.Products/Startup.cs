@@ -36,9 +36,6 @@ namespace ECommerce.Api.Products
             services.AddDbContext<ProductsDbContext>(options =>
                 options.UseSqlServer("Data Source=LAPTOP-U3V1724K;Initial Catalog=Microservices.Products.Database;Integrated Security=True"));
 
-            //services.AddDbContext<ProductsDbContext>(opt =>
-            //    opt.UseInMemoryDatabase("Products"));
-
             services.AddMediatR(typeof(Startup));
             services.AddTransient<IRequestHandler<CreatePostProductCommand, bool>, PostProductCommandHandler>();
             services.AddRabbitMq();

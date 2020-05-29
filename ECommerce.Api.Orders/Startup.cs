@@ -27,10 +27,6 @@ namespace ECommerce.Api.Orders
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            //services.AddDbContext<OrdersDbContext>(options =>
-            //{
-            //    options.UseInMemoryDatabase("Orders");
-            //});
             services.AddDbContext<OrdersDbContext>(options =>
                 options.UseSqlServer("Data Source=LAPTOP-U3V1724K;Initial Catalog=Microservices.Orders.Database;Integrated Security=True"));
 
