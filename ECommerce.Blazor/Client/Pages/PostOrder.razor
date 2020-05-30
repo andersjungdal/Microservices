@@ -53,10 +53,10 @@ else
                     </div>
 
                 }
-                @if(counter < 1)
+                @if(!clicked)
                 {
                     <div class="form-group">
-                        <input @onclick="() => order.Items.Add(new ECommerce.Blazor.Shared.Models.OrderItem())" value="Orderitem" class="btn btn-primary" />
+                        <input @onclick="OrderItemClicked" value="Orderitem" class="btn btn-primary" />
                     </div>
                 }
 
@@ -71,7 +71,7 @@ else
 @code {
 
 
-    public int counter { get; set; } = 0;
+    public bool clicked { get; set; }
 
     public ECommerce.Blazor.Shared.Models.Order order { get; set; } = new Blazor.Shared.Models.Order()
     {
@@ -81,6 +81,12 @@ else
     public async void Submit()
     {
         await client.PostOrderAsync(order);
+    }
+
+    public void OrderItemClicked() 
+    {
+        order.Items.Add(new ECommerce.Blazor.Shared.Models.OrderItem());
+        clicked = true;
     }
 
 }
