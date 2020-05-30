@@ -26,7 +26,7 @@ namespace ECommerce.Blazor.Client.Services
             try
             {
                 var httpContent = new StringContent(JsonSerializer.Serialize(product), Encoding.UTF8, "application/json");
-                var response = await httpClient.PostAsync("https://localhost:5004/api/products", httpContent);
+                var response = await httpClient.PostAsync("https://localhost:5000/products", httpContent);
                 if (response.IsSuccessStatusCode)
                 {
                     var content = await response.Content.ReadAsByteArrayAsync();
