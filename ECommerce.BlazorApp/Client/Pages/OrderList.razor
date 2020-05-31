@@ -9,8 +9,16 @@
 }
 else
 {
-    <table class="table">
+
+
+
+    @for (int i = 0; i < orders.Length; i++)
+    {
+        <h3>Order</h3>
+        <table class="table">
             <thead>
+
+
                 <tr>
                     <th>Name</th>
                     <th>Price</th>
@@ -18,23 +26,22 @@ else
                 </tr>
             </thead>
             <tbody>
-                @for (int i = 0; i < orders.Length; i++)
-                {
-                    <tr>
-                        <td>@orders[i].CustomerId</td>
-                        <td>@orders[i].OrderDate</td>
-                        <td>@orders[i].Total</td>
-            
-                         </tr>
-                    <tr>
-                        <td colspan="1000">
-                            <OrderItems orderItems="orders[i].Items" />
-                        </td>
-                    </tr>
+                <tr>
+                    <td>@orders[i].CustomerId</td>
+                    <td>@orders[i].OrderDate</td>
+                    <td>@orders[i].Total</td>
 
-                    }
+                </tr>
+                <tr>
+                    <td colspan="1000">
+                        <OrderItems orderItems="orders[i].Items" />
+                    </td>
+                </tr>
             </tbody>
         </table>
+    }
+
+
 }
 
 @code {

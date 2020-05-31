@@ -1,0 +1,41 @@
+﻿@page "/customerlist"
+@using ECommerce.BlazorApp.Shared.Models
+@inject HttpClient client
+<h3>CustomerList</h3>
+
+@if (customers == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Address</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in customers)
+            {
+                <tr>
+                    <td>@item.Name</td>
+                    <td>@item.Address</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+
+
+@code {
+
+    private List<Customer> customers;
+
+    protected override async Task OnInitializedAsync()
+    {
+        customers = await client.GetFromJsonAsync<List<Customer>>("customers");
+    }
+}
