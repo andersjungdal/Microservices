@@ -1,9 +1,0 @@
-C:\Users\ander\Desktop\Microservices\ECommerce.Blazor\Shared\bin\Debug\netstandard2.1\ECommerce.Blazor.Shared.deps.json
-C:\Users\ander\Desktop\Microservices\ECommerce.Blazor\Shared\bin\Debug\netstandard2.1\ECommerce.Blazor.Shared.dll
-C:\Users\ander\Desktop\Microservices\ECommerce.Blazor\Shared\bin\Debug\netstandard2.1\ECommerce.Blazor.Shared.pdb
-C:\Users\ander\Desktop\Microservices\ECommerce.Blazor\Shared\obj\Debug\netstandard2.1\ECommerce.Blazor.Shared.csprojAssemblyReference.cache
-C:\Users\ander\Desktop\Microservices\ECommerce.Blazor\Shared\obj\Debug\netstandard2.1\ECommerce.Blazor.Shared.csproj.CoreCompileInputs.cache
-C:\Users\ander\Desktop\Microservices\ECommerce.Blazor\Shared\obj\Debug\netstandard2.1\ECommerce.Blazor.Shared.AssemblyInfoInputs.cache
-C:\Users\ander\Desktop\Microservices\ECommerce.Blazor\Shared\obj\Debug\netstandard2.1\ECommerce.Blazor.Shared.AssemblyInfo.cs
-C:\Users\ander\Desktop\Microservices\ECommerce.Blazor\Shared\obj\Debug\netstandard2.1\ECommerce.Blazor.Shared.dll
-C:\Users\ander\Desktop\Microservices\ECommerce.Blazor\Shared\obj\Debug\netstandard2.1\ECommerce.Blazor.Shared.pdb

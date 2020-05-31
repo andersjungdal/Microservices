@@ -1,0 +1,92 @@
+﻿@page "/postorder"
+
+@inject ECommerce.BlazorApp.Client.Services.HttpClientOrdersService client
+<h1>Create new order</h1>
+
+
+@if (order == null)
+{
+    <p>loading..</p>
+}
+else
+{
+    <h4>Create Order</h4>
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+
+            <EditForm Model="@order" OnValidSubmit="Submit">
+
+
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <h5>CustomerId</h5>
+                    <InputNumber id="inputRessourceName" class="form-control" placeholder="Navn" @bind-Value="order.CustomerId" />
+                </div>
+                <div class="form-group">
+                    <h5>OrderDate</h5>
+                    <InputDate id="inputRessourceName" class="form-control" placeholder="Navn" @bind-Value="order.OrderDate" />
+                </div>
+                <div class="form-group">
+                    <h5>Total</h5>
+                    <InputNumber id="inputRessourceName" class="form-control" placeholder="Navn" @bind-Value="order.Total" />
+                </div>
+
+                @foreach (var item in order.Items)
+                {
+
+                    <div class="form-group">
+                        <h5>Product id</h5>
+                        <InputNumber id="inputRessourceName" class="form-control" placeholder="Navn" @bind-Value="item.ProductId" />
+                    </div>
+                    <div class="form-group">
+                        <h5>Product name</h5>
+                        <InputText id="inputRessourceName" class="form-control" placeholder="Navn" @bind-Value="item.ProductName" />
+                    </div>
+                    <div class="form-group">
+                        <h5>Quantity</h5>
+                        <InputNumber id="inputRessourceName" class="form-control" placeholder="Navn" @bind-Value="item.Quantity" />
+                    </div>
+                    <div class="form-group">
+                        <h5>Unit price</h5>
+                        <InputNumber id="inputRessourceName" class="form-control" placeholder="Navn" @bind-Value="item.UnitPrice" />
+                    </div>
+
+                }
+                @if (!clicked)
+                {
+                    <div class="form-group">
+                        <input @onclick="OrderItemClicked" value="Orderitem" class="btn btn-primary" />
+                    </div>
+                }
+
+                <div class="form-group">
+                    <input type="submit" value="Create order" class="btn btn-primary" />
+                </div>
+
+            </EditForm>
+        </div>
+    </div>
+}
+@code {
+
+
+    public bool clicked { get; set; }
+
+    public ECommerce.BlazorApp.Shared.Models.Order order { get; set; } = new BlazorApp.Shared.Models.Order()
+    {
+        Items = new List<ECommerce.BlazorApp.Shared.Models.OrderItem>()
+    };
+
+    public async void Submit()
+    {
+        await client.PostOrderAsync(order);
+    }
+
+    public void OrderItemClicked()
+    {
+        order.Items.Add(new ECommerce.BlazorApp.Shared.Models.OrderItem());
+        clicked = true;
+    }
+
+}

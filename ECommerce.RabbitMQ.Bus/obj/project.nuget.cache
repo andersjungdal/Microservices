@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "EQdNU/O8xoJ1IneHwBzjps6akFmhHoGvQ5rx6sVfR/FfxCIfvrSfuMLXY40ickF/lFCW7tWzzrEZQd2p2jPcRw==",
+  "dgSpecHash": "NPn3xMBlzfuPWHNr1gPTLFsk5J/+BJNDHZb8Qv330e/QXdHKVY43ASIq5I0MK0aZmu3D2u64RgMgxGXHI/PkkQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\ander\\Desktop\\Microservices\\ECommerce.RabbitMQ.Bus\\ECommerce.RabbitMQ.Bus.csproj",
   "expectedPackageFiles": [

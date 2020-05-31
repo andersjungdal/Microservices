@@ -1,0 +1,50 @@
+﻿@page "/orderlist"
+@using ECommerce.BlazorApp.Shared.Models
+@inject HttpClient client
+<h3>Orderlist</h3>
+
+@if (orders == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Inventory</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for (int i = 0; i < orders.Length; i++)
+                {
+                    <tr>
+                        <td>@orders[i].CustomerId</td>
+                        <td>@orders[i].OrderDate</td>
+                        <td>@orders[i].Total</td>
+            
+                         </tr>
+                    <tr>
+                        <td colspan="1000">
+                            <OrderItems orderItems="orders[i].Items" />
+                        </td>
+                    </tr>
+
+                    }
+            </tbody>
+        </table>
+}
+
+@code {
+
+    private Order[] orders;
+    private bool[] clicked;
+
+    protected override async Task OnInitializedAsync()
+    {
+        orders = await client.GetFromJsonAsync<Order[]>("orders");
+        clicked = new bool[orders.Length];
+    }
+}

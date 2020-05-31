@@ -1,0 +1,43 @@
+﻿@page "/productlist"
+@using ECommerce.BlazorApp.Shared.Models
+@inject HttpClient client
+<h3>ProductList</h3>
+
+@if (products == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Inventory</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in products)
+            {
+                <tr>
+                    <td>@item.Name</td>
+                    <td>@item.Price</td>
+                    <td>@item.Inventory</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+
+
+@code {
+
+    private List<Product> products;
+
+    protected override async Task OnInitializedAsync()
+    {
+        products = await client.GetFromJsonAsync<List<Product>>("products");
+    }
+}
