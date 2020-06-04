@@ -1,0 +1,79 @@
+﻿@page "/login"
+<h3>Login</h3>
+
+@if (usernam == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+
+    <div class="form-group">
+        <label>
+            Username:
+            <input @bind="Username" />
+        </label>
+    </div>
+    <div class="form-group">
+        <label>
+            Password:
+            <input @bind="Password" />
+        </label>
+    </div>
+
+
+    @foreach (string item in usernam)
+    {
+        if (item == Username.ToString())
+            RigthUsername = true;
+
+    }
+
+
+    @foreach (string item in passw)
+    {
+        if (item == Password.ToString())
+            RigthPassword = true;
+
+    }
+
+
+    @*En bedre måde at lave det?*@
+    @if (RigthUsername == true && RigthPassword == true)
+    {
+        <form action="/agentroom">
+            <input type="submit" value="Go to Agentroom" />
+        </form>
+
+    }
+    else
+    {
+        <form action="">
+            <input type="submit" value="Go to Agentroom" />
+        </form>
+        <p>Wrong username or password</p>
+    }
+}
+    @code {
+
+public string[] usernam = new string[]
+{
+        "hej123",
+        "hvadså123",
+        "du_der123"
+        };
+    public string[] passw = new string[]
+    {
+        "pas1",
+        "pas2",
+        "pas3"
+            };
+
+
+    public string Username { get; set; }
+
+    public string Password { get; set; }
+
+    private bool RigthUsername { get; set; }
+    private bool RigthPassword { get; set; }
+    }

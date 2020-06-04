@@ -1,0 +1,211 @@
+﻿@page "/agentroom"
+@using Microsoft.AspNetCore.SignalR.Client
+@inject NavigationManager NavigationManager
+
+
+@if (!Connected1)
+{
+    <button @onclick="JoinGroup1">Join Room1</button>
+}
+else
+{
+    <div class="form-group">
+        <label>
+            Message:
+            <input @bind="userMessage1" size="50" />
+        </label>
+    </div>
+
+    <button @onclick="LeaveGroup1">Leave</button>
+
+    <button @onclick="SendGroup1">Send</button>
+
+    <ul id="messagesList">
+        @foreach (var message in messages1)
+        {
+            <li>@message</li>
+        }
+    </ul>
+}
+
+@if (!Connected2)
+{
+    <button @onclick="JoinGroup2">Join Room2</button>
+}
+else
+{
+    <div class="form-group">
+        <label>
+            Message:
+            <input @bind="userMessage2" size="50" />
+        </label>
+    </div>
+
+    <button @onclick="LeaveGroup2">Leave</button>
+
+    <button @onclick="SendGroup2">Send</button>
+
+    <ul id="messagesList">
+        @foreach (var message in messages2)
+        {
+            <li>@message</li>
+        }
+    </ul>
+}
+
+@if (!Connected3)
+{
+    <button @onclick="JoinGroup3">Join Room3</button>
+}
+else
+{
+    <div class="form-group">
+        <label>
+            Message:
+            <input @bind="userMessage3" size="50" />
+        </label>
+    </div>
+
+    <button @onclick="LeaveGroup3">Leave</button>
+
+    <button @onclick="SendGroup3">Send</button>
+
+    <ul id="messagesList">
+        @foreach (var message in messages3)
+        {
+            <li>@message</li>
+        }
+    </ul>
+}
+
+
+
+
+@code {
+
+    //[Parameter]
+    //public string userName { get; set; }
+    //[Parameter]
+    //public string groupName { get; set; }
+
+    private HubConnection chatHubConnection;
+
+    private string userMessage1;
+    private string userMessage2;
+    private string userMessage3;
+
+
+    private List<string> messages1 = new List<string>();
+    private List<string> messages2 = new List<string>();
+    private List<string> messages3 = new List<string>();
+
+
+    private bool Connected1;
+    private bool Connected2;
+    private bool Connected3;
+
+
+    protected override async Task OnInitializedAsync()
+    {
+
+        chatHubConnection = new HubConnectionBuilder()
+        .WithUrl(NavigationManager.ToAbsoluteUri("/ChatHub"))
+        .Build();
+
+        #region Chat with room1
+
+        chatHubConnection.On<string>("NewUserEntered1", (x) =>
+        {
+            string encodedMessage = x;
+            //messages.Add(encodedMessage);
+            Connected1 = true;
+            StateHasChanged();
+
+        });
+        chatHubConnection.On<string>("SendMessageToGroup1", (x) =>
+        {
+            string encodedMessage = x;
+            messages1.Add(encodedMessage);
+            userMessage1 = "";
+            StateHasChanged();
+        });
+        chatHubConnection.On<string>("UserLeaved1", (x) =>
+        {
+            string encodedMessage = x;
+            Connected1 = false;
+            userMessage1 = "";
+            StateHasChanged();
+        });
+        #endregion
+        #region Chat with room2
+
+        chatHubConnection.On<string>("NewUserEntered2", (x) =>
+        {
+            string encodedMessage = x;
+            //messages.Add(encodedMessage);
+            Connected2 = true;
+            StateHasChanged();
+
+        });
+        chatHubConnection.On<string>("SendMessageToGroup2", (x) =>
+        {
+            string encodedMessage = x;
+            messages2.Add(encodedMessage);
+            userMessage2 = "";
+            StateHasChanged();
+        });
+        chatHubConnection.On<string>("UserLeaved2", (x) =>
+        {
+            string encodedMessage = x;
+            Connected2 = false;
+            userMessage2 = "";
+            StateHasChanged();
+        });
+        #endregion
+        #region Chat with room3
+
+        chatHubConnection.On<string>("NewUserEntered3", (x) =>
+        {
+            string encodedMessage = x;
+            //messages.Add(encodedMessage);
+            Connected3 = true;
+            StateHasChanged();
+
+        });
+        chatHubConnection.On<string>("SendMessageToGroup3", (x) =>
+        {
+            string encodedMessage = x;
+            messages3.Add(encodedMessage);
+            userMessage3 = "";
+            StateHasChanged();
+        });
+        chatHubConnection.On<string>("UserLeaved3", (x) =>
+        {
+            string encodedMessage = x;
+            Connected3 = false;
+            userMessage3 = "";
+            StateHasChanged();
+        });
+        #endregion
+
+
+        await chatHubConnection.StartAsync();
+
+        //return base.OnInitializedAsync();
+    }
+
+    Task JoinGroup1() => chatHubConnection.SendAsync("JoinGroup1", "testroom1");
+    Task JoinGroup2() => chatHubConnection.SendAsync("JoinGroup2", "testroom2");
+    Task JoinGroup3() => chatHubConnection.SendAsync("JoinGroup3", "testroom3");
+
+
+    Task SendGroup1() => chatHubConnection.SendAsync("SendGroup1", "Admin: " + userMessage1, "testroom1");
+    Task SendGroup2() => chatHubConnection.SendAsync("SendGroup2", "Admin: " + userMessage2, "testroom2");
+    Task SendGroup3() => chatHubConnection.SendAsync("SendGroup3", "Admin: " + userMessage3, "testroom3");
+
+
+    Task LeaveGroup1() => chatHubConnection.SendAsync("LeaveGroup1", "testroom1");
+    Task LeaveGroup2() => chatHubConnection.SendAsync("LeaveGroup2", "testroom2");
+    Task LeaveGroup3() => chatHubConnection.SendAsync("LeaveGroup3", "testroom3");
+
+}

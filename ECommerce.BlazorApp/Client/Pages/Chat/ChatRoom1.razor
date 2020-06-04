@@ -55,7 +55,7 @@ else
         .WithUrl(NavigationManager.ToAbsoluteUri("/ChatHub"))
         .Build();
 
-        chatHubConnection.On<string>("NewUserEntered", (x) =>
+        chatHubConnection.On<string>("NewUserEntered1", (x) =>
         {
             string encodedMessage = x;
         //messages.Add(encodedMessage);
@@ -63,16 +63,18 @@ else
             StateHasChanged();
 
         });
-        chatHubConnection.On<string>("SendMessageToGroup", (x) =>
+        chatHubConnection.On<string>("SendMessageToGroup1", (x) =>
         {
             string encodedMessage = x;
             messages.Add(encodedMessage);
+            userMessage = "";
             StateHasChanged();
         });
-        chatHubConnection.On<string>("UserLeaved", (x) =>
+        chatHubConnection.On<string>("UserLeaved1", (x) =>
         {
             string encodedMessage = x;
             userConnected = false;
+            userMessage = "";
             StateHasChanged();
         });
 
@@ -81,11 +83,11 @@ else
         //return base.OnInitializedAsync();
     }
 
-    Task JoinGroup() => chatHubConnection.SendAsync("JoinGroup", groupName);
+    Task JoinGroup() => chatHubConnection.SendAsync("JoinGroup1", groupName);
 
-    Task SendGroup() => chatHubConnection.SendAsync("SendGroup", $"{userName}: " + userMessage, groupName);
+    Task SendGroup() => chatHubConnection.SendAsync("SendGroup1", $"{userName}: " + userMessage, groupName);
 
-    Task LeaveGroup() => chatHubConnection.SendAsync("LeaveGroup", groupName);
+    Task LeaveGroup() => chatHubConnection.SendAsync("LeaveGroup1", groupName);
 
 
 }
