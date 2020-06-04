@@ -110,7 +110,7 @@
         }
       ],
       "UpstreamPathTemplate": "/admin",
-      "UpstreamHttpMethod": [ "GET" ]
+      "UpstreamHttpMethod": [ "Post" ]
     }
   ],
   "GlobalConfiguration": {

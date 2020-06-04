@@ -22,7 +22,7 @@ namespace Admin.Api.Services
             this.adminDbContext = adminDbContext;
             this.mapper = mapper;
         }
-        public async Task<(bool IsSuccess, Models.Admin Admin, string ErrorMessage)> GetUsernameAndPassword()
+        public async Task<Models.Admin> GetUsernameAndPassword()
         {
             try
             {
@@ -31,14 +31,14 @@ namespace Admin.Api.Services
                 {
                     logger?.LogInformation("Admin found");
                     var result = mapper.Map<Db.Admin, Models.Admin>(admin);
-                    return (true, result, null);
+                    return result;
                 }
-                return (false, null, "Not found");
+                return null;
             }
             catch (Exception ex)
             {
                 logger?.LogError(ex.ToString());
-                return (false, null, ex.Message);
+                return null;
             }
         }
     }

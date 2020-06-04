@@ -17,13 +17,16 @@ namespace Admin.Api.Controllers
         {
             this.admin = admin;
         }
-        [HttpGet]
-        public async Task<IActionResult> GetCustomerAsync()
+        [HttpPost]
+        public async Task<IActionResult> GetCustomerAsync([FromBody] Models.Admin x)
         {
+            
             var result = await admin.GetUsernameAndPassword();
-            if (result.IsSuccess)
+            
+            if (result != null && x.Username == result.Username && x.Password == result.Password)
             {
-                return Ok(result.Admin);
+                result.Password = null;
+                return Ok(result);
             }
             return NotFound();
         }

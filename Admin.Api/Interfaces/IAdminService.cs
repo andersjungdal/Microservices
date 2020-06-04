@@ -8,6 +8,6 @@ namespace Admin.Api.Interfaces
 {
     public interface IAdminService
     {
-        Task<(bool IsSuccess, Models.Admin Admin, string ErrorMessage)> GetUsernameAndPassword();
+        Task<Models.Admin> GetUsernameAndPassword();
     }
 }

@@ -88,7 +88,10 @@ else
     //[Parameter]
     //public string groupName { get; set; }
 
-    private HubConnection chatHubConnection;
+    private HubConnection chatHubConnection1;
+    private HubConnection chatHubConnection2;
+    private HubConnection chatHubConnection3;
+ 
 
     private string userMessage1;
     private string userMessage2;
@@ -108,13 +111,22 @@ else
     protected override async Task OnInitializedAsync()
     {
 
-        chatHubConnection = new HubConnectionBuilder()
+        chatHubConnection1 = new HubConnectionBuilder()
         .WithUrl(NavigationManager.ToAbsoluteUri("/ChatHub"))
         .Build();
 
+        chatHubConnection2 = new HubConnectionBuilder()
+        .WithUrl(NavigationManager.ToAbsoluteUri("/ChatHub"))
+        .Build();
+
+        chatHubConnection3 = new HubConnectionBuilder()
+        .WithUrl(NavigationManager.ToAbsoluteUri("/ChatHub"))
+        .Build();
+
+
         #region Chat with room1
 
-        chatHubConnection.On<string>("NewUserEntered1", (x) =>
+        chatHubConnection1.On<string>("NewUserEntered", (x) =>
         {
             string encodedMessage = x;
             //messages.Add(encodedMessage);
@@ -122,14 +134,14 @@ else
             StateHasChanged();
 
         });
-        chatHubConnection.On<string>("SendMessageToGroup1", (x) =>
+        chatHubConnection1.On<string>("SendMessageToGroup", (x) =>
         {
             string encodedMessage = x;
             messages1.Add(encodedMessage);
             userMessage1 = "";
             StateHasChanged();
         });
-        chatHubConnection.On<string>("UserLeaved1", (x) =>
+        chatHubConnection1.On<string>("UserLeaved", (x) =>
         {
             string encodedMessage = x;
             Connected1 = false;
@@ -139,7 +151,7 @@ else
         #endregion
         #region Chat with room2
 
-        chatHubConnection.On<string>("NewUserEntered2", (x) =>
+        chatHubConnection2.On<string>("NewUserEntered", (x) =>
         {
             string encodedMessage = x;
             //messages.Add(encodedMessage);
@@ -147,14 +159,14 @@ else
             StateHasChanged();
 
         });
-        chatHubConnection.On<string>("SendMessageToGroup2", (x) =>
+        chatHubConnection2.On<string>("SendMessageToGroup", (x) =>
         {
             string encodedMessage = x;
             messages2.Add(encodedMessage);
             userMessage2 = "";
             StateHasChanged();
         });
-        chatHubConnection.On<string>("UserLeaved2", (x) =>
+        chatHubConnection2.On<string>("UserLeaved", (x) =>
         {
             string encodedMessage = x;
             Connected2 = false;
@@ -164,7 +176,7 @@ else
         #endregion
         #region Chat with room3
 
-        chatHubConnection.On<string>("NewUserEntered3", (x) =>
+        chatHubConnection3.On<string>("NewUserEntered", (x) =>
         {
             string encodedMessage = x;
             //messages.Add(encodedMessage);
@@ -172,14 +184,14 @@ else
             StateHasChanged();
 
         });
-        chatHubConnection.On<string>("SendMessageToGroup3", (x) =>
+        chatHubConnection3.On<string>("SendMessageToGroup", (x) =>
         {
             string encodedMessage = x;
             messages3.Add(encodedMessage);
             userMessage3 = "";
             StateHasChanged();
         });
-        chatHubConnection.On<string>("UserLeaved3", (x) =>
+        chatHubConnection3.On<string>("UserLeaved", (x) =>
         {
             string encodedMessage = x;
             Connected3 = false;
@@ -189,23 +201,25 @@ else
         #endregion
 
 
-        await chatHubConnection.StartAsync();
+        await chatHubConnection1.StartAsync();
+        await chatHubConnection2.StartAsync();
+        await chatHubConnection3.StartAsync();
 
         //return base.OnInitializedAsync();
     }
 
-    Task JoinGroup1() => chatHubConnection.SendAsync("JoinGroup1", "testroom1");
-    Task JoinGroup2() => chatHubConnection.SendAsync("JoinGroup2", "testroom2");
-    Task JoinGroup3() => chatHubConnection.SendAsync("JoinGroup3", "testroom3");
+    Task JoinGroup1() => chatHubConnection1.SendAsync("JoinGroup", "testroom1");
+    Task JoinGroup2() => chatHubConnection2.SendAsync("JoinGroup", "testroom2");
+    Task JoinGroup3() => chatHubConnection3.SendAsync("JoinGroup", "testroom3");
 
 
-    Task SendGroup1() => chatHubConnection.SendAsync("SendGroup1", "Admin: " + userMessage1, "testroom1");
-    Task SendGroup2() => chatHubConnection.SendAsync("SendGroup2", "Admin: " + userMessage2, "testroom2");
-    Task SendGroup3() => chatHubConnection.SendAsync("SendGroup3", "Admin: " + userMessage3, "testroom3");
+    Task SendGroup1() => chatHubConnection1.SendAsync("SendGroup", "Admin: " + userMessage1, "testroom1");
+    Task SendGroup2() => chatHubConnection2.SendAsync("SendGroup", "Admin: " + userMessage2, "testroom2");
+    Task SendGroup3() => chatHubConnection3.SendAsync("SendGroup", "Admin: " + userMessage3, "testroom3");
 
 
-    Task LeaveGroup1() => chatHubConnection.SendAsync("LeaveGroup1", "testroom1");
-    Task LeaveGroup2() => chatHubConnection.SendAsync("LeaveGroup2", "testroom2");
-    Task LeaveGroup3() => chatHubConnection.SendAsync("LeaveGroup3", "testroom3");
+    Task LeaveGroup1() => chatHubConnection1.SendAsync("LeaveGroup", "testroom1");
+    Task LeaveGroup2() => chatHubConnection2.SendAsync("LeaveGroup", "testroom2");
+    Task LeaveGroup3() => chatHubConnection3.SendAsync("LeaveGroup", "testroom3");
 
 }

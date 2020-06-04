@@ -1,58 +1,29 @@
 ﻿@page "/login"
 @using ECommerce.BlazorApp.Shared.Models
 @inject HttpClient client
+@inject NavigationManager navigationManager
 <h3>Login</h3>
 
-@if (admin == null)
-{
-    <p><em>Loading...</em></p>
-}
-else
-{
 
-    <div class="form-group">
-        <label>
-            Username:
-            <input @bind="Username" />
-        </label>
-    </div>
-    <div class="form-group">
-        <label>
-            Password:
-            <input @bind="Password" />
-        </label>
-    </div>
-
-    @if (Username == admin.Username)
-    {
-        RigthUsername = true;
-    }
-    @if(Password == admin.Password)
-    {
-        RigthPassword = true;
-    }
+<div class="form-group">
+    <label>
+        Username:
+        <input @bind="Username" />
+    </label>
+</div>
+<div class="form-group">
+    <label>
+        Password:
+        <input @bind="Password" />
+    </label>
+</div>
 
 
-    @*En bedre måde at lave det?*@
-    @if (RigthUsername == true && RigthPassword == true)
-    {
-        <form action="/agentroom">
-            <input type="submit" value="Go to Agentroom" />
-        </form>
+<button @onclick="Loginn">to Agentroom</button>
 
-    }
-    else
-    {
-        <form action="">
-            <input type="submit" value="Go to Agentroom" />
-        </form>
-        <p>Wrong username or password</p>
-    }
-}
 
 
 @code {
-
 
 
 
@@ -60,13 +31,20 @@ else
 
     public string Password { get; set; }
 
-    private bool RigthUsername { get; set; }
-    private bool RigthPassword { get; set; }
 
-    private Admin admin;
-
-    protected override async Task OnInitializedAsync()
+    private async void Loginn()
     {
-        admin = await client.GetFromJsonAsync<Admin>("admin");
+
+        var httpContent = new StringContent(System.Text.Json.JsonSerializer.Serialize(new Admin() { Username = Username, Password = Password }), System.Text.Encoding.UTF8, "application/json");
+        var response = await client.PostAsync("admin", httpContent);
+        if (response.StatusCode == System.Net.HttpStatusCode.OK)
+        {
+            var content = System.Text.Json.JsonSerializer.Deserialize<Admin>(await response.Content.ReadAsStringAsync());
+
+            if (content != null)
+            {
+                navigationManager.NavigateTo("/agentroom");
+            }
+        }
     }
 }

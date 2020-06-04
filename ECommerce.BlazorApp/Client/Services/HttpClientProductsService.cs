@@ -19,8 +19,6 @@ namespace ECommerce.BlazorApp.Client.Services
             this.httpClient = httpClient;
         }
 
-
-
         public async Task<(bool IsSuccess, string ErrorMessage)> PostProductAsync(Product product)
         {
             try
