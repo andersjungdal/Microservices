@@ -1,7 +1,9 @@
 ﻿@page "/login"
+@using ECommerce.BlazorApp.Shared.Models
+@inject HttpClient client
 <h3>Login</h3>
 
-@if (usernam == null)
+@if (admin == null)
 {
     <p><em>Loading...</em></p>
 }
@@ -21,20 +23,13 @@ else
         </label>
     </div>
 
-
-    @foreach (string item in usernam)
+    @if (Username == admin.Username)
     {
-        if (item == Username.ToString())
-            RigthUsername = true;
-
+        RigthUsername = true;
     }
-
-
-    @foreach (string item in passw)
+    @if(Password == admin.Password)
     {
-        if (item == Password.ToString())
-            RigthPassword = true;
-
+        RigthPassword = true;
     }
 
 
@@ -54,20 +49,11 @@ else
         <p>Wrong username or password</p>
     }
 }
-    @code {
 
-public string[] usernam = new string[]
-{
-        "hej123",
-        "hvadså123",
-        "du_der123"
-        };
-    public string[] passw = new string[]
-    {
-        "pas1",
-        "pas2",
-        "pas3"
-            };
+
+@code {
+
+
 
 
     public string Username { get; set; }
@@ -76,4 +62,11 @@ public string[] usernam = new string[]
 
     private bool RigthUsername { get; set; }
     private bool RigthPassword { get; set; }
+
+    private Admin admin;
+
+    protected override async Task OnInitializedAsync()
+    {
+        admin = await client.GetFromJsonAsync<Admin>("admin");
     }
+}
