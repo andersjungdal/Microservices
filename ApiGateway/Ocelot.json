@@ -53,7 +53,7 @@
 
     {
       "DownstreamPathTemplate": "/api/products",
-      "DownstreamScheme": "https",
+      "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
@@ -65,7 +65,7 @@
     },
     {
       "DownstreamPathTemplate": "/api/products/{id}",
-      "DownstreamScheme": "https",
+      "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
@@ -114,6 +114,6 @@
     }
   ],
   "GlobalConfiguration": {
-    "applicationUrl": "https://localhost:5000"
+    "applicationUrl": "http://localhost:5000"
   }
 }

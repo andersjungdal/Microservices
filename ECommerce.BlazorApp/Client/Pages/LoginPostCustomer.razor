@@ -1,4 +1,4 @@
-﻿@page "/login"
+﻿@page "/loginpostcustomer"
 @using ECommerce.BlazorApp.Shared.Models
 @inject HttpClient client
 @inject NavigationManager navigationManager
@@ -22,7 +22,7 @@
 </div>
 
 
-<button @onclick="Loginn">Go to AgentRoom</button>
+<button @onclick="Login">Go to CustomerRoom</button>
 
 
 
@@ -35,7 +35,7 @@
     public string Password { get; set; }
 
 
-    private async void Loginn()
+    private async void Login()
     {
 
         var httpContent = new StringContent(JsonSerializer.Serialize(new Admin() { Username = Username, Password = Password }), Encoding.UTF8, "application/json");
@@ -46,7 +46,7 @@
 
             if (content != null)
             {
-                navigationManager.NavigateTo("/agentroom");
+                navigationManager.NavigateTo("/postcustomer");
             }
         }
     }

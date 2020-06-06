@@ -27,6 +27,7 @@ namespace ECommerce.BlazorApp.Client
             builder.Services.AddTransient(sp => new HttpClient { BaseAddress = new Uri("https://localhost:5000") });
 
             await builder.Build().RunAsync();
+
         }
     }
 }

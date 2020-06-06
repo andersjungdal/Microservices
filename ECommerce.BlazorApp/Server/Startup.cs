@@ -29,7 +29,6 @@ namespace ECommerce.BlazorApp.Server
 
             services.AddSignalR();
 
-
             services.AddResponseCompression(opts =>
             {
                 opts.MimeTypes = ResponseCompressionDefaults.MimeTypes.Concat(

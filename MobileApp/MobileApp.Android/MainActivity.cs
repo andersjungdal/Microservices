@@ -6,6 +6,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using System.Net;
 
 namespace MobileApp.Droid
 {
@@ -14,6 +15,10 @@ namespace MobileApp.Droid
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {
+            //ServicePointManager
+            //.ServerCertificateValidationCallback +=
+            //(sender, cert, chain, sslPolicyErrors) => true;
+
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
 
@@ -26,6 +31,8 @@ namespace MobileApp.Droid
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
         {
             Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
+
+
 
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
         }

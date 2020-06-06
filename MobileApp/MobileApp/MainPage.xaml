@@ -6,11 +6,18 @@
              mc:Ignorable="d"
              x:Class="MobileApp.MainPage">
 
-    <StackLayout>
+    <StackLayout Padding="0,75">
         <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
+
+        <Button Text="See Products" Clicked="GoToProductPage" WidthRequest="150" VerticalOptions="Center"
+                HorizontalOptions="Center"/>
+
+                <!--vil blive lavet senere-->
+
+        <Button Text="See Customers" Clicked="GoToCustomerPage" WidthRequest="150" VerticalOptions="Center"
+                HorizontalOptions="Center"/>
+
+
     </StackLayout>
 
 </ContentPage>

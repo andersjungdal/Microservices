@@ -17,5 +17,14 @@ namespace MobileApp
         {
             InitializeComponent();
         }
+        public void GoToProductPage(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new ProductPage());
+        }
+        //vil blive lavet senere
+        public void GoToCustomerPage(object sender, EventArgs e)
+        {
+
+        }
     }
 }
