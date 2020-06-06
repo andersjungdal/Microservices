@@ -46,10 +46,10 @@ namespace ECommerce.Api.Customers.Tests
 
             var customersProvider = new CustomersProvider(dbContext, null, mapper, configuration, null);
 
-            var customer = await customersProvider.GetCustomerAsync(1);
+            var customer = await customersProvider.GetCustomerAsync(2);
             Assert.True(customer.IsSuccess);
             Assert.NotNull(customer.Customer);
-            Assert.True(customer.Customer.Id == 1);
+            Assert.True(customer.Customer.Id == 2);
             Assert.Null(customer.ErrorMessage);
         }
 

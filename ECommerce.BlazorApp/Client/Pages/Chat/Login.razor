@@ -2,6 +2,9 @@
 @using ECommerce.BlazorApp.Shared.Models
 @inject HttpClient client
 @inject NavigationManager navigationManager
+@using System.Text.Json
+@using System.Text
+@using System.Net
 <h3>Login</h3>
 
 
@@ -35,11 +38,11 @@
     private async void Loginn()
     {
 
-        var httpContent = new StringContent(System.Text.Json.JsonSerializer.Serialize(new Admin() { Username = Username, Password = Password }), System.Text.Encoding.UTF8, "application/json");
+        var httpContent = new StringContent(JsonSerializer.Serialize(new Admin() { Username = Username, Password = Password }), Encoding.UTF8, "application/json");
         var response = await client.PostAsync("admin", httpContent);
-        if (response.StatusCode == System.Net.HttpStatusCode.OK)
+        if (response.StatusCode == HttpStatusCode.OK)
         {
-            var content = System.Text.Json.JsonSerializer.Deserialize<Admin>(await response.Content.ReadAsStringAsync());
+            var content = JsonSerializer.Deserialize<Admin>(await response.Content.ReadAsStringAsync());
 
             if (content != null)
             {

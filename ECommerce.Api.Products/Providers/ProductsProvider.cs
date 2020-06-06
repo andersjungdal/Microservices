@@ -124,23 +124,5 @@ namespace ECommerce.Api.Products.Providers
                 return (false, null, ex.Message);
             }
         }
-        //virker ikke
-        //public async Task<(bool IsSuccess, Db.Product Product, string ErrorMessage)> UpdateProductAsync(int id, [FromBody] Models.Product product)
-        //{
-        //    try
-        //    {               
-        //        var mapper = configurationProvider.CreateMapper();
-        //        var editproduct = mapper.Map<Db.Product>(product);
-        //        editproduct.Id = id;
-        //        dbContext.Update(editproduct).State = EntityState.Modified;
-        //        await dbContext.SaveChangesAsync();
-        //        return (true, editproduct, null);
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        logger?.LogError(ex.ToString());
-        //        return (false, null, ex.Message);
-        //    }
-        //}
     }
 }
