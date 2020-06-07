@@ -16,14 +16,14 @@ namespace MobileApp.Services
         static ProductsService()
         {
             client = new HttpClient();
-            client.BaseAddress = new Uri("http://10.0.2.2:5000");
+            client.BaseAddress = new Uri("http://10.0.2.2:5002");
             
 
         }
 
         public static async Task<List<Product>> GetProductsAsync()
         {
-            var productsRaw = await client.GetStringAsync("/products");
+            var productsRaw = await client.GetStringAsync("api/products");
 
             var serializer = new JsonSerializer();
             using (var tReader = new StringReader(productsRaw))

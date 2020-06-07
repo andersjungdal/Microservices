@@ -6,7 +6,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 5004
+          "Port": 5003
         }
       ],
       "UpstreamPathTemplate": "/customers",
@@ -18,7 +18,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 5004
+          "Port": 5003
         }
       ],
       "UpstreamPathTemplate": "/customers/{id}",
@@ -32,7 +32,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 5003
+          "Port": 5005
         }
       ],
       "UpstreamPathTemplate": "/orders",
@@ -44,7 +44,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 5003
+          "Port": 5005
         }
       ],
       "UpstreamPathTemplate": "/orders/{id}",
@@ -53,11 +53,11 @@
 
     {
       "DownstreamPathTemplate": "/api/products",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 5002
+          "Port": 5001
         }
       ],
       "UpstreamPathTemplate": "/products",
@@ -65,11 +65,11 @@
     },
     {
       "DownstreamPathTemplate": "/api/products/{id}",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 5002
+          "Port": 5001
         }
       ],
       "UpstreamPathTemplate": "/products/{id}",
@@ -82,7 +82,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 5001
+          "Port": 5006
         }
       ],
       "UpstreamPathTemplate": "/search",
@@ -94,7 +94,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 5001
+          "Port": 5006
         }
       ],
       "UpstreamPathTemplate": "/search/{id}",
@@ -106,7 +106,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 5006
+          "Port": 5007
         }
       ],
       "UpstreamPathTemplate": "/admin",
@@ -114,6 +114,6 @@
     }
   ],
   "GlobalConfiguration": {
-    "applicationUrl": "http://localhost:5000"
+    "applicationUrl": "https://localhost:5000"
   }
 }
