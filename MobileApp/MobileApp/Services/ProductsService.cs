@@ -37,26 +37,5 @@ namespace MobileApp.Services
                 }
             }
         }
-        //public static async Task<List<Product>> GetProductsAsync()
-        //{
-        //    try
-        //    {
-        //        var client = httpClientFactory.CreateClient("ProductsService");
-        //        var response = await client.GetAsync("api/products");
-        //        if (response.IsSuccessStatusCode)
-        //        {
-        //            var content = await response.Content.ReadAsStringAsync();
-        //            var options = new JsonSerializerOptions() { PropertyNameCaseInsensitive = true };
-        //            var result = JsonSerializer.Deserialize<IEnumerable<Product>>(content, options);
-        //            return (true, result, null);
-        //        }
-        //        return (false, null, response.ReasonPhrase);
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        logger?.LogError(ex.ToString());
-        //        return (false, null, ex.Message);
-        //    }
-        //}
     }
 }

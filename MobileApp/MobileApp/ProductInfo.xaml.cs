@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MobileApp.Design;
+using MobileApp.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,6 +14,8 @@ namespace MobileApp
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ProductInfo : ContentPage
     {
+        public List<Product> productInBasket = new List<Product>();
+        private Product selectedProduct;
         public ProductInfo()
         {
             InitializeComponent();
@@ -20,7 +24,19 @@ namespace MobileApp
         {
             InitializeComponent();
             BindingContext = product;
+            selectedProduct = product;
+
         }
+
+        public void AddToBasket(object sender, EventArgs e)
+        {
+            productInBasket.Add(selectedProduct);
+        }
+        public void GoToBasket(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new BasketPage(productInBasket));
+        }
+
 
     }
 }

@@ -23,12 +23,16 @@
 
             <RelativeLayout HorizontalOptions="FillAndExpand" VerticalOptions="Start">
 
-                <Button Text="Add to basket" x:Name="addBtn"
-                        RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=.25}"/>
+                <Button Text="Add to basket" Clicked="AddToBasket" x:Name="addBtn"
+                        RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=.40}" />
                 <Button Text="Favorite"
-                        RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView, ElementName=addBtn, Property=X, Constant=85}"/>
+                        RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView, ElementName=addBtn, Property=X, Constant=200}"/>
 
             </RelativeLayout>
+
+            <Button Text="Go to basket" Clicked="GoToBasket" WidthRequest="150" VerticalOptions="Center"
+                HorizontalOptions="Center"/>
+
 
         </StackLayout>
     </ContentPage.Content>
