@@ -13,6 +13,7 @@ namespace MobileApp
     [DesignTimeVisible(false)]
     public partial class MainPage : ContentPage
     {
+        Basket basket = new Basket();
         public MainPage()
         {
             InitializeComponent();
@@ -25,6 +26,10 @@ namespace MobileApp
         public void GoToCustomerPage(object sender, EventArgs e)
         {
 
+        }
+        public void GoToTheBasket(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new BasketPage());
         }
     }
 }

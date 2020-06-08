@@ -5,15 +5,30 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="MobileApp.BasketPage">
+    <!--<ContentPage.BindingContext>-->
+    
     <ContentPage.Content>
-        <CollectionView ItemsSource="{Binding}" >
+        <StackLayout Orientation="Vertical">
+            <CollectionView ItemsSource="{Binding}" SelectionMode="Single" SelectionChanged="Product_Select" >
             <CollectionView.ItemTemplate>
                 <DataTemplate>
                     <StackLayout Orientation="Vertical">
-                        <Label Text="{Binding Path=Name}" FontSize="Large"/>
+                        <Label Text="{Binding Name}" FontSize="Large"/>
                     </StackLayout>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
+            
+            <RelativeLayout HorizontalOptions="FillAndExpand" VerticalOptions="Start">
+
+                <Button Text="Remove selected items" Clicked="RemoveSelectedItems" 
+                        RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=.40}"/>
+
+            </RelativeLayout>
+
+
+        </StackLayout>
     </ContentPage.Content>
+    
+    <!--</ContentPage.BindingContext>-->
 </ContentPage>

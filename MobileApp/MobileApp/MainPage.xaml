@@ -17,6 +17,8 @@
         <Button Text="See Customers" Clicked="GoToCustomerPage" WidthRequest="150" VerticalOptions="Center"
                 HorizontalOptions="Center"/>
 
+        <Button Text="Go to basket" Clicked="GoToTheBasket" WidthRequest="150" VerticalOptions="Center"
+                HorizontalOptions="Center"/>
 
 
 
