@@ -7,14 +7,21 @@
              mc:Ignorable="d"
              x:Class="MobileApp.ProductPage">
     <ContentPage.Content>
-        <CollectionView ItemsSource="{Binding}" SelectionMode="Single" SelectionChanged="Product_Selected">
+        <StackLayout>
+        <CollectionView ItemsSource="{Binding}" SelectionMode="Single" SelectionChanged="Product_Selected" >
             <CollectionView.ItemTemplate>
                 <DataTemplate>
-                    <StackLayout Orientation="Vertical">
+                    <StackLayout Orientation="Vertical" Padding="10,0">
                         <Label Text="{Binding Path=Name}" FontSize="Large"/>
                     </StackLayout>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
+        <StackLayout VerticalOptions="Start" Padding="30,5">
+
+            <Button Text="Go to basket" Clicked="GoBasket" 
+                       WidthRequest="150"/>
+            </StackLayout>
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>

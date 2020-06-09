@@ -21,10 +21,10 @@ namespace MobileApp
         public List<Product> productinbasket = new List<Product>();
         private Product selectedProduct;
 
-        //public ProductInfo()
-        //{
-        //    InitializeComponent();
-        //}
+        public ProductInfo()
+        {
+            InitializeComponent();
+        }
         public ProductInfo(Models.Product product)
         {
             InitializeComponent();
@@ -43,7 +43,8 @@ namespace MobileApp
             
             basket.BasketProducts.Add(selectedProduct);
             Navigation.PopAsync();
-            
+
+
         }
         public void GoToBasket(object sender, EventArgs e)
         {

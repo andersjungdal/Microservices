@@ -28,5 +28,9 @@ namespace MobileApp
             var products = await Services.ProductsService.GetProductsAsync();
             BindingContext = products;
         }
+        public void GoBasket(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new BasketPage());
+        }
     }
 }

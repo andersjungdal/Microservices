@@ -20,9 +20,9 @@ namespace MobileApp
 
             container = containerBuilder.Build();
 
-            AutofacServiceLocator asl = new AutofacServiceLocator(container);
+            //AutofacServiceLocator asl = new AutofacServiceLocator(container);
 
-            CommonServiceLocator.ServiceLocator.SetLocatorProvider(() => asl);
+            //CommonServiceLocator.ServiceLocator.SetLocatorProvider(() => asl);
 
 
         }

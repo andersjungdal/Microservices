@@ -9,22 +9,25 @@
     
     <ContentPage.Content>
         <StackLayout Orientation="Vertical">
-            <CollectionView ItemsSource="{Binding}" SelectionMode="Single" SelectionChanged="Product_Select" >
+            <CollectionView ItemsSource="{Binding}" SelectionMode="Multiple" SelectionChanged="Product_Select">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
-                    <StackLayout Orientation="Vertical">
+                    <StackLayout Orientation="Vertical" Padding="10,0">
                         <Label Text="{Binding Name}" FontSize="Large"/>
                     </StackLayout>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
             
-            <RelativeLayout HorizontalOptions="FillAndExpand" VerticalOptions="Start">
+            <StackLayout VerticalOptions="Start" Padding="30,5,30,15">
 
-                <Button Text="Remove selected items" Clicked="RemoveSelectedItems" 
-                        RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=.40}"/>
+                <Button Text="Remove selected item" Clicked="RemoveSelectedItems" 
+                       WidthRequest="150"/>
 
-            </RelativeLayout>
+                <Button Text="See selected items" Clicked="SeeSelectedItem" 
+                       WidthRequest="150"/>
+
+            </StackLayout>
 
 
         </StackLayout>

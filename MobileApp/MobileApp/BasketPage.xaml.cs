@@ -18,9 +18,11 @@ namespace MobileApp
     public partial class BasketPage : ContentPage
     {
 
-        private Product selectproduct;
-        private List<Product> products = new List<Product>();
+        //private Product selectproduct;
+        private List<Product> selectedproducts;
         public Basket Basket { get; set; }
+        Models.Product o;
+
 
         //private readonly IBasket basket;
 
@@ -28,6 +30,7 @@ namespace MobileApp
         {
             InitializeComponent();
             Basket = AutofacHelper.container.Resolve<Basket>();
+            selectedproducts = new List<Product>();
             //foreach (var item in Basket.BasketProducts)
             //{
             //    products.Add(item);
@@ -52,16 +55,82 @@ namespace MobileApp
         //}
         public void Product_Select(object sender, SelectionChangedEventArgs e)
         {
-            Models.Product product = e.CurrentSelection.First() as Models.Product;
-            selectproduct = product;
+
+            var selected = e.CurrentSelection;
+            
+
+                if(selectedproducts.Count < selected.Count)
+                {
+                    selectedproducts.Add(selected.ElementAt(selected.Count-1) as Models.Product);
+                }
+
+                if (selectedproducts.Count > selected.Count)
+                {
+                var currentSelectionToList = new List<Models.Product>();
+                foreach (var item in selected)
+                {
+                    currentSelectionToList.Add(item as Models.Product);
+                }
+                    List<Product> Unselected = selectedproducts.Except(currentSelectionToList).Concat(selectedproducts.Except(currentSelectionToList)).ToList();
+                    Unselected.RemoveAt(Unselected.Count - 1);
+                    Product removeSpecificProduct = Unselected.Single();
+                    selectedproducts.Remove(removeSpecificProduct);                 
+                }
+            
+            
+            //if (selected.Count == 0)
+            //{
+            //    selectedproducts.RemoveAt(selectedproducts.Count - 1);
+            //}
+            //selected = new List<Product>();
 
         }
 
         public void RemoveSelectedItems(object sender, EventArgs e)
         {
-            Basket.BasketProducts.Remove(selectproduct);
-            Navigation.PopAsync();
+            List<Models.Product> templist = new List<Product>();
+
+            foreach (var item in selectedproducts)
+            {
+                templist.Add(item);
+            }
+            if(selectedproducts.Count != 0)
+            {
+                foreach (var item in templist)
+                {
+                    Basket.BasketProducts.Remove(item);
+                    selectedproducts.RemoveAt(selectedproducts.Count - 1);
+                }
+            }
+            else
+            {
+                DisplayAlert("Notification", "Select an item an try again", "OK");
+            }
+
+            InitializeComponent();
         }
+
+        public void SeeSelectedItem(object sender, EventArgs e)
+        {
+             
+
+            if (selectedproducts.Count == 1)
+            {
+                o = selectedproducts.Single();
+
+                Navigation.PushAsync(new SeeSpecificBasketItem(o));
+            }
+            else if(selectedproducts.Count > 1)
+            {
+                DisplayAlert("Notification", "You can only see one product at a time", "OK");
+            }
+            else
+            {
+                DisplayAlert("Notification", "Select an item an try again", "OK");
+            }
+        }
+
+
         //public event PropertyChangedEventHandler PropertyChanged;
         //protected override void OnPropertyChanged([CallerMemberName] string propertyName = null)
         //{
