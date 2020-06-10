@@ -22,10 +22,9 @@ namespace MobileApp
         {
             Navigation.PushAsync(new ProductPage());
         }
-        //vil blive lavet senere
         public void GoToCustomerPage(object sender, EventArgs e)
         {
-
+            Navigation.PushAsync(new CustomerPage());
         }
         public void GoToTheBasket(object sender, EventArgs e)
         {

@@ -1,6 +1,5 @@
 ﻿using Autofac;
 using CommonServiceLocator;
-using MobileApp.Design;
 using MobileApp.Models;
 using System;
 using System.Collections.Generic;
@@ -30,8 +29,7 @@ namespace MobileApp
             InitializeComponent();
             BindingContext = product;
             selectedProduct = product;
-            basket = AutofacHelper.container.Resolve<Basket>();
-            
+            basket = AutofacHelper.container.Resolve<Basket>();            
         }
 
         public void AddToBasket(object sender, EventArgs e)

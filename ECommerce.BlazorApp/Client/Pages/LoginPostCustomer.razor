@@ -5,6 +5,7 @@
 @using System.Text.Json
 @using System.Text
 @using System.Net
+@using System.Threading;
 <h3>Login</h3>
 
 
@@ -21,6 +22,10 @@
     </label>
 </div>
 
+@if (Count > 0)
+{
+    <h6>@wrongPasswordMessage</h6>
+}
 
 <button @onclick="Login">Go to CustomerRoom</button>
 
@@ -34,6 +39,8 @@
 
     public string Password { get; set; }
 
+    private int Count { get; set; }
+    private string wrongPasswordMessage { get; set; } = "Wrong username or password";
 
     private async void Login()
     {
@@ -48,6 +55,20 @@
             {
                 navigationManager.NavigateTo("/postcustomer");
             }
+        }
+        else
+        {
+
+            Count = 3;
+            var timer = new Timer(new TimerCallback(_ =>
+            {
+                if (Count <= 0) return;
+                Count--;
+
+                // Note that the following line is necessary because otherwise
+                // Blazor would not recognize the state change and not refresh the UI
+                this.StateHasChanged();
+            }), null, 1000, 1000);
         }
     }
 }

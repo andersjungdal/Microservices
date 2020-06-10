@@ -83,11 +83,6 @@ else
 
 @code {
 
-    //[Parameter]
-    //public string userName { get; set; }
-    //[Parameter]
-    //public string groupName { get; set; }
-
     private HubConnection chatHubConnection1;
     private HubConnection chatHubConnection2;
     private HubConnection chatHubConnection3;
@@ -129,7 +124,6 @@ else
         chatHubConnection1.On<string>("NewUserEntered", (x) =>
         {
             string encodedMessage = x;
-            //messages.Add(encodedMessage);
             Connected1 = true;
             StateHasChanged();
 
@@ -154,7 +148,6 @@ else
         chatHubConnection2.On<string>("NewUserEntered", (x) =>
         {
             string encodedMessage = x;
-            //messages.Add(encodedMessage);
             Connected2 = true;
             StateHasChanged();
 
@@ -179,7 +172,6 @@ else
         chatHubConnection3.On<string>("NewUserEntered", (x) =>
         {
             string encodedMessage = x;
-            //messages.Add(encodedMessage);
             Connected3 = true;
             StateHasChanged();
 
@@ -205,7 +197,6 @@ else
         await chatHubConnection2.StartAsync();
         await chatHubConnection3.StartAsync();
 
-        //return base.OnInitializedAsync();
     }
 
     Task JoinGroup1() => chatHubConnection1.SendAsync("JoinGroup", "testroom1");

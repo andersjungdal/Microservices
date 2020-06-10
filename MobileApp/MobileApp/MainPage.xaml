@@ -12,8 +12,6 @@
         <Button Text="See Products" Clicked="GoToProductPage" WidthRequest="150" VerticalOptions="Center"
                 HorizontalOptions="Center"/>
 
-                <!--vil blive lavet senere-->
-
         <Button Text="See Customers" Clicked="GoToCustomerPage" WidthRequest="150" VerticalOptions="Center"
                 HorizontalOptions="Center"/>
 

@@ -1,4 +1,4 @@
-﻿using ECommerce.BlazorApp.Client.Interfaces;
+﻿
 using ECommerce.BlazorApp.Shared.Models;
 using System;
 using System.Collections.Generic;
@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace ECommerce.BlazorApp.Client.Services
 {
-    public class HttpClientProductsService : IHttpClientProductsService
+    public class HttpClientProductsService
     {
         private readonly HttpClient httpClient;
 

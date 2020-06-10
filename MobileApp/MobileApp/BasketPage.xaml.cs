@@ -17,42 +17,20 @@ namespace MobileApp
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class BasketPage : ContentPage
     {
-
-        //private Product selectproduct;
         private List<Product> selectedproducts;
         public Basket Basket { get; set; }
-        Models.Product o;
-
-
-        //private readonly IBasket basket;
-
+        Models.Product navigationObject;
         public BasketPage()
         {
             InitializeComponent();
             Basket = AutofacHelper.container.Resolve<Basket>();
             selectedproducts = new List<Product>();
-            //foreach (var item in Basket.BasketProducts)
-            //{
-            //    products.Add(item);
-            //}
-
-            //ServiceLocator.Current.GetInstance<Basket>();
         }
-        //public BasketPage()
-        //{
-        //    InitializeComponent();
-        //}
-
         protected override void OnAppearing()
         {
             base.OnAppearing();
             BindingContext = Basket.BasketProducts;
         }
-        //public void AddToBasket(object sender, EventArgs e)
-        //{
-        //productInBasket.Add(selectedProduct);
-        //productsInBasketListe.Add()
-        //}
         public void Product_Select(object sender, SelectionChangedEventArgs e)
         {
 
@@ -66,24 +44,16 @@ namespace MobileApp
 
                 if (selectedproducts.Count > selected.Count)
                 {
-                var currentSelectionToList = new List<Models.Product>();
-                foreach (var item in selected)
-                {
-                    currentSelectionToList.Add(item as Models.Product);
+                    var currentSelectionToList = new List<Models.Product>();
+                    foreach (var item in selected)
+                    {
+                        currentSelectionToList.Add(item as Models.Product);
+                    }
+                        List<Product> Unselected = selectedproducts.Except(currentSelectionToList).Concat(selectedproducts.Except(currentSelectionToList)).ToList();
+                        Unselected.RemoveAt(Unselected.Count - 1);
+                        Product removeSpecificProduct = Unselected.Single();
+                        selectedproducts.Remove(removeSpecificProduct);                 
                 }
-                    List<Product> Unselected = selectedproducts.Except(currentSelectionToList).Concat(selectedproducts.Except(currentSelectionToList)).ToList();
-                    Unselected.RemoveAt(Unselected.Count - 1);
-                    Product removeSpecificProduct = Unselected.Single();
-                    selectedproducts.Remove(removeSpecificProduct);                 
-                }
-            
-            
-            //if (selected.Count == 0)
-            //{
-            //    selectedproducts.RemoveAt(selectedproducts.Count - 1);
-            //}
-            //selected = new List<Product>();
-
         }
 
         public void RemoveSelectedItems(object sender, EventArgs e)
@@ -111,14 +81,12 @@ namespace MobileApp
         }
 
         public void SeeSelectedItem(object sender, EventArgs e)
-        {
-             
-
+        {            
             if (selectedproducts.Count == 1)
             {
-                o = selectedproducts.Single();
+                navigationObject = selectedproducts.Single();
 
-                Navigation.PushAsync(new SeeSpecificBasketItem(o));
+                Navigation.PushAsync(new SeeSpecificBasketItem(navigationObject));
             }
             else if(selectedproducts.Count > 1)
             {
@@ -129,21 +97,5 @@ namespace MobileApp
                 DisplayAlert("Notification", "Select an item an try again", "OK");
             }
         }
-
-
-        //public event PropertyChangedEventHandler PropertyChanged;
-        //protected override void OnPropertyChanged([CallerMemberName] string propertyName = null)
-        //{
-        //    base.OnPropertyChanged(propertyName);
-
-        //    PropertyChangedEventHandler handler = PropertyChanged;
-        //    if (handler != null)
-        //        handler(this, new PropertyChangedEventArgs(propertyName));
-        //}
-        //public void Refresh(object sender, PropertyChangingEventArgs e)
-        //{
-        //    e.
-        //}
-
     }
 }

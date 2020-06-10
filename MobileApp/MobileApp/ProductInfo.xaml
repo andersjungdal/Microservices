@@ -25,13 +25,13 @@
 
                 <Button Text="Add to basket" Clicked="AddToBasket" x:Name="addBtn"
                         RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=.40}" />
-                <Button Text="Favorite"
-                RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView, ElementName=addBtn, Property=X, Constant=200}"/>
+                <Button Text="Go to basket" Clicked="GoToBasket"
+                RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView, ElementName=addBtn, Property=X, Constant=200}" WidthRequest="160"/>
 
             </RelativeLayout>
 
-            <Button Text="Go to basket" Clicked="GoToBasket" WidthRequest="150" VerticalOptions="Center"
-                HorizontalOptions="Center"/>
+            <!--<Button Text="Go to basket" Clicked="GoToBasket" WidthRequest="150" VerticalOptions="Center"
+                HorizontalOptions="Center"/>-->
 
 
         </StackLayout>

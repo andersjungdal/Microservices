@@ -58,7 +58,6 @@ else
         chatHubConnection.On<string>("NewUserEntered", (x) =>
         {
             string encodedMessage = x;
-        //messages.Add(encodedMessage);
         userConnected = true;
             StateHasChanged();
 
@@ -80,7 +79,6 @@ else
 
         await chatHubConnection.StartAsync();
 
-        //return base.OnInitializedAsync();
     }
 
     Task JoinGroup() => chatHubConnection.SendAsync("JoinGroup", groupName);

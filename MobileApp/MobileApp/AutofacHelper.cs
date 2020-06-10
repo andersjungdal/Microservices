@@ -15,15 +15,7 @@ namespace MobileApp
 
             containerBuilder.RegisterType<Basket>().SingleInstance();
 
-
-            //CommonServiceLocator.ServiceLocator.Current.GetInstance<Basket>();
-
             container = containerBuilder.Build();
-
-            //AutofacServiceLocator asl = new AutofacServiceLocator(container);
-
-            //CommonServiceLocator.ServiceLocator.SetLocatorProvider(() => asl);
-
 
         }
     }
