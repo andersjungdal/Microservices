@@ -16,7 +16,6 @@ namespace MobileApp
     public partial class ProductInfo : ContentPage
     {
         public Basket basket { get; set; }
-        //Basket basket = new Basket();
         public List<Product> productinbasket = new List<Product>();
         private Product selectedProduct;
 

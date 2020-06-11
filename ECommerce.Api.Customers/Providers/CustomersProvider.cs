@@ -78,7 +78,6 @@ namespace ECommerce.Api.Customers.Providers
             try
             {
 
-
                 logger?.LogInformation("Creating customer");
                 var mapper = configurationProvider.CreateMapper();
                 var newcustomer = mapper.Map<Db.Customer>(customer);
