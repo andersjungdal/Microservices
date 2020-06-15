@@ -7,7 +7,6 @@
     <option value="testroom1">rum1</option>
     <option value="testroom2">rum2</option>
     <option value="testroom3">rum3</option>
-    <option value="testroomAll">common room</option>
 </select>
 
 <div class="form-group">
@@ -20,7 +19,7 @@
 @switch (groupName)
 {
     case "testroom1":
-        if (userName == null || userName.Length == 0)
+        if (String.IsNullOrEmpty(userName))
         {
             <p>You have to specify a name</p>
         }
@@ -31,7 +30,7 @@
         }
         break;
     case "testroom2":
-        if (userName == null || userName.Length == 0)
+        if (String.IsNullOrEmpty(userName))
         {
             <p>You have to specify a name</p>
         }
@@ -42,7 +41,7 @@
         }
         break;
     case "testroom3":
-        if (userName == null || userName.Length == 0)
+        if (String.IsNullOrEmpty(userName))
         {
             <p>You have to specify a name</p>
         }
