@@ -5458,20 +5458,20 @@
   },
   "packageFolders": {
     "C:\\Users\\ander\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {},
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ander\\Desktop\\Microservices\\ECommerce.Api.Search\\ECommerce.Api.Search.csproj",
+      "projectUniqueName": "C:\\Users\\ander\\Desktop\\Erhvervsakademiuddannelse_rapporter_projekter_og_materialle\\Microservices\\ECommerce.Api.Search\\ECommerce.Api.Search.csproj",
       "projectName": "ECommerce.Api.Search",
-      "projectPath": "C:\\Users\\ander\\Desktop\\Microservices\\ECommerce.Api.Search\\ECommerce.Api.Search.csproj",
+      "projectPath": "C:\\Users\\ander\\Desktop\\Erhvervsakademiuddannelse_rapporter_projekter_og_materialle\\Microservices\\ECommerce.Api.Search\\ECommerce.Api.Search.csproj",
       "packagesPath": "C:\\Users\\ander\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ander\\Desktop\\Microservices\\ECommerce.Api.Search\\obj\\",
+      "outputPath": "C:\\Users\\ander\\Desktop\\Erhvervsakademiuddannelse_rapporter_projekter_og_materialle\\Microservices\\ECommerce.Api.Search\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\",
+        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
@@ -5488,12 +5488,13 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\ander\\Desktop\\Microservices\\ECommerce.RabbitMQ.Bus\\ECommerce.RabbitMQ.Bus.csproj": {
-              "projectPath": "C:\\Users\\ander\\Desktop\\Microservices\\ECommerce.RabbitMQ.Bus\\ECommerce.RabbitMQ.Bus.csproj"
+            "C:\\Users\\ander\\Desktop\\Erhvervsakademiuddannelse_rapporter_projekter_og_materialle\\Microservices\\ECommerce.RabbitMQ.Bus\\ECommerce.RabbitMQ.Bus.csproj": {
+              "projectPath": "C:\\Users\\ander\\Desktop\\Erhvervsakademiuddannelse_rapporter_projekter_og_materialle\\Microservices\\ECommerce.RabbitMQ.Bus\\ECommerce.RabbitMQ.Bus.csproj"
             },
-            "C:\\Users\\ander\\Desktop\\Microservices\\ECommerce.RabbitMQ.IoC\\ECommerce.RabbitMQ.IoC.csproj": {
-              "projectPath": "C:\\Users\\ander\\Desktop\\Microservices\\ECommerce.RabbitMQ.IoC\\ECommerce.RabbitMQ.IoC.csproj"
+            "C:\\Users\\ander\\Desktop\\Erhvervsakademiuddannelse_rapporter_projekter_og_materialle\\Microservices\\ECommerce.RabbitMQ.IoC\\ECommerce.RabbitMQ.IoC.csproj": {
+              "projectPath": "C:\\Users\\ander\\Desktop\\Erhvervsakademiuddannelse_rapporter_projekter_og_materialle\\Microservices\\ECommerce.RabbitMQ.IoC\\ECommerce.RabbitMQ.IoC.csproj"
             }
           }
         }
@@ -5506,6 +5507,7 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "AutoMapper": {
             "target": "Package",
@@ -5564,7 +5566,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
       }
     }
   }

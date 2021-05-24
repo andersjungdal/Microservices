@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "iwLFlGad51ayf7DXvq24bpR7tfGohIZNPmaGlJDKWOZDMzckeZYadkwC8jiFLM8aJPTYsx6xeGVcvN3JHM5VyA==",
+  "dgSpecHash": "4Dtp1VVvS6d6yQ/RgRg4cSmi9YQ20ggAVt+Bh5+0NQoTUEYMnJH2r5Aej7ZMf+pQwfrGIkwHxcr9BCbBvQhpUg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ander\\Desktop\\Microservices\\XUnitTestProduct\\XUnitTestProduct.csproj",
+  "projectFilePath": "C:\\Users\\ander\\Desktop\\Erhvervsakademiuddannelse_rapporter_projekter_og_materialle\\Microservices\\XUnitTestProduct\\XUnitTestProduct.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ander\\.nuget\\packages\\automapper\\9.0.0\\automapper.9.0.0.nupkg.sha512",
     "C:\\Users\\ander\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\7.0.0\\automapper.extensions.microsoft.dependencyinjection.7.0.0.nupkg.sha512",
@@ -59,7 +59,7 @@
     "C:\\Users\\ander\\.nuget\\packages\\microsoft.identity.client\\3.0.8\\microsoft.identity.client.3.0.8.nupkg.sha512",
     "C:\\Users\\ander\\.nuget\\packages\\microsoft.net.http.headers\\1.0.2\\microsoft.net.http.headers.1.0.2.nupkg.sha512",
     "C:\\Users\\ander\\.nuget\\packages\\microsoft.net.test.sdk\\16.5.0\\microsoft.net.test.sdk.16.5.0.nupkg.sha512",
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.platforms\\2.0.0\\microsoft.netcore.platforms.2.0.0.nupkg.sha512",
+    "C:\\Users\\ander\\.nuget\\packages\\microsoft.netcore.platforms\\2.0.0\\microsoft.netcore.platforms.2.0.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "C:\\Users\\ander\\.nuget\\packages\\microsoft.testplatform.objectmodel\\16.5.0\\microsoft.testplatform.objectmodel.16.5.0.nupkg.sha512",
     "C:\\Users\\ander\\.nuget\\packages\\microsoft.testplatform.testhost\\16.5.0\\microsoft.testplatform.testhost.16.5.0.nupkg.sha512",

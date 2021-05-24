@@ -491,20 +491,20 @@
   },
   "packageFolders": {
     "C:\\Users\\ander\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {},
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ander\\Desktop\\Microservices\\ApiGateway\\ApiGateway.csproj",
+      "projectUniqueName": "C:\\Users\\ander\\Desktop\\Erhvervsakademiuddannelse_rapporter_projekter_og_materialle\\Microservices\\ApiGateway\\ApiGateway.csproj",
       "projectName": "ApiGateway",
-      "projectPath": "C:\\Users\\ander\\Desktop\\Microservices\\ApiGateway\\ApiGateway.csproj",
+      "projectPath": "C:\\Users\\ander\\Desktop\\Erhvervsakademiuddannelse_rapporter_projekter_og_materialle\\Microservices\\ApiGateway\\ApiGateway.csproj",
       "packagesPath": "C:\\Users\\ander\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ander\\Desktop\\Microservices\\ApiGateway\\obj\\",
+      "outputPath": "C:\\Users\\ander\\Desktop\\Erhvervsakademiuddannelse_rapporter_projekter_og_materialle\\Microservices\\ApiGateway\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\",
+        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
@@ -521,6 +521,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "projectReferences": {}
         }
       },
@@ -532,6 +533,7 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "Ocelot": {
             "target": "Package",
@@ -556,7 +558,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
       }
     }
   }

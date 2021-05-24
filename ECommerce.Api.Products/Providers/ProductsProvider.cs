@@ -86,7 +86,7 @@ namespace ECommerce.Api.Products.Providers
                 var newproduct = mapper.Map<Db.Product>(product);
                 if(newproduct != null)
                 {
-                    dbContext.Products.Add(newproduct);
+                    await dbContext.Products.AddAsync(newproduct);
                     await dbContext.SaveChangesAsync();
                     logger?.LogInformation($"product created {newproduct}");
 

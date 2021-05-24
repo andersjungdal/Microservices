@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ymNozCkIE8ZhrkS9pEtiPBtEPclP8tk1tMfC97eG5jbm9RHx5P0UxmvAHLOM2QKmJMzwl1pEAMokwwkz+96qCA==",
+  "dgSpecHash": "CRXB2/dvMn0UKx57vOCCv7jskM0Q8OlEemxtLewAd7NTrcEHV1KoiZmxZpgOQyxMYBmadY1XySpWVYiNQ+p4nw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ander\\Desktop\\Microservices\\ECommerce.RabbitMQ.IoC\\ECommerce.RabbitMQ.IoC.csproj",
+  "projectFilePath": "C:\\Users\\ander\\Desktop\\Erhvervsakademiuddannelse_rapporter_projekter_og_materialle\\Microservices\\ECommerce.RabbitMQ.IoC\\ECommerce.RabbitMQ.IoC.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ander\\.nuget\\packages\\mediatr\\8.0.1\\mediatr.8.0.1.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.aspnetcore.http.abstractions\\2.2.0\\microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",

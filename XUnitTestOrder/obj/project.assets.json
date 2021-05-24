@@ -6152,20 +6152,20 @@
   },
   "packageFolders": {
     "C:\\Users\\ander\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {},
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ander\\Desktop\\Microservices\\XUnitTestOrder\\XUnitTestOrder.csproj",
+      "projectUniqueName": "C:\\Users\\ander\\Desktop\\Erhvervsakademiuddannelse_rapporter_projekter_og_materialle\\Microservices\\XUnitTestOrder\\XUnitTestOrder.csproj",
       "projectName": "XUnitTestOrder",
-      "projectPath": "C:\\Users\\ander\\Desktop\\Microservices\\XUnitTestOrder\\XUnitTestOrder.csproj",
+      "projectPath": "C:\\Users\\ander\\Desktop\\Erhvervsakademiuddannelse_rapporter_projekter_og_materialle\\Microservices\\XUnitTestOrder\\XUnitTestOrder.csproj",
       "packagesPath": "C:\\Users\\ander\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ander\\Desktop\\Microservices\\XUnitTestOrder\\obj\\",
+      "outputPath": "C:\\Users\\ander\\Desktop\\Erhvervsakademiuddannelse_rapporter_projekter_og_materialle\\Microservices\\XUnitTestOrder\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\",
+        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
@@ -6182,9 +6182,10 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\ander\\Desktop\\Microservices\\ECommerce.Api.Orders\\ECommerce.Api.Orders.csproj": {
-              "projectPath": "C:\\Users\\ander\\Desktop\\Microservices\\ECommerce.Api.Orders\\ECommerce.Api.Orders.csproj"
+            "C:\\Users\\ander\\Desktop\\Erhvervsakademiuddannelse_rapporter_projekter_og_materialle\\Microservices\\ECommerce.Api.Orders\\ECommerce.Api.Orders.csproj": {
+              "projectPath": "C:\\Users\\ander\\Desktop\\Erhvervsakademiuddannelse_rapporter_projekter_og_materialle\\Microservices\\ECommerce.Api.Orders\\ECommerce.Api.Orders.csproj"
             }
           }
         }
@@ -6197,6 +6198,7 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "AutoMapper": {
             "target": "Package",
@@ -6234,14 +6236,11 @@
         "assetTargetFallback": true,
         "warn": true,
         "frameworkReferences": {
-          "Microsoft.AspNetCore.App": {
-            "privateAssets": "none"
-          },
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
       }
     }
   }

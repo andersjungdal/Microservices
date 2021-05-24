@@ -4,8 +4,9 @@
     {
         public CustomerProfile()
         {
-            CreateMap<Db.Customer, Models.Customer>();
-            CreateMap<Models.Customer, Db.Customer>();
+            CreateMap<Db.Customer, Models.Customer>()
+                .ReverseMap();
+            //CreateMap<Models.Customer, Db.Customer>();
         }
     }
 }

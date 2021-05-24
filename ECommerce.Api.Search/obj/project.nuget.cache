@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "tKDGKkz20wdrbDWi0AIA6NsmPQp4+ld5BTI+qZ3yMmIidmix9NNZmMq++uJRAQ+vtSscPSTC4tUi8WfJBBvXFw==",
+  "dgSpecHash": "3+ROiYoldXDapPayR0bbELsYUcZJ7O0n5JfDc1WwqSg3ujU2tEk37TSxHkcTPJTX0MEj7EX73OLzkoqgW17xBA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ander\\Desktop\\Microservices\\ECommerce.Api.Search\\ECommerce.Api.Search.csproj",
+  "projectFilePath": "C:\\Users\\ander\\Desktop\\Erhvervsakademiuddannelse_rapporter_projekter_og_materialle\\Microservices\\ECommerce.Api.Search\\ECommerce.Api.Search.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ander\\.nuget\\packages\\automapper\\9.0.0\\automapper.9.0.0.nupkg.sha512",
     "C:\\Users\\ander\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\7.0.0\\automapper.extensions.microsoft.dependencyinjection.7.0.0.nupkg.sha512",
@@ -35,7 +35,7 @@
     "C:\\Users\\ander\\.nuget\\packages\\microsoft.extensions.options\\3.1.3\\microsoft.extensions.options.3.1.3.nupkg.sha512",
     "C:\\Users\\ander\\.nuget\\packages\\microsoft.extensions.primitives\\3.1.3\\microsoft.extensions.primitives.3.1.3.nupkg.sha512",
     "C:\\Users\\ander\\.nuget\\packages\\microsoft.identity.client\\3.0.8\\microsoft.identity.client.3.0.8.nupkg.sha512",
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.platforms\\2.0.0\\microsoft.netcore.platforms.2.0.0.nupkg.sha512",
+    "C:\\Users\\ander\\.nuget\\packages\\microsoft.netcore.platforms\\2.0.0\\microsoft.netcore.platforms.2.0.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "C:\\Users\\ander\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.10.8\\microsoft.visualstudio.azure.containers.tools.targets.1.10.8.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.win32.registry\\4.5.0\\microsoft.win32.registry.4.5.0.nupkg.sha512",

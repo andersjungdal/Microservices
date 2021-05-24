@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "NPn3xMBlzfuPWHNr1gPTLFsk5J/+BJNDHZb8Qv330e/QXdHKVY43ASIq5I0MK0aZmu3D2u64RgMgxGXHI/PkkQ==",
+  "dgSpecHash": "g+YIW147o35djDLy4BD6QJFse40Um8gmuWUpJRe/euzdE6w4tU3yOvUtSFjkl8jcZN1Yy4Z8fPU45z1oCHKCwg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ander\\Desktop\\Microservices\\ECommerce.RabbitMQ.Bus\\ECommerce.RabbitMQ.Bus.csproj",
+  "projectFilePath": "C:\\Users\\ander\\Desktop\\Erhvervsakademiuddannelse_rapporter_projekter_og_materialle\\Microservices\\ECommerce.RabbitMQ.Bus\\ECommerce.RabbitMQ.Bus.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ander\\.nuget\\packages\\mediatr\\8.0.1\\mediatr.8.0.1.nupkg.sha512",
     "C:\\Users\\ander\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\3.1.3\\microsoft.extensions.dependencyinjection.3.1.3.nupkg.sha512",

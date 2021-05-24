@@ -4,8 +4,9 @@
     {
         public ProductProfile()
         {
-            CreateMap<Db.Product, Models.Product>();
-            CreateMap<Models.Product, Db.Product>();
+            CreateMap<Db.Product, Models.Product>()
+                .ReverseMap();
+            //CreateMap<Models.Product, Db.Product>();
         }
     }
 }
